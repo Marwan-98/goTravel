@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model travelUser {
+  id         Int          @id @default(autoincrement())
+  firstName  String
+  lastName   String
+  email      String       @unique
+  country    String
+  currency   String
+  hotel      hotel[]
+  restaurant restaurant[]
+  attraction attraction[]
+  trips      trip[]
+}
+
+model hotel {
+  id       Int        @id @default(autoincrement())
+  userId   Int
+  hotelId  Int
+  name     String
+  location String
+  url      String
+  imageUrl String?
+  tripId   Int
+  user     travelUser @relation(fields: [userId], references: [id])
+  trip     trip       @relation(fields: [tripId], references: [id])
+}
+
+model restaurant {
+  id           Int        @id @default(autoincrement())
+  userId       Int
+  restaurantId String
+  name         String
+  location     String
+  url          String
+  imageUrl     String?
+  tripId       Int
+  user         travelUser @relation(fields: [userId], references: [id])
+  trip         trip       @relation(fields: [tripId], references: [id])
+}
+
+model attraction {
+  id           Int        @id @default(autoincrement())
+  userId       Int
+  attractionId Int
+  name         String
+  location     String
+  url          String
+  imageUrl     String?
+  tripId       Int
+  user         travelUser @relation(fields: [userId], references: [id])
+  trip         trip       @relation(fields: [tripId], references: [id])
+}
+
+model trip {
+  id         Int          @id @default(autoincrement())
+  name       String
+  hotel      hotel[]
+  attraction attraction[]
+  restaurant restaurant[]
+  days       day[]
+  userId     Int
+  user       travelUser   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model day {
+  id        Int     @id @default(autoincrement())
+  dayNumber String
+  tripId    Int
+  trip      trip    @relation(fields: [tripId], references: [id])
+  events    event[]
+}
+
+model event {
+  id      Int    @id @default(autoincrement())
+  content String
+  target  String
+  time    String
+  dayId   Int
+  day     day    @relation(fields: [dayId], references: [id])
+}
