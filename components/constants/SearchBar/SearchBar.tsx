@@ -4,18 +4,30 @@ import {
   setDestination,
   setOrigin,
 } from "../../../redux/features/flightsSlice";
-import { flightsListbox, locationsListbox, lodgesListbox } from "./listboxes";
+import {
+  flightsListbox,
+  locationsListbox,
+  lodgesListbox,
+  usersListbox,
+} from "./listboxes";
 //@ts-ignore
 import Turnstone from "turnstone";
 import { useDispatch } from "react-redux";
 import { setCity, setCityCode } from "../../../redux/features/citySlice";
 
-const SearchBar = ({ searching }: { searching: string }) => {
+const SearchBar = ({
+  searching,
+  setSelectedUser,
+}: {
+  searching: string;
+  setSelectedUser?: React.Dispatch<React.SetStateAction<null | number>>;
+}) => {
   const dispatch = useDispatch();
   switch (searching) {
     case "originFlights":
       return (
         <Turnstone
+          placeholder={"Origin City..."}
           listbox={flightsListbox}
           styles={styles}
           onSelect={(selected: string) =>
@@ -27,6 +39,7 @@ const SearchBar = ({ searching }: { searching: string }) => {
     case "destinationFlights":
       return (
         <Turnstone
+          placeholder={"Destination City..."}
           listbox={flightsListbox}
           styles={styles}
           onSelect={(selected: string) =>
@@ -51,6 +64,7 @@ const SearchBar = ({ searching }: { searching: string }) => {
     case "locations":
       return (
         <Turnstone
+          placeholder={"Search Destinations..."}
           listbox={locationsListbox}
           styles={styles}
           debounceWait={2000}
@@ -72,6 +86,20 @@ const SearchBar = ({ searching }: { searching: string }) => {
             if (selected) {
               dispatch(setCityCode(selected[1]));
               dispatch(setCity(selected[0]));
+            }
+          }}
+        />
+      );
+    case "users":
+      return (
+        <Turnstone
+          placeholder={"Search Travelers..."}
+          listbox={usersListbox}
+          styles={styles}
+          debounceWait={2000}
+          onSelect={(selected: [string, number]) => {
+            if (selected && setSelectedUser) {
+              setSelectedUser(selected[1]);
             }
           }}
         />

@@ -4,7 +4,8 @@ import DatePicker from "react-datepicker";
 //@ts-ignore
 import Turnstone from "turnstone";
 import Link from "next/link";
-import { Hotels, Result } from "../types/Hotels";
+import { Hotel } from "../types/Hotels";
+import { HotelResult } from "../types/HotelResult";
 import { useAppSelector } from "../redux/hooks";
 import { setHotel, setHotels } from "../redux/features/hotelsSlice";
 import { useDispatch } from "react-redux";
@@ -13,14 +14,19 @@ import SearchBar from "../components/constants/SearchBar/SearchBar";
 import axios from "axios";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { format } from "date-fns";
+import { motion } from "framer-motion";
+import { setStartDate, setEndDate } from "../redux/features/userSlice";
+import InnerLayout from "../components/InnerLayout";
+import { setCity } from "../redux/features/citySlice";
 
 const Lodges = () => {
+  const city = useAppSelector((state) => state.city.city);
   const cityCode = useAppSelector((state) => state.city.cityCode);
   const hotels = useAppSelector((state) => state.hotels.hotels);
   const [open, setOpen] = useState(false);
-  const [selectedHotel, setSelectedHotel] = useState<Result | null>(null);
-  const [startDate, setStartDate] = useState<Date>(new Date());
-  const [endDate, setEndDate] = useState<Date | null>(null);
+  const [selectedHotel, setSelectedHotel] = useState<HotelResult | null>(null);
+  const startDate = useAppSelector((state) => state.user.startDate);
+  const endDate = useAppSelector((state) => state.user.endDate);
   const [traveler, setTraveler] = useState(1);
 
   const dispatch = useDispatch();
@@ -28,144 +34,125 @@ const Lodges = () => {
   const getHotels = () => {
     if (endDate) {
       axios
-        .get("https://hotels-com-provider.p.rapidapi.com/v1/hotels/search", {
-          params: {
-            checkin_date: format(startDate!, "yyyy-MM-dd"),
-            checkout_date: format(endDate!, "yyyy-MM-dd"),
-            sort_order: "STAR_RATING_HIGHEST_FIRST",
-            destination_id: cityCode,
-            adults_number: String(traveler),
-            locale: "en_US",
-            currency: "USD",
+        .post(
+          "https://travel-advisor.p.rapidapi.com/hotels/v2/list",
+          {
+            geoId: cityCode,
+            checkIn: startDate,
+            checkOut: endDate,
+            sort: "RATING_HIGH_TO_LOW",
+            sortOrder: "desc",
+            updateToken: "",
           },
-          headers: {
-            "X-RapidAPI-Key":
-              "56b9557de5msh43c2654c5ab3bf0p137f1bjsn275bc3e4b597",
-            "X-RapidAPI-Host": "hotels-com-provider.p.rapidapi.com",
-          },
-        })
-        .then((res) => dispatch(setHotels(res.data)));
+          {
+            headers: {
+              "X-RapidAPI-Key":
+                "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
+              "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
+            },
+          }
+        )
+        .then((res) => {
+          const hotelResults =
+            res.data.data.AppPresentation_queryAppListV2[0].sections
+              .filter(
+                (hotel) => hotel.__typename === "AppPresentation_SingleCard"
+              )
+              .map((hotel) => hotel.singleCardContent);
+          dispatch(setHotels(hotelResults));
+        });
     }
-  };
-
-  const onChange = (dates: [Date | null, Date | null]) => {
-    const [start, end] = dates;
-    setStartDate(start!);
-    setEndDate(end!);
   };
 
   useEffect(() => {
     return () => {
-      dispatch(setHotels(null));
+      dispatch(setCity(""));
     };
   }, []);
 
+  useEffect(() => {
+    city && getHotels();
+  }, [city]);
+
   return (
     <Layout>
-      <div className="h-auto min-h-screen">
-        <div className="flex items-center justify-center">
-          <div className=" flex flex-col w-full justify-between">
-            <div className="flex items-center justify-around my-1">
-              <div className="flex flex-col w-1/2 mr-5">
-                <SearchBar searching="lodges" />
-              </div>
-              <div className="h-full w-96">
-                <DatePicker
-                  dateFormat="yyyy-MM-dd"
-                  selected={startDate}
-                  onChange={onChange}
-                  startDate={startDate}
-                  endDate={endDate}
-                  selectsRange
-                  className="h-[44px] w-full text-center border"
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-around my-1">
-              <div className="flex items-center w-52 justify-between px-2">
-                <button
-                  className="flex bg-white border h-6 w-6 justify-center items-center rounded-xl p-0"
-                  onClick={() =>
-                    traveler === 0
-                      ? setTraveler(traveler)
-                      : setTraveler(traveler - 1)
-                  }
-                >
-                  <AiOutlineMinus />
-                </button>
-                <div className="inline-flex items-center justify-center w-32 border border-transparent bg-indigo-100 px-4 py-2 text-base font-medium text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                  {traveler} Adults
-                </div>
-                <button
-                  className="flex bg-white border h-6 w-6 justify-center items-center rounded-xl p-0"
-                  onClick={() => setTraveler(traveler + 1)}
-                >
-                  <AiOutlinePlus />
-                </button>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center w-32 border border-transparent bg-indigo-100 px-4 py-2 text-base font-medium text-indigo-700 uppercase hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  onClick={getHotels}
-                >
-                  Search
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-wrap">
-          {hotels?.searchResults.results.map((hotel) => (
-            <div
-              className="mx-5 h-72 w-72 border border-gray-100 my-5 relative flex flex-col"
-              key={hotel.id}
+      <InnerLayout>
+        {!hotels ? (
+          <>
+            <motion.div
+              className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
+              initial={{ y: 100 }}
+              whileInView={{ y: 0 }}
             >
-              <div
-                className="h-2/3 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('${hotel.optimizedThumbUrls.srpDesktop}')`,
-                }}
-              ></div>
-              <div className="flex flex-col justify-around items-start flex-1">
-                <h2 className="truncate font-bold w-full">{hotel.name}</h2>
-                <h4>
-                  <span
-                    className={`${
-                      hotel.guestReviews.unformattedRating > 4
-                        ? "bg-green-900"
-                        : hotel.guestReviews.unformattedRating > 3
-                        ? "bg-yellow-400"
-                        : "bg-red-600"
-                    } text-white px-[4px] rounded text-center`}
-                  >
-                    {hotel.guestReviews.unformattedRating}
-                  </span>{" "}
-                  /5
-                </h4>
-                <Link
-                  href={`/hotel/${hotel.id}?startDate=${format(
-                    startDate!,
-                    "yyyy-MM-dd"
-                  )}&endDate=${format(
-                    endDate!,
-                    "yyyy-MM-dd"
-                  )}&adults=${traveler}`}
-                >
-                  <button
-                    className="bg-blue-900 text-white p-1 rounded"
-                    onClick={() => {
-                      setOpen(!open);
-                    }}
-                  >
-                    Starts from {hotel.ratePlan.price.current}
-                  </button>
-                </Link>
+              <div>
+                <div className="flex justify-between">
+                  <div>
+                    <h2 className="text-4xl">Hungry?</h2>
+                    <span>Just Search For hotels In Your Area</span>
+                  </div>
+                  <div className="basis-80">
+                    <SearchBar searching="locations" />
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
+            </motion.div>
+          </>
+        ) : (
+          <>
+            <motion.div
+              key={hotels}
+              className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
+              initial={{ y: 100 }}
+              whileInView={{ y: 0 }}
+            >
+              <div>
+                <div className="flex justify-between">
+                  <div>
+                    <h2 className="text-4xl">
+                      <span className="font-bold text-[#FF8345]">Cairo</span>{" "}
+                      hotels
+                    </h2>{" "}
+                  </div>
+                  <div className="basis-80">
+                    <SearchBar searching="locations" />
+                  </div>
+                </div>
+                <div className="mt-10">
+                  {hotels.map((hotel) => (
+                    <div className="bg-white w-full h-52 my-10 rounded-2xl flex">
+                      <div
+                        className="bg-black h-full w-1/4 rounded-2xl"
+                        style={{
+                          backgroundImage: `url('${hotel.cardPhotos[0].sizes.urlTemplate
+                            .replace(new RegExp("{width}"), "400")
+                            .replace(new RegExp("{height}"), "400")}')`,
+                        }}
+                      ></div>
+                      <div className="py-2 px-10 flex flex-col justify-around grow">
+                        <h3 className="text-2xl font-bold mb-2">
+                          {hotel.cardTitle?.string}
+                        </h3>
+                        <span>{hotel.primaryInfo?.text}</span>
+                        <span>
+                          {hotel.bubbleRating?.rating} (
+                          {hotel.bubbleRating?.numberReviews?.string} Reviews)
+                        </span>
+                        <Link
+                          href={`/hotel/${hotel.cardLink.route.typedParams.contentId}?startDate=${startDate}&endDate=${endDate}`}
+                        >
+                          <button className="bg-[#1EC28B] p-3 text-white rounded-2xl w-24 self-end">
+                            Details
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </InnerLayout>
     </Layout>
   );
 };

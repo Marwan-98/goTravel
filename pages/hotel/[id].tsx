@@ -22,6 +22,8 @@ const HotelModal = () => {
   const router = useRouter();
   const { id, startDate, endDate, adults } = router.query;
 
+  const [selectedImage, setSelectedImage] = useState(0);
+
   const [openRoomModal, setOpenRoomModal] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState<Room>();
   const [openImageModal, setOpenImageModal] = useState(false);
@@ -34,25 +36,30 @@ const HotelModal = () => {
   useEffect(() => {
     if (router.isReady) {
       axios
-        .get(
-          "https://hotels-com-provider.p.rapidapi.com/v1/hotels/booking-details",
+        .post(
+          "https://travel-advisor.p.rapidapi.com/hotels/v2/get-details",
+          {
+            contentId: id,
+            checkIn: startDate,
+            checkOut: endDate,
+            rooms: [
+              {
+                adults: 2,
+                childrenAges: [],
+              },
+            ],
+          },
           {
             headers: {
               "X-RapidAPI-Key":
-                "8be7cf2951msheff3a283564814ap167a8fjsnd415b34b76b5",
-              "X-RapidAPI-Host": "hotels-com-provider.p.rapidapi.com",
-            },
-            params: {
-              adults_number: adults,
-              checkin_date: startDate,
-              locale: "en_US",
-              currency: "USD",
-              hotel_id: id,
-              checkout_date: endDate,
+                "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
+              "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
           }
         )
-        .then((res) => dispatch(setHotel(res.data)));
+        .then((res) =>
+          dispatch(setHotel(res.data.data.AppPresentation_queryAppDetailV2[0]))
+        );
     }
     return () => {
       dispatch(setHotel(null));
@@ -81,193 +88,164 @@ const HotelModal = () => {
   return (
     <Layout>
       {hotel ? (
-        <div>
-          <div className="z-10">
-            <div className="flex min-h-full items-end p-4 text-center sm:items-center sm:p-0">
-              <div className="sm:flex sm:items-start">
-                <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <div className="flex text-2xl font-medium leading-6 text-gray-900">
-                    {hotel.name}{" "}
-                    <span
-                      className={`${
-                        hotel.reviews.brands.rating > 7
-                          ? "bg-green-900"
-                          : hotel.reviews.brands.rating > 5
-                          ? "bg-yellow-400"
-                          : "bg-red-600"
-                      } text-white px-[4px] rounded text-center mx-2`}
-                    >
-                      {hotel.reviews.brands.rating}
-                    </span>
-                    <button
-                      className="p-1"
-                      onClick={() => setAddToTripModal(true)}
-                    >
-                      {liked ? (
-                        <AiFillHeart className="text-red-500" />
-                      ) : (
-                        <AiOutlineHeart />
-                      )}
-                    </button>
-                  </div>
-                  <h4 className="pt-4">{hotel.address.fullAddress} </h4>
-                  <div
-                    className={`bg-black bg-opacity-[20%] fixed h-full w-full inset-0 top-0 left-0 flex items-center justify-center ${
-                      openImageModal ? "block" : "hidden"
-                    }`}
-                  >
-                    <div className="w-1/2 bg-red-300 relative">
-                      <button
-                        className="absolute bg-black text-white p-0 rounded-full h-5 w-5 top-5 right-5"
-                        onClick={() => {
-                          setOpenImageModal(!openImageModal);
-                          setModalImages([]);
-                          setImageURL(0);
-                        }}
+        <div className="bg-gray-100 min-h-full">
+          <div className="flex bg-white shadow w-full">
+            {hotel.sections.map((section) => {
+              if (section.__typename === "AppPresentation_PoiOverview") {
+                return (
+                  <div className="p-5 flex flex-col w-1/2 justify-around">
+                    <div className="flex items-center">
+                      <h2 className="text-3xl font-bold">{section.name}</h2>
+                      <span
+                        className="text-3xl cursor-pointer px-5"
+                        onClick={() => setAddToTripModal(true)}
                       >
-                        X
-                      </button>
-                      <div
-                        className="h-96 w-full bg-center bg-cover"
-                        style={{
-                          backgroundImage: `url('${modalImages[imageURL]?.fullSizeUrl}')`,
-                        }}
-                      ></div>
-                      <div className="absolute w-full top-1/2 px-3 flex justify-between">
-                        <button
-                          onClick={() =>
-                            imageURL > 0
-                              ? setImageURL(imageURL - 1)
-                              : setImageURL(modalImages.length - 1)
-                          }
-                        >
-                          back
-                        </button>
-                        <button
-                          onClick={() =>
-                            imageURL < modalImages.length - 1
-                              ? setImageURL(imageURL + 1)
-                              : setImageURL(0)
-                          }
-                        >
-                          next
-                        </button>
+                        {liked ? (
+                          <AiFillHeart className="text-red-600" />
+                        ) : (
+                          <AiOutlineHeart />
+                        )}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Contact</h3>
+                      <div className="flex flex-col py-5">
+                        {section.contactLinks?.map((link) =>
+                          link.link.externalUrl ? (
+                            <Link href={link.link.externalUrl}>
+                              <span className="my-2">
+                                {decodeURI(link.link.externalUrl)}
+                              </span>
+                            </Link>
+                          ) : null
+                        )}
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-2">
-                    <h6 className="text-lg font-medium leading-6 text-gray-900 mt-5">
-                      Amenities
-                    </h6>
-                    <div className="grid grid-cols-1 md:grid-cols-2">
-                      {hotel.amenities[0].listItems.map((amenity, idx) => {
-                        return (
-                          <div className="m-5" key={idx}>
-                            <h6 className="font-bold uppercase">
-                              {amenity.heading}
-                            </h6>
-                            {amenity.listItems.map((amenityName, idx) => (
-                              <span className="block" key={idx}>
-                                {amenityName}
-                              </span>
-                            ))}
-                          </div>
-                        );
-                      })}
+                    <div>
+                      <h3 className="text-xl font-bold">Offers</h3>
                     </div>
                   </div>
-                  <div className="mt-2">
-                    <h6 className="text-lg font-medium leading-6 text-gray-900 mt-5">
-                      Available Rooms
-                    </h6>
-                    <>
-                      <table className="min-w-full table-fixed divide-y divide-gray-300">
-                        <thead className="bg-gray-50">
-                          <tr>
-                            <th
-                              scope="col"
-                              className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                            ></th>
-                            <th
-                              scope="col"
-                              className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                            >
-                              Accommodation Type
-                            </th>
-                            <th
-                              scope="col"
-                              className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                            >
-                              Sleeps
-                            </th>
-                            <th
-                              scope="col"
-                              className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                            >
-                              Price
-                            </th>
-                            <th
-                              scope="col"
-                              className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                            ></th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200 bg-white">
-                          {hotel.roomsAndRates.rooms.map((room, idx) => (
-                            <tr key={idx}>
-                              <td>
-                                <div
-                                  className="bg-black h-10 w-10 m-5 bg-center bg-cover cursor-pointer"
-                                  style={{
-                                    backgroundImage: `url('${room.images[0].thumbnailUrl}')`,
-                                  }}
-                                  onClick={() => {
-                                    setModalImages(room.images);
-                                    setOpenImageModal(!openImageModal);
-                                  }}
-                                ></div>
-                              </td>
-                              <td>{room.name}</td>
-                              <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                {room.maxOccupancy?.total}
-                              </td>
-                              <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                {room.ratePlans[0].price.current}
-                              </td>
-                              <td className="whitespace-nowrap px-3 py-4 text-sm text-white">
-                                <button
-                                  className="bg-blue-600 p-2"
-                                  onClick={() => {
-                                    setSelectedRoom(room);
-                                    setOpenRoomModal(true);
-                                  }}
-                                >
-                                  Book
-                                </button>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </>
+                );
+              }
+            })}
+            {hotel.sections.map((section) => {
+              if (section.__typename === "AppPresentation_PoiHeroStandard") {
+                return (
+                  <div className="flex flex-col p-5 items-center grow">
+                    {section.albumPhotos ? (
+                      <>
+                        <div
+                          className="bg-blue-300 h-72 w-full m-2 rounded-2xl relative"
+                          style={{
+                            backgroundImage: `url('${section.albumPhotos[
+                              selectedImage
+                            ].data.photoSizeDynamic.urlTemplate
+                              .replace(new RegExp("{width}"), "1000")
+                              .replace(new RegExp("{height}"), "1000")}')`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                          }}
+                        >
+                          <div
+                            className="bg-black h-16 w-16 absolute top-[41%] rounded-2xl left-0"
+                            onClick={() =>
+                              selectedImage > 0
+                                ? setSelectedImage(selectedImage - 1)
+                                : null
+                            }
+                          ></div>
+                          <div
+                            className="bg-black h-16 w-16 absolute top-[41%] rounded-2xl right-0"
+                            onClick={() =>
+                              selectedImage <
+                              hotel.sections[0].albumPhotos!.length - 1
+                                ? setSelectedImage(selectedImage + 1)
+                                : null
+                            }
+                          ></div>
+                        </div>
+                        <div className="h-20 w-96 flex overflow-x-scroll m-2">
+                          {section.albumPhotos.map((image, idx) => {
+                            return (
+                              <div
+                                className="h-full w-24 mx-2 shrink-0 rounded-2xl"
+                                style={{
+                                  backgroundImage: `url('${image.data.photoSizeDynamic.urlTemplate
+                                    .replace(new RegExp("{width}"), "1000")
+                                    .replace(
+                                      new RegExp("{height}"),
+                                      "1000"
+                                    )}')`,
+                                  backgroundSize: "cover",
+                                  backgroundPosition: "center",
+                                }}
+                                onClick={() => setSelectedImage(idx)}
+                              ></div>
+                            );
+                          })}
+                        </div>
+                      </>
+                    ) : null}
                   </div>
-                </div>
+                );
+              }
+            })}
+          </div>
+          <div className="mt-5 p-5 shadow grid grid-cols-3 gap-8">
+            <div className="col-span-2">
+              <div className="p-5 bg-white mb-5 rounded-2xl shadow">
+                <h2 className="text-3xl font-bold mb-5">About</h2>
+                {hotel.sections.map((section) => {
+                  if (section.__typename === "AppPresentation_PoiAbout") {
+                    return <p>{section.about}</p>;
+                  }
+                })}
+              </div>
+              <div className="p-5 bg-white mb-5 rounded-2xl shadow">
+                <h2 className="text-3xl font-bold mb-5">Location</h2>
+                <span>Location Address</span>
+                {hotel.sections.map((section) => {
+                  if (
+                    section.__typename === "AppPresentation_StaticMapSection"
+                  ) {
+                    return (
+                      <div className="mt-5">
+                        <iframe
+                          className="w-full"
+                          height="450"
+                          style={{ border: "0" }}
+                          loading="lazy"
+                          allowFullScreen
+                          src={`https://www.google.com/maps/embed/v1/place?q=${section.anchor?.geoPoint.latitude},+${section.anchor?.geoPoint.longitude}&key=AIzaSyCl3SJGil6I1PFVm-tdautynTV4TYExj6Y`}
+                        ></iframe>
+                      </div>
+                    );
+                  }
+                })}
+              </div>
+              <div className="p-5 bg-white mb-5 rounded-2xl shadow">
+                <h2 className="text-3xl font-bold mb-5">Reviews</h2>
               </div>
             </div>
+            <div className="bg-black  rounded-2xl shadow"></div>
           </div>
-          {openRoomModal && (
-            <RoomModal
-              setOpenRoomModal={setOpenRoomModal}
-              room={selectedRoom}
-            />
-          )}
           {addToTripModal && (
             <AddToTripModal
               setAddToTripModal={setAddToTripModal}
               id={id}
               type="HOTEL"
-              name={hotel.name}
-              address={hotel.address.fullAddress}
+              name={
+                hotel.sections.filter(
+                  (section) =>
+                    section.__typename === "AppPresentation_PoiOverview"
+                )[0].name
+              }
+              address={
+                hotel.sections.filter(
+                  (section) =>
+                    section.__typename === "AppPresentation_PoiLocation"
+                )[0]?.address?.address || " "
+              }
             />
           )}
         </div>

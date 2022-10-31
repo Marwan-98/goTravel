@@ -36,7 +36,7 @@ export const lodgesListbox = {
           params: { query: query, currency: "USD", locale: "en_US" },
           headers: {
             "X-RapidAPI-Key":
-              "56b9557de5msh43c2654c5ab3bf0p137f1bjsn275bc3e4b597",
+              "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
             "X-RapidAPI-Host": "hotels-com-provider.p.rapidapi.com",
           },
         }
@@ -62,7 +62,7 @@ export const locationsListbox = {
         params: { query: query, lang: "en_US", units: "km" },
         headers: {
           "X-RapidAPI-Key":
-            "56b9557de5msh43c2654c5ab3bf0p137f1bjsn275bc3e4b597",
+            "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
           "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
         },
       })
@@ -84,6 +84,21 @@ export const locationsListbox = {
       })
       .catch((error) => {
         console.error(error);
+      });
+  },
+};
+
+export const usersListbox = {
+  data: async (query: string) => {
+    return axios
+      .get("/api/getUsers", {
+        headers: {
+          email: query,
+        },
+      })
+      .then((res) => {
+        const users = res.data.map((user) => [user.email, user.id]);
+        return users;
       });
   },
 };

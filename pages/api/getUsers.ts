@@ -3,17 +3,15 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../utils/prismaClient";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { user } = req.headers;
-  const trips = await prisma.trip.findMany({
+  const { email } = req.headers;
+  const findUsers = await prisma.travelUser.findMany({
     where: {
-      user: {
-        some: {
-          id: Number(user),
-        },
+      email: {
+        contains: String(email),
       },
     },
   });
-  return res.status(200).json(trips);
+  return res.status(200).json(findUsers);
 };
 
 export default handler;

@@ -1,17 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { addDays, format, startOfToday } from "date-fns";
+import { add, addDays, format, startOfToday } from "date-fns";
 import { User } from "../../types/User";
 
 type initialState = {
   user: User | null;
   startDate: string;
-  endDate: string | null;
+  endDate: string;
 };
 
 const initialState: initialState = {
   user: null,
   startDate: format(startOfToday(), "yyyy-MM-dd"),
-  endDate: null,
+  endDate: format(add(startOfToday(), { days: 1 }), "yyyy-MM-dd"),
 };
 
 const userSlice = createSlice({

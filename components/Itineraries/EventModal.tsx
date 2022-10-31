@@ -28,7 +28,6 @@ const EventModal = ({
       time: "",
     },
     onSubmit: (values) => {
-      console.log(values);
       axios
         .post("/api/addEvent", {
           values,

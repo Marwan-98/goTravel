@@ -9,7 +9,6 @@ import CloseButton from "../constants/CloseButton";
 const AddToTripModal = ({ setAddToTripModal, id, type, name, address }) => {
   const dispatch = useDispatch();
 
-  console.log(id, type);
   const user = useAppSelector((state) => state.user.user);
   const hotel = useAppSelector((state) => state.hotels.hotel);
   const trips = useAppSelector((state) => state.itinerary.trips);

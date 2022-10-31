@@ -1,6 +1,5 @@
 export const styles = {
-  input:
-    "block px-5 my-1 h-11 w-full border border-gray-300 shadow-sm sm:text-sm",
+  input: "block p-7 my-1 h-11 w-full border-none sm:text-sm rounded-full",
   item: "p-2",
   highlightedItem: "bg-neutral-800 cursor-pointer rounded-md p-2",
   listbox: "bg-neutral-900 w-full text-slate-50 rounded-md",

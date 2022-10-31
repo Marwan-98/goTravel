@@ -11,18 +11,37 @@ import { RiArrowDropDownLine, RiArrowDropRightLine } from "react-icons/ri";
 import DayEvents from "../../components/Itineraries/DayEvents";
 import { AiOutlinePlus } from "react-icons/ai";
 import EventModal from "../../components/Itineraries/EventModal";
+import { BsPlusLg } from "react-icons/bs";
+import AddTraveler from "../../components/Itineraries/AddTraveler";
+import ChatModal from "../../components/Itineraries/ChatModal";
+import { useSockets } from "../../context/socket.context";
+import EVENTS from "../../config/events";
 
 const Itinerary = () => {
   const trip = useAppSelector((state) => state.itinerary.trip);
   const [showEventModal, setShowEventModal] = useState(false);
+  const [showAddTravelerModal, setShowAddTravelerModal] = useState(false);
   const [selectedDay, setSelectedDay] = useState(0);
+  const [showChatModal, setShowChatModal] = useState(false);
 
   const router = useRouter();
   const { id } = router.query;
 
+  const { socket, roomId } = useSockets();
+
   const dispatch = useDispatch();
+
   useEffect(() => {
-    if (router.isReady)
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (router.isReady) {
+      if (id !== roomId) {
+        socket.emit(EVENTS.CLIENT.JOIN_ROOM, id);
+      }
       axios
         .get("/api/getTrip", {
           headers: {
@@ -31,12 +50,44 @@ const Itinerary = () => {
         })
         .then((res) => dispatch(setTrip(res.data)))
         .catch((err) => console.log(err));
-  }, [router.isReady]);
+    }
+  }, [router]);
+
   return (
     <Layout>
       <>
-        <div>
+        <div className="mx-10">
           <h2 className="text-3xl uppercase font-bold my-2">{trip?.name}</h2>
+          <div>
+            <h3 className="text-2xl font-bold my-6">Members</h3>
+            <div className="flex items-center px-5">
+              {trip?.user.map((user, idx) => (
+                <div className="mx-5" key={idx}>
+                  <div className="h-16 w-16 rounded-full bg-black"></div>
+                  <span>
+                    {user.firstName} {user.lastName}
+                  </span>
+                </div>
+              ))}
+              <button
+                className="mx-5 flex flex-col justify-center items-center cursor-pointer"
+                onClick={() => setShowAddTravelerModal(true)}
+              >
+                <div className="h-16 w-16 rounded-full border border-dashed border-4 flex items-center justify-center">
+                  <BsPlusLg />
+                </div>
+                <span>Add Traveler</span>
+              </button>
+              <div className="grow text-end">
+                <button
+                  className="bg-red-500 font-bold text-white p-2 rounded-2xl"
+                  onClick={() => setShowChatModal(true)}
+                >
+                  Group Chat
+                </button>
+              </div>
+            </div>
+          </div>
           <div>
             <h3 className="text-2xl font-bold my-6">Days</h3>
             <ul>
@@ -122,6 +173,13 @@ const Itinerary = () => {
             selectedDay={selectedDay}
           />
         )}
+        {showAddTravelerModal && (
+          <AddTraveler
+            setShowAddTravelerModal={setShowAddTravelerModal}
+            tripId={id}
+          />
+        )}
+        {showChatModal && <ChatModal setShowChatModal={setShowChatModal} />}
       </>
     </Layout>
   );

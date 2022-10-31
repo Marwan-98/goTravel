@@ -3646,7 +3646,6 @@
 //   });
 // }
 
-// console.log(results);
 // export default results;
 
 // const data2 = {

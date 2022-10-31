@@ -47,7 +47,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
   const trips = await prisma.trip.findMany({
     where: {
-      userId: user,
+      user: {
+        some: {
+          id: Number(user),
+        },
+      },
     },
     include: {
       hotel: true,

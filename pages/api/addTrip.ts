@@ -3,13 +3,16 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../utils/prismaClient";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { values, duration } = req.body;
-  console.log(values, duration);
+  const { values, duration, user } = req.body;
 
   const newTrip = await prisma.trip.create({
     data: {
       name: values.name,
-      userId: values.user,
+      user: {
+        connect: {
+          id: Number(values.user),
+        },
+      },
     },
   });
 
@@ -34,7 +37,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const allTrips = await prisma.trip.findMany({
     where: {
-      userId: values.user,
+      user: {
+        some: {
+          id: Number(values.user),
+        },
+      },
     },
   });
 

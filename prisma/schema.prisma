@@ -18,6 +18,7 @@ model travelUser {
   restaurant restaurant[]
   attraction attraction[]
   trips      trip[]
+  messages   message[]
 }
 
 model hotel {
@@ -66,8 +67,8 @@ model trip {
   attraction attraction[]
   restaurant restaurant[]
   days       day[]
-  userId     Int
-  user       travelUser   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user       travelUser[]
+  messages   message[]
 }
 
 model day {
@@ -85,4 +86,14 @@ model event {
   time    String
   dayId   Int
   day     day    @relation(fields: [dayId], references: [id])
+}
+
+model message {
+  id       Int        @id @default(autoincrement())
+  message  String
+  dateSent DateTime
+  userId   Int
+  tripId   Int
+  trip     trip       @relation(fields: [tripId], references: [id])
+  user     travelUser @relation(fields: [userId], references: [id])
 }

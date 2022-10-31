@@ -10,6 +10,7 @@ import { setRestaurant } from "../../redux/features/restaurantSlice";
 import { Section } from "../../types/RestaurantResult";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import AddToTripModal from "../../components/Hotels/AddToTripModal";
+import Link from "next/link";
 
 const Restaurant = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const Restaurant = () => {
   const user = useAppSelector((state) => state.user.user);
   const trips = useAppSelector((state) => state.itinerary.trips);
   const restaurant = useAppSelector((state) => state.restaurants.restaurant);
+  const [selectedImage, setSelectedImage] = useState(0);
 
   const router = useRouter();
   const { id, reservationTime, partySize } = router.query;
@@ -37,12 +39,16 @@ const Restaurant = () => {
           {
             headers: {
               "X-RapidAPI-Key":
-                "56b9557de5msh43c2654c5ab3bf0p137f1bjsn275bc3e4b597",
+                "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
               "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
           }
         )
-        .then((res) => dispatch(setRestaurant(res.data)));
+        .then((res) =>
+          dispatch(
+            setRestaurant(res.data.data.AppPresentation_queryAppDetailV2[0])
+          )
+        );
     }
   }, [router]);
 
@@ -65,162 +71,145 @@ const Restaurant = () => {
     }
   }, [trips, router]);
 
-  console.log(restaurant);
   return (
     <Layout>
-      <div>
-        {restaurant &&
-          restaurant.data.AppPresentation_queryAppDetailV2[0].sections.map(
-            (section: Section, idx: number) => {
-              switch (section.__typename) {
-                case "AppPresentation_PoiHeroStandard":
-                  return (
-                    <div className="h-96 w-full bg-black flex" key={idx}>
-                      <div
-                        className="h-full border border-white sm:w-1/3 md:w-1/3 w-full bg-red-500 bg-cover bg-center"
-                        style={{
-                          backgroundImage: section.albumPhotos
-                            ? `url('${section.albumPhotos[0].data.photoSizeDynamic.urlTemplate
-                                .replace(new RegExp("{width}"), "1000")
-                                .replace(new RegExp("{height}"), "1000")}')`
-                            : `url('../no-photo.png')`,
-                        }}
-                      ></div>
-                      <div className="h-full grow md:w-1/5 w-1/2 border border-white bg-blue-500 flex flex-col hidden sm:block">
+      {restaurant ? (
+        <div className="bg-gray-100 min-h-full">
+          <div className="flex bg-white shadow w-full">
+            <div className="p-5 flex flex-col w-1/2 justify-around">
+              <div className="flex items-center">
+                <h2 className="text-3xl font-bold">
+                  {restaurant.sections[2].name}
+                </h2>
+                <span
+                  className="text-3xl cursor-pointer px-5"
+                  onClick={() => setAddToTripModal(true)}
+                >
+                  {liked ? (
+                    <AiFillHeart className="text-red-600" />
+                  ) : (
+                    <AiOutlineHeart />
+                  )}
+                </span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Contact</h3>
+                <div className="flex flex-col py-5">
+                  {restaurant.sections[2]?.contactLinks?.map((link) =>
+                    link.link.externalUrl ? (
+                      <Link href={link.link.externalUrl}>
+                        <span className="my-2">
+                          {decodeURI(link.link.externalUrl)}
+                        </span>
+                      </Link>
+                    ) : null
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col p-5 items-center grow">
+              {restaurant.sections[0].albumPhotos ? (
+                <>
+                  <div
+                    className="bg-blue-300 h-72 w-full m-2 rounded-2xl relative"
+                    style={{
+                      backgroundImage: `url('${restaurant.sections[0].albumPhotos[
+                        selectedImage
+                      ].data.photoSizeDynamic.urlTemplate
+                        .replace(new RegExp("{width}"), "1000")
+                        .replace(new RegExp("{height}"), "1000")}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  >
+                    <div
+                      className="bg-black h-16 w-16 absolute top-[41%] rounded-2xl left-0"
+                      onClick={() =>
+                        selectedImage > 0
+                          ? setSelectedImage(selectedImage - 1)
+                          : null
+                      }
+                    ></div>
+                    <div
+                      className="bg-black h-16 w-16 absolute top-[41%] rounded-2xl right-0"
+                      onClick={() =>
+                        selectedImage <
+                        restaurant.sections[0].albumPhotos!.length - 1
+                          ? setSelectedImage(selectedImage + 1)
+                          : null
+                      }
+                    ></div>
+                  </div>
+                  <div className="h-20 w-96 flex overflow-x-scroll m-2">
+                    {restaurant.sections[0].albumPhotos.map((image, idx) => {
+                      return (
                         <div
-                          className="h-1/2 w-full border border-white bg-red-500 bg-cover bg-center"
+                          className="h-full w-24 mx-2 shrink-0 rounded-2xl"
                           style={{
-                            backgroundImage: section.albumPhotos
-                              ? `url('${section.albumPhotos[1].data.photoSizeDynamic.urlTemplate
-                                  .replace(new RegExp("{width}"), "1000")
-                                  .replace(new RegExp("{height}"), "1000")}')`
-                              : `url('../no-photo.png')`,
+                            backgroundImage: `url('${image.data.photoSizeDynamic.urlTemplate
+                              .replace(new RegExp("{width}"), "1000")
+                              .replace(new RegExp("{height}"), "1000")}')`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
                           }}
+                          onClick={() => setSelectedImage(idx)}
                         ></div>
-                        <div
-                          className="h-1/2 w-full border border-white bg-red-500 bg-cover bg-center"
-                          style={{
-                            backgroundImage: section.albumPhotos
-                              ? `url('${section.albumPhotos[2].data.photoSizeDynamic.urlTemplate
-                                  .replace(new RegExp("{width}"), "1000")
-                                  .replace(new RegExp("{height}"), "1000")}')`
-                              : `url('../no-photo.png')`,
-                          }}
-                        ></div>
-                      </div>
-                      <div
-                        className="h-full border border-white w-1/3 bg-red-500 hidden md:block bg-cover bg-center"
-                        style={{
-                          backgroundImage: section.albumPhotos
-                            ? `url('${section.albumPhotos[3].data.photoSizeDynamic.urlTemplate
-                                .replace(new RegExp("{width}"), "1000")
-                                .replace(new RegExp("{height}"), "1000")}')`
-                            : `url('../no-photo.png')`,
-                        }}
-                      ></div>
-                      <div className="h-full w-1/5 border border-white bg-blue-500 flex flex-col hidden md:block">
-                        <div
-                          className="h-1/2 w-full border border-white bg-red-500 bg-cover bg-center"
-                          style={{
-                            backgroundImage: section.albumPhotos
-                              ? `url('${section.albumPhotos[4].data.photoSizeDynamic.urlTemplate
-                                  .replace(new RegExp("{width}"), "1000")
-                                  .replace(new RegExp("{height}"), "1000")}')`
-                              : `url('../no-photo.png')`,
-                          }}
-                        ></div>
-                        <div
-                          className="h-1/2 w-full border border-white bg-red-500 bg-cover bg-center"
-                          style={{
-                            backgroundImage: section.albumPhotos
-                              ? `url('${section.albumPhotos[5].data.photoSizeDynamic.urlTemplate
-                                  .replace(new RegExp("{width}"), "1000")
-                                  .replace(new RegExp("{height}"), "1000")}')`
-                              : `url('../no-photo.png')`,
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  );
-                case "AppPresentation_PoiOverview":
-                  return (
-                    <div key={idx}>
-                      <div className="flex items-center mt-5">
-                        <h2 className="text-2xl uppercase font-bold">
-                          {section.name}
-                        </h2>
-                        <button
-                          onClick={() =>
-                            liked ? null : setAddToTripModal(true)
-                          }
-                          className="px-5"
-                        >
-                          {liked ? (
-                            <AiFillHeart className="text-2xl text-red-500" />
-                          ) : (
-                            <AiOutlineHeart className="text-2xl" />
-                          )}
-                        </button>
-                      </div>
-                      <span className="mt-2 text-gray-500">
-                        {section.tags?.text}
-                      </span>
-                    </div>
-                  );
-                case "AppPresentation_PoiAbout":
-                  return (
-                    <div className="mt-2" key={idx}>
-                      <p className="text-lg">{section.about}</p>
-                    </div>
-                  );
-                case "AppPresentation_PoiLocation":
-                  return (
-                    <div className="mt-2" key={idx}>
-                      <h3 className="text-1xl uppercase font-bold">Location</h3>
-                      <p className="mt-2 text-lg">{section.address?.address}</p>
-                    </div>
-                  );
-                case "AppPresentation_StaticMapSection":
-                  return (
-                    <iframe
-                      key={idx}
-                      className="w-full lg:w-[600px]"
-                      height="450"
-                      style={{ border: "0" }}
-                      loading="lazy"
-                      allowFullScreen
-                      src={`https://www.google.com/maps/embed/v1/place?q=${
-                        section.anchor!.geoPoint.latitude
-                      },+${
-                        section.anchor!.geoPoint.longitude
-                      }&key=AIzaSyCl3SJGil6I1PFVm-tdautynTV4TYExj6Y`}
-                    ></iframe>
-                  );
-                default:
-                  break;
+                      );
+                    })}
+                  </div>
+                </>
+              ) : null}
+            </div>
+          </div>
+          <div className="mt-5 p-5 shadow grid grid-cols-3 gap-8">
+            <div className="col-span-2">
+              <div className="p-5 bg-white mb-5 rounded-2xl shadow">
+                <h2 className="text-3xl font-bold mb-5">About</h2>
+                <p>{restaurant.sections[8]?.about}</p>
+              </div>
+              <div className="p-5 bg-white mb-5 rounded-2xl shadow">
+                <h2 className="text-3xl font-bold mb-5">Location</h2>
+                <span>Location Address</span>
+                <div className="mt-5">
+                  <iframe
+                    className="w-full"
+                    height="450"
+                    style={{ border: "0" }}
+                    loading="lazy"
+                    allowFullScreen
+                    src={`https://www.google.com/maps/embed/v1/place?q=${restaurant.sections[14]?.anchor?.geoPoint.latitude},+${restaurant.sections[14]?.anchor?.geoPoint.longitude}&key=AIzaSyCl3SJGil6I1PFVm-tdautynTV4TYExj6Y`}
+                  ></iframe>
+                </div>
+              </div>
+              <div className="p-5 bg-white mb-5 rounded-2xl shadow">
+                <h2 className="text-3xl font-bold mb-5">Reviews</h2>
+              </div>
+            </div>
+            <div className="bg-black  rounded-2xl shadow"></div>
+          </div>
+          {addToTripModal && (
+            <AddToTripModal
+              setAddToTripModal={setAddToTripModal}
+              id={id}
+              type="RESTAURANT"
+              name={
+                restaurant?.sections.filter(
+                  (section) =>
+                    section.__typename === "AppPresentation_PoiOverview"
+                )[0].name
               }
-            }
+              address={
+                restaurant?.sections.filter(
+                  (section) =>
+                    section.__typename === "AppPresentation_PoiLocation"
+                )[0]?.address?.address || " "
+              }
+            />
           )}
-        {addToTripModal && (
-          <AddToTripModal
-            setAddToTripModal={setAddToTripModal}
-            id={id}
-            type="RESTAURANT"
-            name={
-              restaurant?.data.AppPresentation_queryAppDetailV2[0].sections.filter(
-                (section) =>
-                  section.__typename === "AppPresentation_PoiOverview"
-              )[0].name
-            }
-            address={
-              restaurant?.data.AppPresentation_queryAppDetailV2[0].sections.filter(
-                (section) =>
-                  section.__typename === "AppPresentation_PoiLocation"
-              )[0]?.address?.address || " "
-            }
-          />
-        )}
-      </div>
+        </div>
+      ) : (
+        <div></div>
+      )}
     </Layout>
   );
 };

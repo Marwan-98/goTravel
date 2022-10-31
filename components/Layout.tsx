@@ -24,6 +24,10 @@ import { useDispatch } from "react-redux";
 import { auth } from "../utils/authentication";
 import { setTrips } from "../redux/features/ItinerarySlice";
 import { AiOutlineTool } from "react-icons/ai";
+import InnerLayout from "./InnerLayout";
+import { useSockets } from "../context/socket.context";
+import EVENTS from "../config/events";
+import { useUser } from "../context/AuthContext";
 
 const navigation = [
   { name: "Explore", href: "/", icon: MdOutlineExplore },
@@ -39,45 +43,52 @@ function classNames(...classes: string[]) {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const { user } = useUser();
+  const { socket, roomId, rooms } = useSockets();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const user = useAppSelector((state) => state.user.user);
+  const appUser = useAppSelector((state) => state.user.user);
+  const trips = useAppSelector((state) => state.itinerary.trips);
   const dispatch = useDispatch();
 
   const router = useRouter();
 
   useEffect(() => {
-    auth().then((res) => {
-      if (!res) {
-        dispatch(setUser(null));
-        router.push("/signIn");
-      } else if (res && !user) {
-        axios
-          .get("/api/getUser", {
-            headers: {
-              email: res!.user.email,
-            },
-          })
-          .then((res) => {
-            dispatch(setUser(res.data));
-          });
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    user &&
+    if (!user) {
+      dispatch(setUser(null));
+      router.push("/signIn");
+    } else if (user && !appUser) {
       axios
-        .get("/api/getTrips", {
+        .get("/api/getUser", {
           headers: {
-            user: user.id,
+            email: user!.email,
           },
         })
         .then((res) => {
-          console.log(res.data);
-          dispatch(setTrips(res.data));
+          dispatch(setUser(res.data));
         });
-  }, [user]);
+    }
+  }, []);
+
+  useEffect(() => {
+    appUser &&
+      axios
+        .get("/api/getTrips", {
+          headers: {
+            user: appUser.id,
+          },
+        })
+        .then((res) => {
+          dispatch(setTrips(res.data));
+        })
+        .then(() => {
+          trips.map((trip) => {
+            const roomName = trip.name;
+            const roomId = trip.id;
+            socket.emit(EVENTS.CLIENT.CREATE_ROOM, { roomName, roomId });
+          });
+        });
+  }, [appUser]);
 
   const signOut = async () => {
     const { error } = await supabase.auth.signOut();
@@ -87,8 +98,8 @@ const Layout = ({ children }: LayoutProps) => {
   };
 
   return (
-    user && (
-      <div>
+    appUser && (
+      <div className="w-screen">
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
             as="div"
@@ -149,27 +160,6 @@ const Layout = ({ children }: LayoutProps) => {
                         alt="Your Company"
                       />
                     </div>
-                    <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-                      <Link href="#" className="group block flex-shrink-0">
-                        <div className="flex items-center">
-                          <div>
-                            <img
-                              className="inline-block h-10 w-10 rounded-full"
-                              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt=""
-                            />
-                          </div>
-                          <div className="ml-3">
-                            <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                              {user?.firstName} {user?.lastName}
-                            </p>
-                            <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                              View profile
-                            </p>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {navigation.map((item) => (
                         <a
@@ -217,24 +207,6 @@ const Layout = ({ children }: LayoutProps) => {
                   alt="Your Company"
                 />
               </div>
-              <div className="flex flex-shrink-0 border-gray-200 p-4">
-                <a href="#" className="group block w-full flex-shrink-0">
-                  <div className="flex items-center justify-center">
-                    <div>
-                      <img
-                        className="inline-block h-9 w-9 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                        {user?.firstName} {user?.lastName}
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
@@ -279,7 +251,7 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col md:pl-64">
+        <div className="flex flex-1 flex-col md:pl-64 w-full">
           <div className="sticky top-0 z-10 bg-white pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
             <button
               type="button"
@@ -290,8 +262,8 @@ const Layout = ({ children }: LayoutProps) => {
               <MdOutlineMenu className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <main className="flex-1">
-            <div className="py-6 px-10">{children}</div>
+          <main className="flex h-screen w-full relative text-[#2B2945] overflow-x-hidden">
+            <div className="py-6 h-full w-full relative">{children}</div>
           </main>
         </div>
       </div>

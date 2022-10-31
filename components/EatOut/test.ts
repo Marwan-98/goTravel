@@ -20980,3 +20980,7251 @@ export const restaurant = {
     ],
   },
 };
+
+export const attractionTest = {
+  __typename: "AppPresentation_QueryAppDetailResponse",
+  container: {
+    __typename: "AppPresentation_DetailResponseContainer",
+    navTitle: "The Museum of Egyptian Antiquities",
+    isSaved: false,
+    saveId: {
+      __typename: "Trips_ReferenceV2",
+      id: "308825",
+      type: "location",
+    },
+    shareInfo: {
+      __typename: "AppPresentation_ShareInfo",
+      emailBody: {
+        __typename: "AppPresentation_HtmlString",
+        htmlString:
+          '<html><a href="https://www.tripadvisor.com/Attraction_Review-g294201-d308825-Reviews-The_Museum_of_Egyptian_Antiquities-Cairo_Cairo_Governorate.html">https://www.tripadvisor.com/Attraction_Review-g294201-d308825-Reviews-The_Museum_of_Egyptian_Antiquities-Cairo_Cairo_Governorate.html</a><br /><br />Download the <a href="https://www.tripadvisor.com/apps">Tripadvisor app</a> now to check it out and discover more places that travelers like you recommend.</html>',
+      },
+      emailSubject: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Check out The Museum of Egyptian Antiquities on Tripadvisor",
+        debugValueKey: null,
+      },
+      nonEmailMessage: {
+        __typename: "AppPresentation_LocalizedString",
+        string:
+          "https://www.tripadvisor.com/Attraction_Review-g294201-d308825-Reviews-The_Museum_of_Egyptian_Antiquities-Cairo_Cairo_Governorate.html",
+        debugValueKey: null,
+      },
+      webUrl:
+        "https://www.tripadvisor.com/Attraction_Review-g294201-d308825-Reviews-The_Museum_of_Egyptian_Antiquities-Cairo_Cairo_Governorate.html",
+    },
+  },
+  skippedSections: [],
+  sections: [
+    {
+      __typename: "AppPresentation_PoiHeroStandard",
+      trackingTitle: "HeroMediaSection_HERO_MEDIA",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_0","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "HeroMediaSection_HERO_MEDIA",
+      photoCount: 12498,
+      galleryLink: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "MediaGallery",
+          url: "/MediaGallery?locationId=308825&geo=308825&cfg=ar",
+          nonCanonicalUrl: "/MediaGallery?locationId=308825&geo=308825&cfg=ar",
+          typedParams: {
+            __typename: "Routing_MediaGalleryParameters",
+            albumId: null,
+            locationIdStr: "308825",
+            galleryConfig: "ar",
+            offset: null,
+          },
+        },
+        webviewRoute: null,
+        text: null,
+        accessibilityString: null,
+        trackingContext: "server_mediaGallery",
+      },
+      sponsoredBy: null,
+      albumPhotos: [
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 163740569,
+            caption: "во дворе каирского музея",
+            publishedDateTime: "2015-12-14T16:48:33.703Z",
+            thumbsUpVotes: 4,
+            uploadDateTime: "2015-12-14T16:48:33.703Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by Natasha0505",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 1333,
+              maxWidth: 2000,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/c2/7b/99/caption.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/c2/7b/99/caption.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/09/c2/7b/99/caption.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/09/c2/7b/99/caption.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/09/c2/7b/99/caption.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/09/c2/7b/99/caption.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 682,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/09/c2/7b/99/caption.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 2000,
+                height: 1333,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/09/c2/7b/99/caption.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600780,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.351Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.351Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0c/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0c/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0c/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600779,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.305Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.305Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0b/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0b/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0b/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600778,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.258Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.258Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0a/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0a/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/0a/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600777,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.208Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.208Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/09/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/09/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/09/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600776,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.161Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.161Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/08/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/08/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/08/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600775,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.097Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.097Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/07/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/07/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/07/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600774,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:52.035Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:52.035Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/06/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/06/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/06/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600773,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:51.974Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:51.974Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/05/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/05/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1f/05/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+        {
+          __typename: "AppPresentation_Media",
+          data: {
+            __typename: "Media_PhotoResult",
+            id: 649600732,
+            caption: "Museo delle antichità egizie",
+            publishedDateTime: "2022-10-28T09:38:28.626Z",
+            thumbsUpVotes: 0,
+            uploadDateTime: "2022-10-28T09:38:28.626Z",
+            attribution: {
+              __typename: "Media_Attribution",
+              text: "Traveler photo submitted by PPCI-BG",
+            },
+            photoSizeDynamic: {
+              __typename: "Media_PhotoResultSizeDynamic",
+              maxHeight: 800,
+              maxWidth: 1200,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1e/dc/museo-delle-antichita.jpg?w={width}&h={height}&s=1",
+            },
+            sizes: [
+              {
+                __typename: "Media_MediaSize",
+                width: 0,
+                height: 0,
+                url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b8/1e/dc/museo-delle-antichita.jpg?w=100&h=100&s=1",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 50,
+                height: 50,
+                url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 150,
+                height: 150,
+                url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 180,
+                height: 200,
+                url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 250,
+                height: 167,
+                url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 550,
+                height: 367,
+                url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1024,
+                height: 683,
+                url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+              {
+                __typename: "Media_MediaSize",
+                width: 1200,
+                height: 800,
+                url: "https://media-cdn.tripadvisor.com/media/photo-o/26/b8/1e/dc/museo-delle-antichita.jpg",
+              },
+            ],
+          },
+        },
+      ],
+      heroContent: [
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+        {
+          __typename: "AppPresentation_Media",
+        },
+      ],
+      labels: [],
+      clusterId: "HERO_MEDIA",
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_HERO_MEDIA",
+      spacing: "spacing-03",
+      clusterId: "HERO_MEDIA",
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiOverview",
+      locationId: {
+        __typename: "AppPresentation_LocationId",
+        id: "308825",
+        placeType: "attraction",
+      },
+      trackingTitle: "AttractionOverviewNativeSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_1","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "AttractionOverviewNativeSection",
+      name: "The Museum of Egyptian Antiquities",
+      numberReviews: 12672,
+      labels: null,
+      distance: null,
+      rankingDetailsV2: {
+        __typename: "AppPresentation_HtmlLink",
+        text: {
+          __typename: "AppPresentation_HtmlString",
+          text: "#1 of 272 things to do in <a>Cairo</a>",
+        },
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "AppList",
+          url: "/AppList-g294201-a_contentType.attraction-a_isList.true.html",
+          nonCanonicalUrl:
+            "/AppList-g294201-a_contentType.attraction-a_isList.true.html",
+          typedParams: {
+            __typename: "Routing_AppListParameters",
+            contentType: "attraction",
+            geoId: 294201,
+            isCollectionView: null,
+            isList: true,
+            isMap: null,
+            isNearby: null,
+            nearLocationId: null,
+            nearLocationType: null,
+            pagee: null,
+            sort: null,
+            sortOrder: null,
+            routingFilters: null,
+          },
+        },
+        trackingContext: "server_rankingDetails_294201",
+      },
+      managementCenterRoute: null,
+      reviewsLink: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "PoiReviewList",
+          url: "/PoiReviewList-d308825-a_contentType.attraction.html",
+          nonCanonicalUrl:
+            "/PoiReviewList-d308825-a_contentType.attraction.html?geo=294201",
+          typedParams: {
+            __typename: "Routing_PoiReviewListParameters",
+            contentType: "attraction",
+            detailId: 308825,
+            routingFilters: null,
+            pagee: null,
+          },
+        },
+        webviewRoute: null,
+        text: null,
+        accessibilityString: null,
+        trackingContext: "server_reviews",
+      },
+      accessibleTags: null,
+      tags: {
+        __typename: "AppPresentation_JoinedLocalizableObjects",
+        text: "Speciality Museums",
+      },
+      ownerStatus: null,
+      rating: 4.5,
+      clusterId: null,
+      contactLinks: [
+        {
+          __typename: "AppPresentation_ContactLink",
+          clickTrackingUrl: null,
+          icon: "internet",
+          link: {
+            __typename: "AppPresentation_ExternalLink",
+            externalUrl:
+              "http://www.facebook.com/pg/EgyptianMuseum09/about/?ref=page_internal",
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "Visit website",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_website",
+          },
+          linkType: "WEBSITE",
+        },
+        {
+          __typename: "AppPresentation_ContactLink",
+          clickTrackingUrl: null,
+          icon: "phone",
+          link: {
+            __typename: "AppPresentation_ExternalLink",
+            externalUrl: "tel:%2B20%20112%20152%200515",
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "Call",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_phone",
+          },
+          linkType: "PHONE",
+        },
+        {
+          __typename: "AppPresentation_ContactLink",
+          clickTrackingUrl: null,
+          icon: null,
+          link: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppUserReview",
+              url: "/AppUserReview?contentType=attraction&contentId=308825&locationId=308825",
+              nonCanonicalUrl:
+                "/AppUserReview?contentType=attraction&contentId=308825&locationId=308825",
+              typedParams: {
+                __typename: "Routing_AppUserReviewParameters",
+                contentId: "308825",
+              },
+            },
+            webviewRoute: null,
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "Write a review",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_writeReview_poi_overview",
+          },
+          linkType: "WRITE_REVIEW",
+        },
+      ],
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection",
+      spacing: "spacing-04",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiCommerceAttraction",
+      trackingTitle: "AttractionCommerceSummarySection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_2","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "AttractionCommerceSummarySection",
+      poiCommerceAttractionPrimary: {
+        __typename: "AppPresentation_PoiCommerceAttractionPrimary",
+        title: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "Tours & experiences",
+          debugValueKey: null,
+        },
+        subTitle: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "Explore different ways to experience this place.",
+          debugValueKey: null,
+        },
+        price: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "from $9.00",
+          debugValueKey: null,
+        },
+        linkV2: {
+          __typename: "AppPresentation_InternalLink",
+          route: {
+            __typename: "Routing_Route",
+            fragment: null,
+            page: "AttractionCommerce",
+            url: "/AttractionCommerce-a_pagee.0?contentType=attraction&contentId=308825&state=tours",
+            nonCanonicalUrl:
+              "/AttractionCommerce-a_pagee.0?contentType=attraction&contentId=308825&state=tours",
+            typedParams: {
+              __typename: "Routing_AttractionCommerceParameters",
+              state: "tours",
+              contentId: "308825",
+              contentType: "attraction",
+              pagee: "0",
+              routingFilters: null,
+            },
+          },
+          webviewRoute: null,
+          text: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "See tour options",
+            debugValueKey: null,
+          },
+          accessibilityString: null,
+          trackingContext: "server_tourPrimary",
+        },
+      },
+      poiCommerceAttractionSecondary: null,
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_1",
+      spacing: "spacing-03",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiHours",
+      trackingTitle: "AttractionOpenHoursNativeSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_3","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "AttractionOpenHoursNativeSection",
+      iconName: "clock",
+      showMore: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "PoiOpenHours",
+          url: "/PoiOpenHours?contentType=attraction&contentId=308825",
+          nonCanonicalUrl:
+            "/PoiOpenHours?contentType=attraction&contentId=308825",
+          typedParams: {
+            __typename: "Routing_PoiOpenHoursParameters",
+            contentId: "308825",
+            contentType: "attraction",
+          },
+        },
+        webviewRoute: null,
+        text: null,
+        accessibilityString: null,
+        trackingContext: "server_fullOpenHours",
+      },
+      text: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Open now",
+        debugValueKey: null,
+      },
+      todaySchedule: [
+        {
+          __typename: "AppPresentation_LocalizedString",
+          string: "9:00 AM - 5:00 PM",
+          debugValueKey: null,
+        },
+      ],
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_2",
+      spacing: "spacing-06",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiAbout",
+      trackingTitle: "AttractionAboutNativeSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_4","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "AttractionAboutNativeSection",
+      sectionTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "About",
+        debugValueKey: null,
+      },
+      about:
+        "This famous museum houses the world’s largest collection of ancient Egyption artifacts (more than 120,000 items on display) featuring the famous Tutankhamun collection with its beautiful gold death mask and sarcophagus and the royal Mummy room, which houses an additional eleven Pharaonic dignitaries.",
+      nullableContent: [
+        {
+          __typename: "AppPresentation_CollapsibleTextSubsection",
+        },
+        {
+          __typename: "AppPresentation_AwardsAboutSubsection",
+          title: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Awards",
+            debugValueKey: null,
+          },
+          awards: [
+            {
+              __typename: "AppPresentation_SimpleAboutAward",
+              awardIcon: "travelers-choice-badge",
+              awardCategory: "BEST_OF_THE_BEST",
+              title: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "Travelers' Choice Best of the Best",
+                debugValueKey: null,
+              },
+              years: "2022",
+              awardDetails: {
+                __typename: "AppPresentation_SimpleAboutAwardDetails",
+                title: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Travelers' Choice Best of the Best",
+                  debugValueKey: null,
+                },
+                description: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string:
+                    "Travelers’ Choice Best of the Best awards the top 1% of businesses based on reviews, ratings, and saves from millions of travelers across the globe.",
+                  debugValueKey: null,
+                },
+              },
+            },
+          ],
+        },
+        {
+          __typename: "AppPresentation_StandaloneInfoSubsection",
+          title: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Suggested duration",
+            debugValueKey: null,
+          },
+          standaloneItem: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "2-3 hours",
+          },
+        },
+      ],
+      showMore: null,
+      tagsSubsection: null,
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_AD_PLACEHOLDER_NATIVE",
+      spacing: "spacing-05",
+      clusterId: "AD_PLACEHOLDER_NATIVE",
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_AdPlaceholderNative",
+      trackingTitle: "AdPlaceholder_NATIVE",
+      trackingKey:
+        '{"adt":"NATIVE","ik":"3af12072-8977-46c8-84ae-925792db24a4_5","sn":"Attraction_Review"}',
+      stableDiffingType: "AdPlaceholder_NATIVE",
+      clusterId: "AD_PLACEHOLDER_NATIVE",
+      adUnitId: "/5349/ta.ta.com.s/af.egypt.cairo",
+      adSizes: ["FLUID", "_300x250"],
+      targetingParams: [
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "country",
+          values: ["294200"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "dest",
+          values: ["casino"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "detail",
+          values: ["308825"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "d",
+          values: ["CAI"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "dregion",
+          values: ["294201"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "o",
+          values: ["DAB"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "oregion",
+          values: ["34172"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "r",
+          values: ["DABCAI"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "geo",
+          values: ["294201"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "geo_ctx",
+          values: ["12028", "12029", "12077", "21827", "21831", "21833"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "hname",
+          values: ["The_Museum_of_Egyptian_Antiquities"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "loctype",
+          values: ["attractions"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "PageType",
+          values: ["Attraction_Review"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "platform",
+          values: ["mobile_app"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "rd",
+          values: ["com"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "region",
+          values: ["3688720"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "attractype",
+          values: ["Specialty_Museums"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "pos",
+          values: ["inline1"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "fluidType",
+          values: ["mobile"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "correlator",
+          values: ["3921418240836357"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "sess",
+          values: ["99D89825191A470D9D932C1A4C981FF8"],
+        },
+      ],
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_3",
+      spacing: "spacing-08",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiLocation",
+      trackingTitle: "AttractionAreaSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_6","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "AttractionAreaSection",
+      sectionTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "The area",
+        debugValueKey: null,
+      },
+      address: {
+        __typename: "AppPresentation_PoiAddress",
+        address:
+          "Midan El Tahrir Geographical Society Building, Cairo 11511 Egypt",
+      },
+      distance: null,
+      showMore: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "PoiArea",
+          url: "/PoiArea?contentType=attraction&contentId=308825",
+          nonCanonicalUrl: "/PoiArea?contentType=attraction&contentId=308825",
+          typedParams: {
+            __typename: "Routing_PoiAreaParameters",
+            contentId: "308825",
+            contentType: "attraction",
+            geoId: null,
+            routingFilters: null,
+          },
+        },
+      },
+      neighborhood: null,
+      gettingThere: {
+        __typename: "AppPresentation_NearbyTransport",
+        sectionTitle: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "How to get there",
+          debugValueKey: null,
+        },
+        transportItems: [
+          {
+            __typename: "AppPresentation_NearbyTransportItem",
+            transitAndTravel: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "Sadat • 4 min walk",
+              debugValueKey: null,
+            },
+          },
+        ],
+      },
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_4",
+      spacing: "spacing-03",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_StaticMapSection",
+      clusterId: null,
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7","mt":"BEST_NEARBY_STATIC","sn":"Attraction_Review"}',
+      trackingTitle: "StaticMapNearbyPoiSection",
+      stableDiffingType: "StaticMapNearbyPoiSection",
+      anchor: {
+        __typename: "AppPresentation_MapPin",
+        trackingKey:
+          '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_9","sn":"Attraction_Review"}',
+        trackingTitle: "StaticMapPinCard_attraction_308825",
+        icon: {
+          __typename: "AppPresentation_MapPinIcon",
+          activeName: "attractions",
+          name: "attractions-fill",
+        },
+        isSaved: false,
+        saveId: {
+          __typename: "Trips_ReferenceV2",
+          id: "308825",
+          type: "location",
+        },
+        geoPoint: {
+          __typename: "AppPresentation_GeoPoint",
+          latitude: 30.046997,
+          longitude: 31.233677,
+        },
+        fallbackIcon: "ATTRACTION",
+      },
+      center: {
+        __typename: "AppPresentation_GeoPoint",
+        latitude: 30.046997,
+        longitude: 31.233677,
+      },
+      pins: [
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_0","sn":"Attraction_Review"}',
+          trackingTitle:
+            "StaticMapPinCard_restaurant_d44b9183-38dd-4873-b618-39aa0f05c3d1",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "restaurants",
+            name: "restaurants-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "13567060",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.045794,
+            longitude: 31.232195,
+          },
+          fallbackIcon: "RESTAURANT",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_1","sn":"Attraction_Review"}',
+          trackingTitle: "StaticMapPinCard_attraction_552476",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "attractions",
+            name: "attractions-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "552476",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.04606,
+            longitude: 31.234583,
+          },
+          fallbackIcon: "ATTRACTION",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_2","sn":"Attraction_Review"}',
+          trackingTitle:
+            "StaticMapPinCard_restaurant_b0bbbdfb-df54-43c2-a1fc-c707fb837381",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "restaurants",
+            name: "restaurants-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "8734329",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.04662,
+            longitude: 31.231953,
+          },
+          fallbackIcon: "RESTAURANT",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_3","sn":"Attraction_Review"}',
+          trackingTitle: "StaticMapPinCard_attraction_15852600",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "attractions",
+            name: "attractions-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "15852600",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.047499,
+            longitude: 31.23548,
+          },
+          fallbackIcon: "ATTRACTION",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_4","sn":"Attraction_Review"}',
+          trackingTitle:
+            "StaticMapPinCard_restaurant_a118b305-f372-40d6-9895-a677a4b35766",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "restaurants",
+            name: "restaurants-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "11768815",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.045912,
+            longitude: 31.232006,
+          },
+          fallbackIcon: "RESTAURANT",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_5","sn":"Attraction_Review"}',
+          trackingTitle: "StaticMapPinCard_attraction_472084",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "attractions",
+            name: "attractions-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "472084",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.04626,
+            longitude: 31.228937,
+          },
+          fallbackIcon: "ATTRACTION",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_6","sn":"Attraction_Review"}',
+          trackingTitle:
+            "StaticMapPinCard_restaurant_c744fb69-ea35-4cc1-a806-c9c0f31b188b",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "restaurants",
+            name: "restaurants-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "8754718",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.046337,
+            longitude: 31.233053,
+          },
+          fallbackIcon: "RESTAURANT",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_7","sn":"Attraction_Review"}',
+          trackingTitle: "StaticMapPinCard_attraction_20317265",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "attractions",
+            name: "attractions-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "20317265",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.04442,
+            longitude: 31.235712,
+          },
+          fallbackIcon: "ATTRACTION",
+        },
+        {
+          __typename: "AppPresentation_MapPin",
+          trackingKey:
+            '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_7_8","sn":"Attraction_Review"}',
+          trackingTitle:
+            "StaticMapPinCard_restaurant_f75fee3f-b286-4634-91db-5c291b5c7a6d",
+          icon: {
+            __typename: "AppPresentation_MapPinIcon",
+            activeName: "restaurants",
+            name: "restaurants-fill",
+          },
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "10059702",
+            type: "location",
+          },
+          geoPoint: {
+            __typename: "AppPresentation_GeoPoint",
+            latitude: 30.04611,
+            longitude: 31.232384,
+          },
+          fallbackIcon: "RESTAURANT",
+        },
+      ],
+      route: {
+        __typename: "Routing_Route",
+        fragment: null,
+        page: "PoiArea",
+        url: "/PoiArea?contentType=attraction&contentId=308825",
+        nonCanonicalUrl: "/PoiArea?contentType=attraction&contentId=308825",
+        typedParams: {
+          __typename: "Routing_PoiAreaParameters",
+          contentId: "308825",
+          contentType: "attraction",
+          geoId: null,
+          routingFilters: null,
+        },
+      },
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_5",
+      spacing: "spacing-04",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiNearbyLocations",
+      trackingTitle: "NearbyRestaurantsXSellNativeSection",
+      trackingKey:
+        '{"st":"POI_NEARBY","ik":"3af12072-8977-46c8-84ae-925792db24a4_8","lid":"308825","spt":"restaurant","sn":"Attraction_Review"}',
+      stableDiffingType: "NearbyRestaurantsXSellNativeSection",
+      tooltip: null,
+      sectionTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Restaurants nearby",
+        debugValueKey: null,
+      },
+      nonNullContent: [
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_d44b9183-38dd-4873-b618-39aa0f05c3d1",
+          trackingKey:
+            '{"br":5.0,"rc":556,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_0","ctt":"LOCATION","pt":"restaurant","lid":13567060,"pir":4,"mid":498145751,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_d44b9183-38dd-4873-b618-39aa0f05c3d1",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "556",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Lobby Lounge",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=d44b9183-38dd-4873-b618-39aa0f05c3d1",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=d44b9183-38dd-4873-b618-39aa0f05c3d1",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "d44b9183-38dd-4873-b618-39aa0f05c3d1",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Lobby Lounge",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.2 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 760,
+              maxWidth: 1125,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/b1/19/d7/relaxed-yet-elegant-seating.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$ - $$$ • Bar • International • Egyptian",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_b0bbbdfb-df54-43c2-a1fc-c707fb837381",
+          trackingKey:
+            '{"br":5.0,"rc":813,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_1","ctt":"LOCATION","pt":"restaurant","lid":8734329,"pir":5,"mid":304808994,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_b0bbbdfb-df54-43c2-a1fc-c707fb837381",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "813",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Culina",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=b0bbbdfb-df54-43c2-a1fc-c707fb837381",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=b0bbbdfb-df54-43c2-a1fc-c707fb837381",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "b0bbbdfb-df54-43c2-a1fc-c707fb837381",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Culina",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.2 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 787,
+              maxWidth: 1183,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/2b/04/22/getlstd-property-photo.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$ - $$$ • International • Mediterranean • European",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_a118b305-f372-40d6-9895-a677a4b35766",
+          trackingKey:
+            '{"br":5.0,"rc":1320,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_2","ctt":"LOCATION","pt":"restaurant","lid":11768815,"pir":16,"mid":312368819,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_a118b305-f372-40d6-9895-a677a4b35766",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "1,320",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Vivo - The Nile Ritz-Carlton",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=a118b305-f372-40d6-9895-a677a4b35766",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=a118b305-f372-40d6-9895-a677a4b35766",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "a118b305-f372-40d6-9895-a677a4b35766",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Vivo - The Nile Ritz-Carlton",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.2 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1333,
+              maxWidth: 2000,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/9e/5e/b3/rustic-and-contemporary.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$$$ • Italian • Mediterranean • European",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_c744fb69-ea35-4cc1-a806-c9c0f31b188b",
+          trackingKey:
+            '{"br":5.0,"rc":688,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_3","ctt":"LOCATION","pt":"restaurant","lid":8754718,"pir":19,"mid":304813101,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_c744fb69-ea35-4cc1-a806-c9c0f31b188b",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "688",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Bab El-Sharq",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=c744fb69-ea35-4cc1-a806-c9c0f31b188b",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=c744fb69-ea35-4cc1-a806-c9c0f31b188b",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "c744fb69-ea35-4cc1-a806-c9c0f31b188b",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Bab El-Sharq",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "95 m",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 787,
+              maxWidth: 1183,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/2b/14/2d/bab-el-sharq.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$ - $$$ • Lebanese • Mediterranean • Barbecue",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_f75fee3f-b286-4634-91db-5c291b5c7a6d",
+          trackingKey:
+            '{"br":4.5,"rc":282,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_4","ctt":"LOCATION","pt":"restaurant","lid":10059702,"pir":35,"mid":377473870,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_f75fee3f-b286-4634-91db-5c291b5c7a6d",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "282",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Nox Restaurant, Bar & Lounge",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=f75fee3f-b286-4634-91db-5c291b5c7a6d",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=f75fee3f-b286-4634-91db-5c291b5c7a6d",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "f75fee3f-b286-4634-91db-5c291b5c7a6d",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Nox Restaurant, Bar & Lounge",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.2 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 780,
+              maxWidth: 1176,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/7f/cb/4e/a-rooftop-lounge-with.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$$$ • International • Hong Kong • Halal",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_3f39d94a-bbb4-48f1-9164-15874ce093b1",
+          trackingKey:
+            '{"br":5.0,"rc":391,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_5","ctt":"LOCATION","pt":"restaurant","lid":3139482,"pir":31,"mid":171523090,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_3f39d94a-bbb4-48f1-9164-15874ce093b1",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "391",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Night & Day",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=3f39d94a-bbb4-48f1-9164-15874ce093b1",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=3f39d94a-bbb4-48f1-9164-15874ce093b1",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "3f39d94a-bbb4-48f1-9164-15874ce093b1",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Night & Day",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.4 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 2456,
+              maxWidth: 3680,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/39/3c/12/the-appetizers-selection.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$ - $$$ • International • Middle Eastern • Egyptian",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_35c7e50a-9a0a-412b-a020-32d959eb1ad6",
+          trackingKey:
+            '{"br":5.0,"rc":120,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_6","ctt":"LOCATION","pt":"restaurant","lid":12850496,"pir":44,"mid":383333469,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_35c7e50a-9a0a-412b-a020-32d959eb1ad6",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "120",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Bar'Oro",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=35c7e50a-9a0a-412b-a020-32d959eb1ad6",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=35c7e50a-9a0a-412b-a020-32d959eb1ad6",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "35c7e50a-9a0a-412b-a020-32d959eb1ad6",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Bar'Oro",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.2 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1002,
+              maxWidth: 1536,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/d9/34/5d/bar-oro-means-the-golden.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Italian • Bar • International • European",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_be4d922c-21c3-4448-ad25-fb3f0cdea863",
+          trackingKey:
+            '{"br":5.0,"rc":453,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_7","ctt":"LOCATION","pt":"restaurant","lid":2700915,"pir":45,"mid":470839067,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_be4d922c-21c3-4448-ad25-fb3f0cdea863",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "453",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "The Grill Restaurant & Lounge",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=be4d922c-21c3-4448-ad25-fb3f0cdea863",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=be4d922c-21c3-4448-ad25-fb3f0cdea863",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "be4d922c-21c3-4448-ad25-fb3f0cdea863",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for The Grill Restaurant & Lounge",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.5 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 4032,
+              maxWidth: 6048,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/10/6f/1b/romance-is-on-the-menu.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$$$ • French • Steakhouse • European",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_ded1aea7-5ad7-495f-b8d3-c21cf89cb703",
+          trackingKey:
+            '{"br":5.0,"rc":193,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_8","ctt":"LOCATION","pt":"restaurant","lid":2700922,"pir":56,"mid":478390731,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_ded1aea7-5ad7-495f-b8d3-c21cf89cb703",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "193",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Sushiramis",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=ded1aea7-5ad7-495f-b8d3-c21cf89cb703",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=ded1aea7-5ad7-495f-b8d3-c21cf89cb703",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "ded1aea7-5ad7-495f-b8d3-c21cf89cb703",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Sushiramis",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.5 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 3632,
+              maxWidth: 3632,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/83/a9/cb/sushiramis-speaks-for.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$ - $$$ • Japanese • Sushi • Asian",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType:
+            "NearbyRestaurantXSellCard_restaurant_3bc507f3-7250-4d88-9554-c104150de7e3",
+          trackingKey:
+            '{"br":4.5,"rc":657,"ik":"3af12072-8977-46c8-84ae-925792db24a4_8_9","ctt":"LOCATION","pt":"restaurant","lid":1027608,"pir":64,"mid":451816398,"sn":"Attraction_Review"}',
+          trackingTitle:
+            "NearbyRestaurantXSellCard_restaurant_3bc507f3-7250-4d88-9554-c104150de7e3",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "657",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Sabaya",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=restaurant&contentId=3bc507f3-7250-4d88-9554-c104150de7e3",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=restaurant&contentId=3bc507f3-7250-4d88-9554-c104150de7e3",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "3bc507f3-7250-4d88-9554-c104150de7e3",
+                contentType: "restaurant",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Sabaya",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.4 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 3872,
+              maxWidth: 5807,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/ee/2b/ce/sabaya-is-one-of-cairo.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "$$ - $$$ • Lebanese • Mediterranean • Middle Eastern",
+          },
+        },
+      ],
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_6",
+      spacing: "spacing-02",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiNearbyLocations",
+      trackingTitle: "NearbyAttractionsXSellNativeSection",
+      trackingKey:
+        '{"st":"POI_NEARBY","ik":"3af12072-8977-46c8-84ae-925792db24a4_9","lid":"308825","spt":"attraction","sn":"Attraction_Review"}',
+      stableDiffingType: "NearbyAttractionsXSellNativeSection",
+      tooltip: null,
+      sectionTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Attractions nearby",
+        debugValueKey: null,
+      },
+      nonNullContent: [
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_552476",
+          trackingKey:
+            '{"br":3.5,"rc":270,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_0","ctt":"LOCATION","pt":"attraction","lid":552476,"pir":40,"mid":359422873,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_552476",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 3.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "270",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Liberation Square (Midan El-Tahreer)",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=552476",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=552476",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "552476",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Liberation Square (Midan El-Tahreer)",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.1 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 3456,
+              maxWidth: 4608,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/6c/5b/99/caption.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Points of Interest & Landmarks",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_15852600",
+          trackingKey:
+            '{"rc":0,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_1","ctt":"LOCATION","pt":"attraction","lid":15852600,"pir":181,"mid":373302608,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_15852600",
+          bubbleRating: null,
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Mashrabia Gallery of fine arts",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=15852600",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=15852600",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "15852600",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Mashrabia Gallery of fine arts",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.2 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 478,
+              maxWidth: 850,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/40/25/50/getlstd-property-photo.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Art Galleries",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_472084",
+          trackingKey:
+            '{"br":4.5,"rc":3091,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_2","ctt":"LOCATION","pt":"attraction","lid":472084,"pir":20,"mid":373631199,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_472084",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "3,091",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Nile River",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=472084",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=472084",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "472084",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Nile River",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.5 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1536,
+              maxWidth: 2048,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/45/28/df/river-nile-in-upper-lower.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Bodies of Water",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_20317265",
+          trackingKey:
+            '{"br":4.0,"rc":4,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_3","ctt":"LOCATION","pt":"attraction","lid":20317265,"pir":105,"mid":457136884,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_20317265",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "4",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Cairo Metro",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=20317265",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=20317265",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "20317265",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Cairo Metro",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.3 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 3264,
+              maxWidth: 2448,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/3f/5a/f4/cairo-metro.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Public Transportation Systems",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_3748682",
+          trackingKey:
+            '{"br":3.0,"rc":1,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_4","ctt":"LOCATION","pt":"attraction","lid":3748682,"pir":168,"mid":319195322,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_3748682",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 3,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "1",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Atelier Du Caire",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=3748682",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=3748682",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "3748682",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Atelier Du Caire",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.4 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 640,
+              maxWidth: 517,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/06/88/ba/caption.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Art Galleries",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_554194",
+          trackingKey:
+            '{"br":3.5,"rc":57,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_5","ctt":"LOCATION","pt":"attraction","lid":554194,"pir":67,"mid":277308647,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_554194",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 3.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "57",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Sixth of October Bridge",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=554194",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=554194",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "554194",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Sixth of October Bridge",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.5 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1500,
+              maxWidth: 2000,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/87/64/e7/deslumbrante-la-vista.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Bridges",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_459794",
+          trackingKey:
+            '{"br":4.0,"rc":1152,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_6","ctt":"LOCATION","pt":"attraction","lid":459794,"pir":29,"mid":289619204,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_459794",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "1,152",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Cairo Tower",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=459794",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=459794",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "459794",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Cairo Tower",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.9 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 787,
+              maxWidth: 1181,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/43/3d/04/wikimedia-2016-34-largejpg.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Observation Decks & Towers",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_24062089",
+          trackingKey:
+            '{"rc":0,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_7","ctt":"LOCATION","pt":"attraction","lid":24062089,"pir":188,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_24062089",
+          bubbleRating: null,
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "El-moez Street",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=24062089",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=24062089",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "24062089",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for El-moez Street",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "0.1 km",
+            debugValueKey: null,
+          },
+          cardPhoto: null,
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Architectural Buildings",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_469499",
+          trackingKey:
+            '{"br":4.5,"rc":494,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_8","ctt":"LOCATION","pt":"attraction","lid":469499,"pir":19,"mid":105594764,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_469499",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "494",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Zamalek (Gezira Island)",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=469499",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=469499",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "469499",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Zamalek (Gezira Island)",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "1.5 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1500,
+              maxWidth: 2000,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/4b/3f/8c/zamalek-gezira-island.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Neighborhoods • Islands",
+          },
+        },
+        {
+          __typename: "AppPresentation_HorizontalMinimalCardWithBackground",
+          stableDiffingType: "NearbyAttractionXSellCard_attraction_308828",
+          trackingKey:
+            '{"br":4.5,"rc":212,"ik":"3af12072-8977-46c8-84ae-925792db24a4_9_9","ctt":"LOCATION","pt":"attraction","lid":308828,"pir":2,"mid":254275941,"sn":"Attraction_Review"}',
+          trackingTitle: "NearbyAttractionXSellCard_attraction_308828",
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "212",
+              debugValueKey: null,
+            },
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Gayer-Anderson Museum (Bayt al-Kiritliya)",
+            debugValueKey: null,
+          },
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=308828",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=308828",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "308828",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string:
+                "View details for Gayer-Anderson Museum (Bayt al-Kiritliya)",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+          distance: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "2.6 km",
+            debugValueKey: null,
+          },
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1536,
+              maxWidth: 2048,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/27/f1/65/photo0jpg.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Historic Sites • Art Museums",
+          },
+        },
+      ],
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_7",
+      spacing: "spacing-08",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiContribute",
+      clusterId: null,
+      photoCTA: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "AppUploadAPhoto",
+          url: "/AppUploadAPhoto?contentType=attraction&contentId=308825&locationId=308825",
+          nonCanonicalUrl:
+            "/AppUploadAPhoto?contentType=attraction&contentId=308825&locationId=308825",
+          typedParams: {
+            __typename: "Routing_AppUploadAPhotoParameters",
+            contentId: "308825",
+          },
+        },
+        webviewRoute: null,
+        text: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "Upload a photo",
+          debugValueKey: null,
+        },
+        accessibilityString: null,
+        trackingContext: "server_uploadAPhoto_contribute",
+      },
+      reviewCTA: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "AppUserReview",
+          url: "/AppUserReview?contentType=attraction&contentId=308825&locationId=308825",
+          nonCanonicalUrl:
+            "/AppUserReview?contentType=attraction&contentId=308825&locationId=308825",
+          typedParams: {
+            __typename: "Routing_AppUserReviewParameters",
+            contentId: "308825",
+          },
+        },
+        webviewRoute: null,
+        text: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "Write a review",
+          debugValueKey: null,
+        },
+        accessibilityString: null,
+        trackingContext: "server_writeReview_contribute",
+      },
+      sectionTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Contribute",
+        debugValueKey: null,
+      },
+      sectionType: "PoiContribute",
+      stableDiffingType: "ContributeSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_10","lid":308825,"sn":"Attraction_Review"}',
+      trackingTitle: "ContributeSection",
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_8",
+      spacing: "spacing-08",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiReviewsAndQA",
+      trackingTitle: "ReviewsAndQANativeSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_11","lid":308825,"sn":"Attraction_Review"}',
+      stableDiffingType: "ReviewsAndQANativeSection",
+      clusterId: "POI_REVIEWS",
+      tabs: [
+        {
+          __typename: "AppPresentation_Tab",
+          initialTab: true,
+          seeMore: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "PoiReviewList",
+              url: "/PoiReviewList-d308825-a_contentType.attraction.html",
+              nonCanonicalUrl:
+                "/PoiReviewList-d308825-a_contentType.attraction.html?geo=294201",
+              typedParams: {
+                __typename: "Routing_PoiReviewListParameters",
+                contentType: "attraction",
+                detailId: 308825,
+                routingFilters: null,
+                pagee: null,
+              },
+            },
+            webviewRoute: null,
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View 7,570 reviews",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_ViewAllReviews_seeMore",
+          },
+          seeMoreV2: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "PoiReviewList",
+              url: "/PoiReviewList-d308825-a_contentType.attraction.html",
+              nonCanonicalUrl:
+                "/PoiReviewList-d308825-a_contentType.attraction.html?geo=294201",
+              typedParams: {
+                __typename: "Routing_PoiReviewListParameters",
+                contentType: "attraction",
+                detailId: 308825,
+                routingFilters: null,
+                pagee: null,
+              },
+            },
+            webviewRoute: null,
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View 7,570 reviews",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_ViewAllReviews_seeMoreV2",
+          },
+          searchLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "PoiReviewList",
+              url: "/PoiReviewList-d308825-a_contentType.attraction.html",
+              nonCanonicalUrl:
+                "/PoiReviewList-d308825-a_contentType.attraction.html?geo=294201",
+              typedParams: {
+                __typename: "Routing_PoiReviewListParameters",
+                contentType: "attraction",
+                detailId: 308825,
+                routingFilters: null,
+                pagee: null,
+              },
+            },
+            webviewRoute: null,
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View 7,570 reviews",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_ViewAllReviews_searchLink",
+          },
+          tabTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Reviews",
+            debugValueKey: null,
+          },
+          tabSearchHint: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Search reviews...",
+            debugValueKey: null,
+          },
+          content: [
+            {
+              __typename: "AppPresentation_ReviewsHeaderCard",
+              filters: {
+                __typename: "AppPresentation_FilterResponse",
+                showAllText: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Show reviews",
+                  debugValueKey: null,
+                },
+                availableFilterGroups: [
+                  {
+                    __typename: "AppPresentation_StandardFilterGroup",
+                    name: "Filters",
+                    groupType: "StandardFilterGroup",
+                    tooltip: null,
+                    filters: [
+                      {
+                        __typename: "AppPresentation_MultiValueFilter",
+                        trackingKey:
+                          '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_0_0","lid":308825,"fn":"rating","sn":"Attraction_Review"}',
+                        trackingTitle: "APSMultiValueFilter_rating",
+                        title: "Traveler rating",
+                        name: "rating",
+                        surfaces: [],
+                        tooltip: null,
+                        values: [
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: 125,
+                            value: "1",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_BubbleRatingFilterValue",
+                              minimumRatingValue: 10,
+                            },
+                            selectedAccessibilityString: null,
+                            unselectedAccessibilityString: null,
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: 264,
+                            value: "2",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_BubbleRatingFilterValue",
+                              minimumRatingValue: 20,
+                            },
+                            selectedAccessibilityString: null,
+                            unselectedAccessibilityString: null,
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: 1125,
+                            value: "3",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_BubbleRatingFilterValue",
+                              minimumRatingValue: 30,
+                            },
+                            selectedAccessibilityString: null,
+                            unselectedAccessibilityString: null,
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: 3110,
+                            value: "4",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_BubbleRatingFilterValue",
+                              minimumRatingValue: 40,
+                            },
+                            selectedAccessibilityString: null,
+                            unselectedAccessibilityString: null,
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: 8051,
+                            value: "5",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_BubbleRatingFilterValue",
+                              minimumRatingValue: 50,
+                            },
+                            selectedAccessibilityString: null,
+                            unselectedAccessibilityString: null,
+                            tooltip: null,
+                          },
+                        ],
+                      },
+                      {
+                        __typename: "AppPresentation_EnumeratedValueFilter",
+                        trackingKey:
+                          '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_0_1","lid":308825,"fn":"since","sn":"Attraction_Review"}',
+                        trackingTitle: "APSEnumeratedValueFilter_since",
+                        name: "since",
+                        surfaces: [],
+                        title: "Review date",
+                        tooltip: null,
+                        values: [
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "All reviews",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: All reviews",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: All reviews",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "2022-07-29",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Last 3 months",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Last 3 months",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Last 3 months",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "2022-04-29",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Last 6 months",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Last 6 months",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Last 6 months",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "2021-10-29",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Last 12 months",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Last 12 months",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Last 12 months",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                        ],
+                      },
+                      {
+                        __typename: "AppPresentation_MultiValueFilter",
+                        trackingKey:
+                          '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_0_2","lid":308825,"fn":"months","sn":"Attraction_Review"}',
+                        trackingTitle: "APSMultiValueFilter_months",
+                        title: "Time of year",
+                        name: "months",
+                        surfaces: [],
+                        tooltip: null,
+                        values: [
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "1",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "January",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: January",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: January",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "2",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "February",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: February",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: February",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "3",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "March",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: March",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: March",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "4",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "April",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: April",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: April",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "5",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "May",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: May",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: May",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "6",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "June",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: June",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: June",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "7",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "July",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: July",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: July",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "8",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "August",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: August",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: August",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "9",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "September",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: September",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: September",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "10",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "October",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: October",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: October",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "11",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "November",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: November",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: November",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "12",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "December",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: December",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: December",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                        ],
+                      },
+                      {
+                        __typename: "AppPresentation_MultiValueFilter",
+                        trackingKey:
+                          '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_0_3","lid":308825,"fn":"type","sn":"Attraction_Review"}',
+                        trackingTitle: "APSMultiValueFilter_type",
+                        title: "Type of visit",
+                        name: "type",
+                        surfaces: [],
+                        tooltip: null,
+                        values: [
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "Business",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Business",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Business",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Business",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "Couples",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Couples",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Couples",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Couples",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "Family",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Family",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Family",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Family",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "Friends",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Friends",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Friends",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Friends",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                          {
+                            __typename:
+                              "AppPresentation_EnumeratedValueWithCount",
+                            count: null,
+                            value: "Solo",
+                            isSelected: false,
+                            object: {
+                              __typename:
+                                "AppPresentation_SimpleTextFilterValue",
+                              text: "Solo",
+                            },
+                            selectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Disable filter: Solo",
+                              debugValueKey: null,
+                            },
+                            unselectedAccessibilityString: {
+                              __typename: "AppPresentation_LocalizedString",
+                              string: "Enable filter: Solo",
+                              debugValueKey: null,
+                            },
+                            tooltip: null,
+                          },
+                        ],
+                      },
+                    ],
+                    trackingKey:
+                      '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_0","lid":308825,"fn":"Filters","sn":"Attraction_Review"}',
+                    trackingTitle: "StandardFilterGroup_reviews",
+                  },
+                  {
+                    __typename: "AppPresentation_SingleSelectFilterGroup",
+                    name: "English",
+                    groupType: "SingleSelectFilterGroup",
+                    tooltip: null,
+                    filter: {
+                      __typename: "AppPresentation_EnumeratedValueFilter",
+                      trackingKey:
+                        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_1_0","lid":308825,"fn":"language","sn":"Attraction_Review"}',
+                      trackingTitle: "APSEnumeratedValueFilter_language",
+                      name: "language",
+                      surfaces: [],
+                      title: "Language",
+                      tooltip: null,
+                      values: [
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 9,
+                          value: "no",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Norwegian",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Norwegian",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Norwegian",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 307,
+                          value: "de",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "German",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: German",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: German",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 455,
+                          value: "ru",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Russian",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Russian",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Russian",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 4,
+                          value: "fi",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Finnish",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Finnish",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Finnish",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 846,
+                          value: "pt",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Portuguese (Portugal)",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Portuguese (Portugal)",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Portuguese (Portugal)",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 164,
+                          value: "zhTW",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Chinese (Taiwan)",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Chinese (Taiwan)",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Chinese (Taiwan)",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 594,
+                          value: "fr",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "French",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: French",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: French",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 9,
+                          value: "hu",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Hungarian",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Hungarian",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Hungarian",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 3,
+                          value: "sk",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Slovak",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Slovak",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Slovak",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 4,
+                          value: "sr",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Serbian",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Serbian",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Serbian",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 170,
+                          value: "zhCN",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Chinese (Simplified)",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Chinese (Simplified)",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Chinese (Simplified)",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 33,
+                          value: "sv",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Swedish",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Swedish",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Swedish",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 34,
+                          value: "ko",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Korean",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Korean",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Korean",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 72,
+                          value: "el",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Greek",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Greek",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Greek",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 7570,
+                          value: "en",
+                          isSelected: true,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "English",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: English",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: English",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 500,
+                          value: "it",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Italian",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Italian",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Italian",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 3,
+                          value: "iw",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Hebrew",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Hebrew",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Hebrew",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 1363,
+                          value: "es",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Spanish (Spain)",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Spanish (Spain)",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Spanish (Spain)",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 15,
+                          value: "cs",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Czech",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Czech",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Czech",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 248,
+                          value: "ar",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Arabic",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Arabic",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Arabic",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 7,
+                          value: "th",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Thai",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Thai",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Thai",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 251,
+                          value: "ja",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Japanese",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Japanese",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Japanese",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 78,
+                          value: "pl",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Polish",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Polish",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Polish",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 25,
+                          value: "da",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Danish",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Danish",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Danish",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 99,
+                          value: "nl",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Dutch",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Dutch",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Dutch",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                        {
+                          __typename:
+                            "AppPresentation_EnumeratedValueWithCount",
+                          count: 49,
+                          value: "tr",
+                          isSelected: false,
+                          object: {
+                            __typename: "AppPresentation_SimpleTextFilterValue",
+                            text: "Turkish",
+                          },
+                          selectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Disable filter: Turkish",
+                            debugValueKey: null,
+                          },
+                          unselectedAccessibilityString: {
+                            __typename: "AppPresentation_LocalizedString",
+                            string: "Enable filter: Turkish",
+                            debugValueKey: null,
+                          },
+                          tooltip: null,
+                        },
+                      ],
+                    },
+                    trackingKey:
+                      '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_reviewFilterGroups_1","fn":"language","sn":"Attraction_Review"}',
+                    trackingTitle: "SingleSelectFilterGroup_language",
+                  },
+                ],
+              },
+              count: 12674,
+              keywords: [
+                "king tut",
+                "amazing collection",
+                "death mask",
+                "on display",
+                "gold mask",
+                "take photos",
+                "ancient egypt",
+                "tahrir square",
+                "exhibits",
+                "mummy",
+                "tutankhamun",
+                "guide",
+                "camera",
+                "tuts",
+                "coffin",
+                "contents",
+                "signage",
+                "thousands",
+                "jewelry",
+                "kingdom",
+                "civilization",
+                "highlights",
+                "pyramids",
+                "egp",
+                "kings",
+                "egyptians",
+                "egyptology",
+                "egyptologist",
+              ],
+              rating: 4.5,
+              ratingFilterId: "rating",
+              searchFilterId: "query",
+              ratingCountsV2: {
+                __typename: "AppPresentation_RatingCountsV2",
+                averageBar: {
+                  __typename: "AppPresentation_HistogramBar",
+                  isSelected: true,
+                  label: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Average",
+                    debugValueKey: null,
+                  },
+                  count: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "1,125",
+                    debugValueKey: null,
+                  },
+                  percentage: 9,
+                },
+                excellentBar: {
+                  __typename: "AppPresentation_HistogramBar",
+                  isSelected: true,
+                  label: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Excellent",
+                    debugValueKey: null,
+                  },
+                  count: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "8,051",
+                    debugValueKey: null,
+                  },
+                  percentage: 64,
+                },
+                poorBar: {
+                  __typename: "AppPresentation_HistogramBar",
+                  isSelected: true,
+                  label: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Poor",
+                    debugValueKey: null,
+                  },
+                  count: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "264",
+                    debugValueKey: null,
+                  },
+                  percentage: 2,
+                },
+                terribleBar: {
+                  __typename: "AppPresentation_HistogramBar",
+                  isSelected: true,
+                  label: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Terrible",
+                    debugValueKey: null,
+                  },
+                  count: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "125",
+                    debugValueKey: null,
+                  },
+                  percentage: 1,
+                },
+                veryGoodBar: {
+                  __typename: "AppPresentation_HistogramBar",
+                  isSelected: true,
+                  label: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Very good",
+                    debugValueKey: null,
+                  },
+                  count: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "3,110",
+                    debugValueKey: null,
+                  },
+                  percentage: 25,
+                },
+              },
+              reviewCountText: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "12,674 reviews",
+                debugValueKey: null,
+              },
+              reviewCTA: {
+                __typename: "AppPresentation_InternalLink",
+                route: {
+                  __typename: "Routing_Route",
+                  fragment: null,
+                  page: "AppUserReview",
+                  url: "/AppUserReview?contentType=attraction&contentId=308825&locationId=308825",
+                  nonCanonicalUrl:
+                    "/AppUserReview?contentType=attraction&contentId=308825&locationId=308825",
+                  typedParams: {
+                    __typename: "Routing_AppUserReviewParameters",
+                    contentId: "308825",
+                  },
+                },
+                webviewRoute: null,
+                text: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Write a review",
+                  debugValueKey: null,
+                },
+                accessibilityString: null,
+                trackingContext: "server_writeReview_header",
+              },
+              photoCTA: {
+                __typename: "AppPresentation_InternalLink",
+                route: {
+                  __typename: "Routing_Route",
+                  fragment: null,
+                  page: "AppUploadAPhoto",
+                  url: "/AppUploadAPhoto?contentType=attraction&contentId=308825&locationId=308825",
+                  nonCanonicalUrl:
+                    "/AppUploadAPhoto?contentType=attraction&contentId=308825&locationId=308825",
+                  typedParams: {
+                    __typename: "Routing_AppUploadAPhotoParameters",
+                    contentId: "308825",
+                  },
+                },
+                webviewRoute: null,
+                text: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Upload a photo",
+                  debugValueKey: null,
+                },
+                accessibilityString: null,
+                trackingContext: "server_uploadAPhoto_header",
+              },
+              subRatings: null,
+              tooltip: null,
+              stableDiffingType: "ReviewsHeader",
+            },
+            {
+              __typename: "AppPresentation_ReviewCard",
+              trackingKey:
+                '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_12","lid":308825,"sn":"Attraction_Review","rid":866217284}',
+              trackingTitle: "ReviewCard_866217284",
+              stableDiffingType: "ReviewCard_866217284",
+              reviewRating: 5,
+              bubbleRatingText: {
+                __typename: "AppPresentation_JoinedLocalizableObjects",
+                text: "Oct 2022",
+              },
+              helpfulVote: {
+                __typename: "AppPresentation_HelpfulVote",
+                hasVotedReviewHelpful: false,
+                helpfulVoteAction: {
+                  __typename: "AppPresentation_HelpfulVoteAction",
+                  objectId: "866217284",
+                  objectType: "REVIEW",
+                },
+                helpfulVotes: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "0",
+                  debugValueKey: null,
+                },
+              },
+              labels: [],
+              cardLink: null,
+              photos: [],
+              ownerResponse: null,
+              reviewActions: [
+                {
+                  __typename: "AppPresentation_ShareLinkAction",
+                },
+                {
+                  __typename: "AppPresentation_ReportIAPWebviewAction",
+                  actionName: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Report this review",
+                    debugValueKey: null,
+                  },
+                  actionType: "ReportIAPWebviewAction",
+                  authenticateUser: true,
+                  webUrl: {
+                    __typename: "AppPresentation_ExternalLink",
+                    externalUrl:
+                      "https://www.tripadvisor.com/SocialIapReporting?objectType=Review&contentId=866217284&locationId=308825",
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_report_Review_866217284",
+                  },
+                },
+              ],
+              safetyText: null,
+              disclaimer: {
+                __typename: "AppPresentation_LocalizedString",
+                string:
+                  "This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC.",
+                debugValueKey: null,
+              },
+              htmlText: {
+                __typename: "AppPresentation_HtmlString",
+                htmlString:
+                  "It does not have all of the antiques due to the museum scheduled to open 2023 but it is still incredible with what is inside.",
+              },
+              htmlTitle: {
+                __typename: "AppPresentation_HtmlString",
+                htmlString: "Simply Amazing",
+              },
+              tip: null,
+              tipText: null,
+              supplierName: null,
+              translatedByGoogle: false,
+              subratings: null,
+              userProfile: {
+                __typename: "AppPresentation_MemberProfile",
+                contributionCount: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "72 contributions",
+                  debugValueKey: null,
+                },
+                displayName: "Ridley D",
+                localizedDisplayName: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Ridley D",
+                  debugValueKey: null,
+                },
+                hometown: "Brooklyn, NY",
+                avatar: {
+                  __typename: "AppPresentation_Media",
+                  data: {
+                    __typename: "Media_PhotoResult",
+                    id: 281699629,
+                    caption: "Ridley D",
+                    publishedDateTime: "2017-09-27T01:20:40.439Z",
+                    thumbsUpVotes: 0,
+                    uploadDateTime: "2017-09-27T01:20:40.439Z",
+                    attribution: {
+                      __typename: "Media_Attribution",
+                      text: "Traveler photo submitted by Ridley D",
+                    },
+                    photoSizeDynamic: {
+                      __typename: "Media_PhotoResultSizeDynamic",
+                      maxHeight: 576,
+                      maxWidth: 576,
+                      urlTemplate:
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/ca/65/2d/ridley-d.jpg?w={width}&h={height}&s=1",
+                    },
+                    sizes: [
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 0,
+                        height: 0,
+                        url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/ca/65/2d/ridley-d.jpg?w=100&h=100&s=1",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 50,
+                        height: 50,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-t/10/ca/65/2d/ridley-d.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 150,
+                        height: 150,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-l/10/ca/65/2d/ridley-d.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 180,
+                        height: 200,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-i/10/ca/65/2d/ridley-d.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 205,
+                        height: 205,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-f/10/ca/65/2d/ridley-d.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 450,
+                        height: 450,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-s/10/ca/65/2d/ridley-d.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 550,
+                        height: 550,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-p/10/ca/65/2d/ridley-d.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 576,
+                        height: 576,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-o/10/ca/65/2d/ridley-d.jpg",
+                      },
+                    ],
+                  },
+                },
+                profileLink: {
+                  __typename: "AppPresentation_InternalLink",
+                  route: {
+                    __typename: "Routing_Route",
+                    fragment: null,
+                    page: "Profile",
+                    url: "/Profile/ridleyd",
+                    nonCanonicalUrl: "/Profile/ridleyd",
+                    typedParams: {
+                      __typename: "Routing_ProfileParameters",
+                      contentId: null,
+                      contentType: null,
+                      tab: null,
+                      username: "ridleyd",
+                    },
+                  },
+                  webviewRoute: null,
+                  text: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Shows Ridley D's profile",
+                    debugValueKey: null,
+                  },
+                  accessibilityString: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Shows Ridley D's profile",
+                    debugValueKey: null,
+                  },
+                  trackingContext: "server_memberProfileLink",
+                },
+              },
+              publishedDate: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "Written 10/27/22",
+                debugValueKey: null,
+              },
+              initiallyCollapsed: true,
+            },
+            {
+              __typename: "AppPresentation_ReviewCard",
+              trackingKey:
+                '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_13","lid":308825,"sn":"Attraction_Review","rid":866089922}',
+              trackingTitle: "ReviewCard_866089922",
+              stableDiffingType: "ReviewCard_866089922",
+              reviewRating: 5,
+              bubbleRatingText: {
+                __typename: "AppPresentation_JoinedLocalizableObjects",
+                text: "Oct 2022 • Family",
+              },
+              helpfulVote: {
+                __typename: "AppPresentation_HelpfulVote",
+                hasVotedReviewHelpful: false,
+                helpfulVoteAction: {
+                  __typename: "AppPresentation_HelpfulVoteAction",
+                  objectId: "866089922",
+                  objectType: "REVIEW",
+                },
+                helpfulVotes: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "0",
+                  debugValueKey: null,
+                },
+              },
+              labels: [],
+              cardLink: null,
+              photos: [
+                {
+                  __typename: "AppPresentation_Photo",
+                  photoId: 649289697,
+                  link: {
+                    __typename: "AppPresentation_InternalLink",
+                    route: {
+                      __typename: "Routing_Route",
+                      fragment: null,
+                      page: "PhotoDetails",
+                      url: "/PhotoDetails?ff=649289697&t=p&locationId=308825&geo=308825&cfg=ar&ep=review&rid=866089922",
+                      nonCanonicalUrl:
+                        "/PhotoDetails?ff=649289697&t=p&locationId=308825&geo=308825&cfg=ar&ep=review&rid=866089922",
+                      typedParams: {
+                        __typename: "Routing_PhotoDetailsParameters",
+                        locationIdStr: "308825",
+                        albumId: null,
+                        galleryConfig: "ar",
+                        mediaId: 649289697,
+                        mediaType: "p",
+                        to: null,
+                        from: null,
+                        entryPoint: "review",
+                        reviewId: "866089922",
+                        positionId: null,
+                      },
+                    },
+                    webviewRoute: null,
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_reviewPhoto_649289697",
+                  },
+                  photo: {
+                    __typename: "Photo",
+                    photoSizeDynamic: {
+                      __typename: "PhotoSizeDynamic",
+                      maxHeight: 2048,
+                      maxWidth: 1536,
+                      urlTemplate:
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b3/5f/e1/caption.jpg?w={width}&h={height}&s=1",
+                    },
+                    photoSizes: [
+                      {
+                        __typename: "PhotoSize",
+                        height: 0,
+                        width: 0,
+                        url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b3/5f/e1/caption.jpg?w=100&h=100&s=1",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 50,
+                        width: 50,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 150,
+                        width: 150,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 205,
+                        width: 154,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 200,
+                        width: 180,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 450,
+                        width: 338,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 733,
+                        width: 550,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-p/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 1280,
+                        width: 960,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/26/b3/5f/e1/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 1365,
+                        width: 1024,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b3/5f/e1/caption.jpg",
+                      },
+                    ],
+                  },
+                },
+                {
+                  __typename: "AppPresentation_Photo",
+                  photoId: 649289698,
+                  link: {
+                    __typename: "AppPresentation_InternalLink",
+                    route: {
+                      __typename: "Routing_Route",
+                      fragment: null,
+                      page: "PhotoDetails",
+                      url: "/PhotoDetails?ff=649289698&t=p&locationId=308825&geo=308825&cfg=ar&ep=review&rid=866089922",
+                      nonCanonicalUrl:
+                        "/PhotoDetails?ff=649289698&t=p&locationId=308825&geo=308825&cfg=ar&ep=review&rid=866089922",
+                      typedParams: {
+                        __typename: "Routing_PhotoDetailsParameters",
+                        locationIdStr: "308825",
+                        albumId: null,
+                        galleryConfig: "ar",
+                        mediaId: 649289698,
+                        mediaType: "p",
+                        to: null,
+                        from: null,
+                        entryPoint: "review",
+                        reviewId: "866089922",
+                        positionId: null,
+                      },
+                    },
+                    webviewRoute: null,
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_reviewPhoto_649289698",
+                  },
+                  photo: {
+                    __typename: "Photo",
+                    photoSizeDynamic: {
+                      __typename: "PhotoSizeDynamic",
+                      maxHeight: 2048,
+                      maxWidth: 1536,
+                      urlTemplate:
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b3/5f/e2/caption.jpg?w={width}&h={height}&s=1",
+                    },
+                    photoSizes: [
+                      {
+                        __typename: "PhotoSize",
+                        height: 0,
+                        width: 0,
+                        url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b3/5f/e2/caption.jpg?w=100&h=100&s=1",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 50,
+                        width: 50,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 150,
+                        width: 150,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 205,
+                        width: 154,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 200,
+                        width: 180,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 450,
+                        width: 338,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 733,
+                        width: 550,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-p/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 1280,
+                        width: 960,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/26/b3/5f/e2/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 1365,
+                        width: 1024,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b3/5f/e2/caption.jpg",
+                      },
+                    ],
+                  },
+                },
+                {
+                  __typename: "AppPresentation_Photo",
+                  photoId: 649289699,
+                  link: {
+                    __typename: "AppPresentation_InternalLink",
+                    route: {
+                      __typename: "Routing_Route",
+                      fragment: null,
+                      page: "PhotoDetails",
+                      url: "/PhotoDetails?ff=649289699&t=p&locationId=308825&geo=308825&cfg=ar&ep=review&rid=866089922",
+                      nonCanonicalUrl:
+                        "/PhotoDetails?ff=649289699&t=p&locationId=308825&geo=308825&cfg=ar&ep=review&rid=866089922",
+                      typedParams: {
+                        __typename: "Routing_PhotoDetailsParameters",
+                        locationIdStr: "308825",
+                        albumId: null,
+                        galleryConfig: "ar",
+                        mediaId: 649289699,
+                        mediaType: "p",
+                        to: null,
+                        from: null,
+                        entryPoint: "review",
+                        reviewId: "866089922",
+                        positionId: null,
+                      },
+                    },
+                    webviewRoute: null,
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_reviewPhoto_649289699",
+                  },
+                  photo: {
+                    __typename: "Photo",
+                    photoSizeDynamic: {
+                      __typename: "PhotoSizeDynamic",
+                      maxHeight: 2048,
+                      maxWidth: 1536,
+                      urlTemplate:
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b3/5f/e3/caption.jpg?w={width}&h={height}&s=1",
+                    },
+                    photoSizes: [
+                      {
+                        __typename: "PhotoSize",
+                        height: 0,
+                        width: 0,
+                        url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/b3/5f/e3/caption.jpg?w=100&h=100&s=1",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 50,
+                        width: 50,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-t/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 150,
+                        width: 150,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-l/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 205,
+                        width: 154,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-f/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 200,
+                        width: 180,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-i/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 450,
+                        width: 338,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-s/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 733,
+                        width: 550,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-p/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 1280,
+                        width: 960,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-m/1280/26/b3/5f/e3/caption.jpg",
+                      },
+                      {
+                        __typename: "PhotoSize",
+                        height: 1365,
+                        width: 1024,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-w/26/b3/5f/e3/caption.jpg",
+                      },
+                    ],
+                  },
+                },
+              ],
+              ownerResponse: null,
+              reviewActions: [
+                {
+                  __typename: "AppPresentation_ShareLinkAction",
+                },
+                {
+                  __typename: "AppPresentation_ReportIAPWebviewAction",
+                  actionName: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Report this review",
+                    debugValueKey: null,
+                  },
+                  actionType: "ReportIAPWebviewAction",
+                  authenticateUser: true,
+                  webUrl: {
+                    __typename: "AppPresentation_ExternalLink",
+                    externalUrl:
+                      "https://www.tripadvisor.com/SocialIapReporting?objectType=Review&contentId=866089922&locationId=308825",
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_report_Review_866089922",
+                  },
+                },
+              ],
+              safetyText: null,
+              disclaimer: {
+                __typename: "AppPresentation_LocalizedString",
+                string:
+                  "This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC.",
+                debugValueKey: null,
+              },
+              htmlText: {
+                __typename: "AppPresentation_HtmlString",
+                htmlString:
+                  "A must for all age groups. It gives you an essence of the civilisation back in the day. The rooms with the mummies preserved is more captivating than creepy. It’s amazing to see how well they have preserved the mummies, artefacts, jewelleries etc.",
+              },
+              htmlTitle: {
+                __typename: "AppPresentation_HtmlString",
+                htmlString: "An essence of Egyptian culture and civilisation",
+              },
+              tip: null,
+              tipText: null,
+              supplierName: null,
+              translatedByGoogle: false,
+              subratings: null,
+              userProfile: {
+                __typename: "AppPresentation_MemberProfile",
+                contributionCount: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "207 contributions",
+                  debugValueKey: null,
+                },
+                displayName: "vikysin",
+                localizedDisplayName: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "vikysin",
+                  debugValueKey: null,
+                },
+                hometown: "Hong Kong, China",
+                avatar: {
+                  __typename: "AppPresentation_Media",
+                  data: {
+                    __typename: "Media_PhotoResult",
+                    id: 65004843,
+                    caption: "vickys1985",
+                    publishedDateTime: "2013-05-07T12:51:17.369Z",
+                    thumbsUpVotes: 0,
+                    uploadDateTime: "2013-05-07T12:51:17.369Z",
+                    attribution: {
+                      __typename: "Media_Attribution",
+                      text: "Traveler photo submitted by vikysin",
+                    },
+                    photoSizeDynamic: {
+                      __typename: "Media_PhotoResultSizeDynamic",
+                      maxHeight: 3085,
+                      maxWidth: 3000,
+                      urlTemplate:
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/df/e5/2b/vickys1985.jpg?w={width}&h={height}&s=1",
+                    },
+                    sizes: [
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 0,
+                        height: 0,
+                        url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/df/e5/2b/vickys1985.jpg?w=100&h=100&s=1",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 50,
+                        height: 50,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-t/03/df/e5/2b/vickys1985.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 150,
+                        height: 150,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-l/03/df/e5/2b/vickys1985.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 199,
+                        height: 205,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-f/03/df/e5/2b/vickys1985.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 437,
+                        height: 450,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-s/03/df/e5/2b/vickys1985.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 3000,
+                        height: 3085,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-o/03/df/e5/2b/vickys1985.jpg",
+                      },
+                    ],
+                  },
+                },
+                profileLink: {
+                  __typename: "AppPresentation_InternalLink",
+                  route: {
+                    __typename: "Routing_Route",
+                    fragment: null,
+                    page: "Profile",
+                    url: "/Profile/vintagegemini",
+                    nonCanonicalUrl: "/Profile/vintagegemini",
+                    typedParams: {
+                      __typename: "Routing_ProfileParameters",
+                      contentId: null,
+                      contentType: null,
+                      tab: null,
+                      username: "vintagegemini",
+                    },
+                  },
+                  webviewRoute: null,
+                  text: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Shows vikysin's profile",
+                    debugValueKey: null,
+                  },
+                  accessibilityString: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Shows vikysin's profile",
+                    debugValueKey: null,
+                  },
+                  trackingContext: "server_memberProfileLink",
+                },
+              },
+              publishedDate: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "Written 10/26/22",
+                debugValueKey: null,
+              },
+              initiallyCollapsed: true,
+            },
+            {
+              __typename: "AppPresentation_ReviewCard",
+              trackingKey:
+                '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_14","lid":308825,"sn":"Attraction_Review","rid":865954158}',
+              trackingTitle: "ReviewCard_865954158",
+              stableDiffingType: "ReviewCard_865954158",
+              reviewRating: 4,
+              bubbleRatingText: {
+                __typename: "AppPresentation_JoinedLocalizableObjects",
+                text: "Oct 2022 • Solo",
+              },
+              helpfulVote: {
+                __typename: "AppPresentation_HelpfulVote",
+                hasVotedReviewHelpful: false,
+                helpfulVoteAction: {
+                  __typename: "AppPresentation_HelpfulVoteAction",
+                  objectId: "865954158",
+                  objectType: "REVIEW",
+                },
+                helpfulVotes: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "0",
+                  debugValueKey: null,
+                },
+              },
+              labels: [],
+              cardLink: null,
+              photos: [],
+              ownerResponse: null,
+              reviewActions: [
+                {
+                  __typename: "AppPresentation_ShareLinkAction",
+                },
+                {
+                  __typename: "AppPresentation_ReportIAPWebviewAction",
+                  actionName: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Report this review",
+                    debugValueKey: null,
+                  },
+                  actionType: "ReportIAPWebviewAction",
+                  authenticateUser: true,
+                  webUrl: {
+                    __typename: "AppPresentation_ExternalLink",
+                    externalUrl:
+                      "https://www.tripadvisor.com/SocialIapReporting?objectType=Review&contentId=865954158&locationId=308825",
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_report_Review_865954158",
+                  },
+                },
+              ],
+              safetyText: null,
+              disclaimer: {
+                __typename: "AppPresentation_LocalizedString",
+                string:
+                  "This review is the subjective opinion of a Tripadvisor member and not of Tripadvisor LLC.",
+                debugValueKey: null,
+              },
+              htmlText: {
+                __typename: "AppPresentation_HtmlString",
+                htmlString:
+                  "Amazing museum full of wonderful things. But it was also full of tourists like myself so it was not easy to see everything. <br />But it is nevertheless totally worth it. I look forward to seeing the new museum when it is opened but I still think the old one is worth a visit.",
+              },
+              htmlTitle: {
+                __typename: "AppPresentation_HtmlString",
+                htmlString: "A must see",
+              },
+              tip: null,
+              tipText: null,
+              supplierName: null,
+              translatedByGoogle: false,
+              subratings: null,
+              userProfile: {
+                __typename: "AppPresentation_MemberProfile",
+                contributionCount: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "3 contributions",
+                  debugValueKey: null,
+                },
+                displayName: "Lizzie",
+                localizedDisplayName: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Lizzie",
+                  debugValueKey: null,
+                },
+                hometown: "Auckland Central, New Zealand",
+                avatar: {
+                  __typename: "AppPresentation_Media",
+                  data: {
+                    __typename: "Media_PhotoResult",
+                    id: 452389098,
+                    caption: "default-avatar-2020-63",
+                    publishedDateTime: "2020-02-21T21:05:43.942Z",
+                    thumbsUpVotes: 0,
+                    uploadDateTime: "2020-02-21T21:05:43.942Z",
+                    attribution: {
+                      __typename: "Media_Attribution",
+                      text: "a Tripadvisor member",
+                    },
+                    photoSizeDynamic: {
+                      __typename: "Media_PhotoResultSizeDynamic",
+                      maxHeight: 1200,
+                      maxWidth: 1200,
+                      urlTemplate:
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e8/ea/default-avatar-2020-63.jpg?w={width}&h={height}&s=1",
+                    },
+                    sizes: [
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 0,
+                        height: 0,
+                        url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e8/ea/default-avatar-2020-63.jpg?w=100&h=100&s=1",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 50,
+                        height: 50,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-t/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 150,
+                        height: 150,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 180,
+                        height: 200,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-i/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 205,
+                        height: 205,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-f/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 450,
+                        height: 450,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 550,
+                        height: 550,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-p/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 1024,
+                        height: 1024,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-w/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                      {
+                        __typename: "Media_MediaSize",
+                        width: 1200,
+                        height: 1200,
+                        url: "https://media-cdn.tripadvisor.com/media/photo-o/1a/f6/e8/ea/default-avatar-2020-63.jpg",
+                      },
+                    ],
+                  },
+                },
+                profileLink: {
+                  __typename: "AppPresentation_InternalLink",
+                  route: {
+                    __typename: "Routing_Route",
+                    fragment: null,
+                    page: "Profile",
+                    url: "/Profile/Dream39175584120",
+                    nonCanonicalUrl: "/Profile/Dream39175584120",
+                    typedParams: {
+                      __typename: "Routing_ProfileParameters",
+                      contentId: null,
+                      contentType: null,
+                      tab: null,
+                      username: "Dream39175584120",
+                    },
+                  },
+                  webviewRoute: null,
+                  text: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Shows Lizzie's profile",
+                    debugValueKey: null,
+                  },
+                  accessibilityString: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Shows Lizzie's profile",
+                    debugValueKey: null,
+                  },
+                  trackingContext: "server_memberProfileLink",
+                },
+              },
+              publishedDate: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "Written 10/25/22",
+                debugValueKey: null,
+              },
+              initiallyCollapsed: true,
+            },
+          ],
+        },
+        {
+          __typename: "AppPresentation_Tab",
+          initialTab: null,
+          seeMore: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "FAQ",
+              url: "/FAQ-g294201-d308825-The_Museum_of_Egyptian_Antiquities.html",
+              nonCanonicalUrl:
+                "/FAQ-g294201-d308825-The_Museum_of_Egyptian_Antiquities.html",
+              typedParams: {
+                __typename: "Routing_FAQParameters",
+              },
+            },
+            webviewRoute: null,
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View all",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_viewAllFaq",
+          },
+          seeMoreV2: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppPoiQuestionList",
+              url: "/AppPoiQuestionList?contentType=attraction&contentId=308825&pagee=0",
+              nonCanonicalUrl:
+                "/AppPoiQuestionList?contentType=attraction&contentId=308825&pagee=0",
+              typedParams: {
+                __typename: "Routing_AppPoiQuestionListParameters",
+                contentId: "308825",
+                contentType: "attraction",
+                pagee: "0",
+              },
+            },
+            webviewRoute: null,
+            text: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View all",
+              debugValueKey: null,
+            },
+            accessibilityString: null,
+            trackingContext: "server_viewAllV2Faq",
+          },
+          searchLink: null,
+          tabTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Q&A",
+            debugValueKey: null,
+          },
+          tabSearchHint: null,
+          content: [
+            {
+              __typename: "AppPresentation_QuestionAndAnswerHeaderCard",
+              askAQuestionLink: {
+                __typename: "AppPresentation_InternalLink",
+                route: {
+                  __typename: "Routing_Route",
+                  fragment: null,
+                  page: "AppAskAQuestion",
+                  url: "/AppAskAQuestion?contentType=attraction&contentId=308825",
+                  nonCanonicalUrl:
+                    "/AppAskAQuestion?contentType=attraction&contentId=308825",
+                  typedParams: {
+                    __typename: "Routing_AppAskAQuestionParameters",
+                    contentId: "308825",
+                    contentType: "attraction",
+                  },
+                },
+                webviewRoute: {
+                  __typename: "Routing_Route",
+                  fragment: null,
+                  page: "FAQ",
+                  url: "/FAQ-g294201-d308825-The_Museum_of_Egyptian_Antiquities.html",
+                  nonCanonicalUrl:
+                    "/FAQ-g294201-d308825-The_Museum_of_Egyptian_Antiquities.html",
+                  typedParams: {
+                    __typename: "Routing_FAQParameters",
+                  },
+                },
+                text: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Ask a question",
+                  debugValueKey: null,
+                },
+                accessibilityString: null,
+                trackingContext: "askAQuestion_qa_header",
+              },
+              submitQuestionAction: {
+                __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                authenticateUser: true,
+                tpcid: null,
+                pid: 39219,
+                pstid: null,
+                lcid: 308825,
+                webUrl: {
+                  __typename: "AppPresentation_ExternalLink",
+                  externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                  text: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Ask a question",
+                    debugValueKey: null,
+                  },
+                  accessibilityString: null,
+                  trackingContext: "server_SubmitQuestion_308825",
+                },
+              },
+              poiName: "The Museum of Egyptian Antiquities",
+              postingGuidelinesLink: {
+                __typename: "AppPresentation_ExternalLink",
+                externalUrl:
+                  "https://www.tripadvisorsupport.com/en-US/hc/traveler/articles/369",
+                text: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Posting guidelines",
+                  debugValueKey: null,
+                },
+                accessibilityString: null,
+                trackingContext: "server_postingGuidelines",
+              },
+            },
+            {
+              __typename: "AppPresentation_QuestionAndAnswerCard",
+              stableDiffingType: "QACard_9327764",
+              answerActionText: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "Answer this question",
+                debugValueKey: null,
+              },
+              submitAnswerAction: {
+                __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                authenticateUser: true,
+                tpcid: 9327764,
+                pid: 39219,
+                pstid: null,
+                lcid: 308825,
+                webUrl: {
+                  __typename: "AppPresentation_ExternalLink",
+                  externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                  text: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Submit",
+                    debugValueKey: null,
+                  },
+                  accessibilityString: null,
+                  trackingContext: "server_Answer_9327764",
+                },
+              },
+              allAnswerLinkV2: null,
+              allAnswerLink: {
+                __typename: "AppPresentation_InternalLink",
+                route: {
+                  __typename: "Routing_Route",
+                  fragment: null,
+                  page: "FAQ_Answers",
+                  url: "/FAQ_Answers-g294201-d308825-t9327764-Don_t_know_the_answer_as_the_new_museum_was.html",
+                  nonCanonicalUrl:
+                    "/FAQ_Answers-g294201-d308825-t9327764-Don_t_know_the_answer_as_the_new_museum_was.html",
+                  typedParams: {
+                    __typename: "Routing_FAQ_AnswersParameters",
+                  },
+                },
+                webviewRoute: null,
+                text: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Read all replies",
+                  debugValueKey: null,
+                },
+                accessibilityString: null,
+                trackingContext: "server_allAnswersWebview_9327764",
+              },
+              cardLink: null,
+              question: {
+                __typename: "AppPresentation_QuestionOrAnswer",
+                text: "Don’t know the answer as the new museum was supposed to be open by then. If you have a hotel perhaps you can ask there.",
+                memberProfile: {
+                  __typename: "AppPresentation_MemberProfile",
+                  contributionCount: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "13 contributions",
+                    debugValueKey: null,
+                  },
+                  displayName: "DavidE8479",
+                  localizedDisplayName: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "DavidE8479",
+                    debugValueKey: null,
+                  },
+                  hometown: "New York City, NY",
+                  avatar: {
+                    __typename: "AppPresentation_Media",
+                    data: {
+                      __typename: "Media_PhotoResult",
+                      id: 452389359,
+                      caption: "default-avatar-2020-66",
+                      publishedDateTime: "2020-02-21T21:07:33.267Z",
+                      thumbsUpVotes: 0,
+                      uploadDateTime: "2020-02-21T21:07:33.267Z",
+                      attribution: {
+                        __typename: "Media_Attribution",
+                        text: "a Tripadvisor member",
+                      },
+                      photoSizeDynamic: {
+                        __typename: "Media_PhotoResultSizeDynamic",
+                        maxHeight: 1200,
+                        maxWidth: 1200,
+                        urlTemplate:
+                          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg?w={width}&h={height}&s=1",
+                      },
+                      sizes: [
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 0,
+                          height: 0,
+                          url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg?w=100&h=100&s=1",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 50,
+                          height: 50,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-t/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 150,
+                          height: 150,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 180,
+                          height: 200,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-i/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 205,
+                          height: 205,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-f/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 450,
+                          height: 450,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 550,
+                          height: 550,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-p/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 1024,
+                          height: 1024,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-w/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 1200,
+                          height: 1200,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                      ],
+                    },
+                  },
+                  profileLink: {
+                    __typename: "AppPresentation_InternalLink",
+                    route: {
+                      __typename: "Routing_Route",
+                      fragment: null,
+                      page: "Profile",
+                      url: "/Profile/DavidE8479",
+                      nonCanonicalUrl: "/Profile/DavidE8479",
+                      typedParams: {
+                        __typename: "Routing_ProfileParameters",
+                        contentId: null,
+                        contentType: null,
+                        tab: null,
+                        username: "DavidE8479",
+                      },
+                    },
+                    webviewRoute: null,
+                    text: {
+                      __typename: "AppPresentation_LocalizedString",
+                      string: "Shows DavidE8479's profile",
+                      debugValueKey: null,
+                    },
+                    accessibilityString: {
+                      __typename: "AppPresentation_LocalizedString",
+                      string: "Shows DavidE8479's profile",
+                      debugValueKey: null,
+                    },
+                    trackingContext: "server_question_memberProfileLink",
+                  },
+                },
+                actions: {
+                  __typename: "AppPresentation_PoiQaActions",
+                  deleteAction: {
+                    __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                    authenticateUser: true,
+                    tpcid: 9327764,
+                    pid: 39219,
+                    pstid: null,
+                    lcid: null,
+                    webUrl: {
+                      __typename: "AppPresentation_ExternalLink",
+                      externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                      text: {
+                        __typename: "AppPresentation_LocalizedString",
+                        string: "Delete",
+                        debugValueKey: null,
+                      },
+                      accessibilityString: null,
+                      trackingContext: "server_Delete_9327764",
+                    },
+                  },
+                  reportAction: {
+                    __typename: "AppPresentation_PoiQaReportAction",
+                    authenticateUser: true,
+                    webUrl: {
+                      __typename: "AppPresentation_ExternalLink",
+                      externalUrl:
+                        "https://www.tripadvisor.com/SocialIapReporting?objectType=ApiLocationTopic&contentId=9327764",
+                      text: {
+                        __typename: "AppPresentation_LocalizedString",
+                        string: "Report",
+                        debugValueKey: null,
+                      },
+                      accessibilityString: null,
+                      trackingContext: "server_ReportIAP_9327764",
+                    },
+                  },
+                },
+                writtenDate: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "August 14, 2022",
+                  debugValueKey: null,
+                },
+                thumbsUpAction: null,
+                thumbsUpCount: null,
+              },
+              topAnswer: {
+                __typename: "AppPresentation_QuestionOrAnswer",
+                text: "When I was there in June a huge amount was either crated or being moved, But they were replacing the space with artifacts that had been unseen for decades.",
+                memberProfile: {
+                  __typename: "AppPresentation_MemberProfile",
+                  contributionCount: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "7,292 contributions",
+                    debugValueKey: null,
+                  },
+                  displayName: "Mike BR",
+                  localizedDisplayName: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Mike BR",
+                    debugValueKey: null,
+                  },
+                  hometown: "Haddington, UK",
+                  avatar: {
+                    __typename: "AppPresentation_Media",
+                    data: {
+                      __typename: "Media_PhotoResult",
+                      id: 48442926,
+                      caption: "MikeBR",
+                      publishedDateTime: "2012-09-20T22:52:04.812Z",
+                      thumbsUpVotes: 0,
+                      uploadDateTime: "2012-09-20T22:52:04.812Z",
+                      attribution: {
+                        __typename: "Media_Attribution",
+                        text: "Traveler photo submitted by Mike BR",
+                      },
+                      photoSizeDynamic: {
+                        __typename: "Media_PhotoResultSizeDynamic",
+                        maxHeight: 450,
+                        maxWidth: 252,
+                        urlTemplate:
+                          "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/e3/2e/2e/mikebr.jpg?w={width}&h={height}&s=1",
+                      },
+                      sizes: [
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 0,
+                          height: 0,
+                          url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/e3/2e/2e/mikebr.jpg?w=100&h=100&s=1",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 50,
+                          height: 50,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-t/02/e3/2e/2e/mikebr.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 114,
+                          height: 205,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-f/02/e3/2e/2e/mikebr.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 150,
+                          height: 150,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-l/02/e3/2e/2e/mikebr.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 252,
+                          height: 450,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-s/02/e3/2e/2e/mikebr.jpg",
+                        },
+                      ],
+                    },
+                  },
+                  profileLink: {
+                    __typename: "AppPresentation_InternalLink",
+                    route: {
+                      __typename: "Routing_Route",
+                      fragment: null,
+                      page: "Profile",
+                      url: "/Profile/MikeBR",
+                      nonCanonicalUrl: "/Profile/MikeBR",
+                      typedParams: {
+                        __typename: "Routing_ProfileParameters",
+                        contentId: null,
+                        contentType: null,
+                        tab: null,
+                        username: "MikeBR",
+                      },
+                    },
+                    webviewRoute: null,
+                    text: {
+                      __typename: "AppPresentation_LocalizedString",
+                      string: "Shows Mike BR's profile",
+                      debugValueKey: null,
+                    },
+                    accessibilityString: {
+                      __typename: "AppPresentation_LocalizedString",
+                      string: "Shows Mike BR's profile",
+                      debugValueKey: null,
+                    },
+                    trackingContext: "server_topAnswer_memberProfileLink",
+                  },
+                },
+                actions: {
+                  __typename: "AppPresentation_PoiQaActions",
+                  deleteAction: {
+                    __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                    authenticateUser: true,
+                    tpcid: null,
+                    pid: 39219,
+                    pstid: 19552577,
+                    lcid: null,
+                    webUrl: {
+                      __typename: "AppPresentation_ExternalLink",
+                      externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                      text: {
+                        __typename: "AppPresentation_LocalizedString",
+                        string: "Delete",
+                        debugValueKey: null,
+                      },
+                      accessibilityString: null,
+                      trackingContext: "server_Delete_19552577",
+                    },
+                  },
+                  reportAction: {
+                    __typename: "AppPresentation_PoiQaReportAction",
+                    authenticateUser: true,
+                    webUrl: {
+                      __typename: "AppPresentation_ExternalLink",
+                      externalUrl:
+                        "https://www.tripadvisor.com/SocialIapReporting?objectType=ApiTopicPosting&contentId=19552577",
+                      text: {
+                        __typename: "AppPresentation_LocalizedString",
+                        string: "Report",
+                        debugValueKey: null,
+                      },
+                      accessibilityString: null,
+                      trackingContext: "server_ReportIAP_19552577",
+                    },
+                  },
+                },
+                writtenDate: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "August 16, 2022",
+                  debugValueKey: null,
+                },
+                thumbsUpAction: {
+                  __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                  authenticateUser: true,
+                  tpcid: null,
+                  pid: 39219,
+                  pstid: 19552577,
+                  lcid: null,
+                  webUrl: {
+                    __typename: "AppPresentation_ExternalLink",
+                    externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                    text: null,
+                    accessibilityString: null,
+                    trackingContext: "server_Upvote_19552577",
+                  },
+                },
+                thumbsUpCount: 0,
+              },
+            },
+            {
+              __typename: "AppPresentation_QuestionAndAnswerCard",
+              stableDiffingType: "QACard_9327763",
+              answerActionText: {
+                __typename: "AppPresentation_LocalizedString",
+                string: "Answer this question",
+                debugValueKey: null,
+              },
+              submitAnswerAction: {
+                __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                authenticateUser: true,
+                tpcid: 9327763,
+                pid: 39219,
+                pstid: null,
+                lcid: 308825,
+                webUrl: {
+                  __typename: "AppPresentation_ExternalLink",
+                  externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                  text: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "Submit",
+                    debugValueKey: null,
+                  },
+                  accessibilityString: null,
+                  trackingContext: "server_Answer_9327763",
+                },
+              },
+              allAnswerLinkV2: null,
+              allAnswerLink: {
+                __typename: "AppPresentation_InternalLink",
+                route: {
+                  __typename: "Routing_Route",
+                  fragment: null,
+                  page: "FAQ_Answers",
+                  url: "/FAQ_Answers-g294201-d308825-t9327763-Don_t_know_the_answer_as_the_new_museum_was.html",
+                  nonCanonicalUrl:
+                    "/FAQ_Answers-g294201-d308825-t9327763-Don_t_know_the_answer_as_the_new_museum_was.html",
+                  typedParams: {
+                    __typename: "Routing_FAQ_AnswersParameters",
+                  },
+                },
+                webviewRoute: null,
+                text: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "Add a reply",
+                  debugValueKey: null,
+                },
+                accessibilityString: null,
+                trackingContext: "server_allAnswersWebview_9327763",
+              },
+              cardLink: null,
+              question: {
+                __typename: "AppPresentation_QuestionOrAnswer",
+                text: "Don’t know the answer as the new museum was supposed to be open by then. If you have a hotel perhaps you can ask there.",
+                memberProfile: {
+                  __typename: "AppPresentation_MemberProfile",
+                  contributionCount: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "13 contributions",
+                    debugValueKey: null,
+                  },
+                  displayName: "DavidE8479",
+                  localizedDisplayName: {
+                    __typename: "AppPresentation_LocalizedString",
+                    string: "DavidE8479",
+                    debugValueKey: null,
+                  },
+                  hometown: "New York City, NY",
+                  avatar: {
+                    __typename: "AppPresentation_Media",
+                    data: {
+                      __typename: "Media_PhotoResult",
+                      id: 452389359,
+                      caption: "default-avatar-2020-66",
+                      publishedDateTime: "2020-02-21T21:07:33.267Z",
+                      thumbsUpVotes: 0,
+                      uploadDateTime: "2020-02-21T21:07:33.267Z",
+                      attribution: {
+                        __typename: "Media_Attribution",
+                        text: "a Tripadvisor member",
+                      },
+                      photoSizeDynamic: {
+                        __typename: "Media_PhotoResultSizeDynamic",
+                        maxHeight: 1200,
+                        maxWidth: 1200,
+                        urlTemplate:
+                          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg?w={width}&h={height}&s=1",
+                      },
+                      sizes: [
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 0,
+                          height: 0,
+                          url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg?w=100&h=100&s=1",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 50,
+                          height: 50,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-t/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 150,
+                          height: 150,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 180,
+                          height: 200,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-i/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 205,
+                          height: 205,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-f/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 450,
+                          height: 450,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 550,
+                          height: 550,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-p/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 1024,
+                          height: 1024,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-w/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                        {
+                          __typename: "Media_MediaSize",
+                          width: 1200,
+                          height: 1200,
+                          url: "https://media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg",
+                        },
+                      ],
+                    },
+                  },
+                  profileLink: {
+                    __typename: "AppPresentation_InternalLink",
+                    route: {
+                      __typename: "Routing_Route",
+                      fragment: null,
+                      page: "Profile",
+                      url: "/Profile/DavidE8479",
+                      nonCanonicalUrl: "/Profile/DavidE8479",
+                      typedParams: {
+                        __typename: "Routing_ProfileParameters",
+                        contentId: null,
+                        contentType: null,
+                        tab: null,
+                        username: "DavidE8479",
+                      },
+                    },
+                    webviewRoute: null,
+                    text: {
+                      __typename: "AppPresentation_LocalizedString",
+                      string: "Shows DavidE8479's profile",
+                      debugValueKey: null,
+                    },
+                    accessibilityString: {
+                      __typename: "AppPresentation_LocalizedString",
+                      string: "Shows DavidE8479's profile",
+                      debugValueKey: null,
+                    },
+                    trackingContext: "server_question_memberProfileLink",
+                  },
+                },
+                actions: {
+                  __typename: "AppPresentation_PoiQaActions",
+                  deleteAction: {
+                    __typename: "AppPresentation_PoiQaAnswersAjaxAction",
+                    authenticateUser: true,
+                    tpcid: 9327763,
+                    pid: 39219,
+                    pstid: null,
+                    lcid: null,
+                    webUrl: {
+                      __typename: "AppPresentation_ExternalLink",
+                      externalUrl: "https://www.tripadvisor.com/AnswersAjax",
+                      text: {
+                        __typename: "AppPresentation_LocalizedString",
+                        string: "Delete",
+                        debugValueKey: null,
+                      },
+                      accessibilityString: null,
+                      trackingContext: "server_Delete_9327763",
+                    },
+                  },
+                  reportAction: {
+                    __typename: "AppPresentation_PoiQaReportAction",
+                    authenticateUser: true,
+                    webUrl: {
+                      __typename: "AppPresentation_ExternalLink",
+                      externalUrl:
+                        "https://www.tripadvisor.com/SocialIapReporting?objectType=ApiLocationTopic&contentId=9327763",
+                      text: {
+                        __typename: "AppPresentation_LocalizedString",
+                        string: "Report",
+                        debugValueKey: null,
+                      },
+                      accessibilityString: null,
+                      trackingContext: "server_ReportIAP_9327763",
+                    },
+                  },
+                },
+                writtenDate: {
+                  __typename: "AppPresentation_LocalizedString",
+                  string: "August 14, 2022",
+                  debugValueKey: null,
+                },
+                thumbsUpAction: null,
+                thumbsUpCount: null,
+              },
+              topAnswer: null,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_ATTRACTION_XSELL",
+      spacing: "spacing-08",
+      clusterId: "ATTRACTION_XSELL",
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_WideCardsCarousel",
+      wideCardsCarouselTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Also popular with travelers",
+        debugValueKey: null,
+      },
+      subtitle: null,
+      sponsoredBy: null,
+      trackingTitle: "AttractionXSellSection_ATTRACTION_XSELL",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_18","ast":"ATTRACTIONSBYTAXONOMY","sn":"Attraction_Review"}',
+      stableDiffingType: "AttractionXSellSection_ATTRACTION_XSELL",
+      tooltip: null,
+      seeAllV2: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "AppList",
+          url: "/AppList-g294201-a_contentType.attraction-c49-a_isList.true.html",
+          nonCanonicalUrl:
+            "/AppList-g294201-a_contentType.attraction-c49-a_isList.true.html",
+          typedParams: {
+            __typename: "Routing_AppListParameters",
+            contentType: "attraction",
+            geoId: 294201,
+            isCollectionView: null,
+            isList: true,
+            isMap: null,
+            isNearby: null,
+            nearLocationId: null,
+            nearLocationType: null,
+            pagee: null,
+            sort: null,
+            sortOrder: null,
+            routingFilters: [
+              {
+                __typename: "Routing_Filters",
+                id: "category",
+                value: ["49"],
+              },
+            ],
+          },
+        },
+        webviewRoute: null,
+        text: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "See all",
+          debugValueKey: null,
+        },
+        accessibilityString: null,
+        trackingContext: "server_seeAll",
+      },
+      wideCardsCarouselContent: [
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":212,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_0","ctt":"LOCATION","pt":"attraction","lid":308828,"pir":2,"mid":254275941,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_308828",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_308828",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "308828",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Gayer-Anderson Museum (Bayt al-Kiritliya)",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Historic Sites • Art Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1536,
+              maxWidth: 2048,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/27/f1/65/photo0jpg.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "212",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=308828",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=308828",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "308828",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string:
+                "View details for Gayer-Anderson Museum (Bayt al-Kiritliya)",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":321,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_1","ctt":"LOCATION","pt":"attraction","lid":308822,"pir":16,"mid":374039025,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_308822",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_308822",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "308822",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "The Coptic Museum",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Art Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 3456,
+              maxWidth: 4608,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/4b/61/f1/caption.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "321",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=308822",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=308822",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "308822",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for The Coptic Museum",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":144,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_2","ctt":"LOCATION","pt":"attraction","lid":308895,"pir":18,"mid":299225440,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_308895",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_308895",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "308895",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Museum of Islamic Arts",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Art Museums • History Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Open now",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1333,
+              maxWidth: 2000,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/d5/d1/60/an-outdoor-setting-at.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "144",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=308895",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=308895",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "308895",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Museum of Islamic Arts",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":142,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_3","ctt":"LOCATION","pt":"attraction","lid":566589,"pir":23,"mid":289410502,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_566589",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_566589",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "566589",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Manial Palace Museum",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "History Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1536,
+              maxWidth: 2048,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/40/0d/c6/photo0jpg.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "142",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=566589",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=566589",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "566589",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Manial Palace Museum",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: {
+            __typename: "AppPresentation_Badge",
+            size: "LARGE",
+            type: "TRAVELLER_CHOICE",
+            year: "2022",
+          },
+          trackingKey:
+            '{"br":4.5,"rc":95,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_4","ctt":"LOCATION","pt":"attraction","lid":12166958,"pir":24,"mid":243025502,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_12166958",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_12166958",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "12166958",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "National Museum of Egyptian Civilization NEMC",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Natural History Museums • Art Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 960,
+              maxWidth: 1280,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/7c/46/5e/national-museum-of-egyptian.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "95",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=12166958",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=12166958",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "12166958",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string:
+                "View details for National Museum of Egyptian Civilization NEMC",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.0,"rc":78,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_5","ctt":"LOCATION","pt":"attraction","lid":459958,"pir":37,"mid":17911001,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_459958",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_459958",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "459958",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Abdeen Palace Museum",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "History Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Open now",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 1944,
+              maxWidth: 2592,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/11/4c/d9/the-garden-outside-the.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "78",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=459958",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=459958",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "459958",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Abdeen Palace Museum",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":62,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_6","ctt":"LOCATION","pt":"attraction","lid":2433295,"pir":44,"mid":335302189,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_2433295",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_2433295",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "2433295",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Bayt Al-Suhaymi",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Speciality Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 756,
+              maxWidth: 1008,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/fc/4e/2d/20180804-124807-largejpg.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "62",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=2433295",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=2433295",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "2433295",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Bayt Al-Suhaymi",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":34,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_7","ctt":"LOCATION","pt":"attraction","lid":3810365,"pir":48,"mid":100507899,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_3810365",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_3810365",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "3810365",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Oum El Dounia Gallery",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Art Galleries",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Open now",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 600,
+              maxWidth: 800,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/fd/a0/fb/oum-el-dounia-gallery.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "34",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=3810365",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=3810365",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "3810365",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Oum El Dounia Gallery",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.5,"rc":22,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_8","ctt":"LOCATION","pt":"attraction","lid":3170758,"pir":50,"mid":199903665,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_3170758",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_3170758",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "3170758",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Egyptian Textile Museum",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "Speciality Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 759,
+              maxWidth: 1012,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/ea/49/b1/textile-museum-in-cairo.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4.5,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "22",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=3170758",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=3170758",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "3170758",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Egyptian Textile Museum",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+        {
+          __typename: "AppPresentation_VerticalStandardCard",
+          badge: null,
+          trackingKey:
+            '{"br":4.0,"rc":36,"ik":"3af12072-8977-46c8-84ae-925792db24a4_18_9","ctt":"LOCATION","pt":"attraction","lid":3846996,"pir":51,"mid":79282539,"sn":"Attraction_Review"}',
+          trackingTitle: "PoiVerticalStandardCard_attraction_3846996",
+          stableDiffingType: "PoiVerticalStandardCard_attraction_3846996",
+          isSaved: false,
+          saveId: {
+            __typename: "Trips_ReferenceV2",
+            id: "3846996",
+            type: "location",
+          },
+          cardTitle: {
+            __typename: "AppPresentation_LocalizedString",
+            string: "Umm Kolthoum Museum",
+            debugValueKey: null,
+          },
+          primaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "History Museums",
+          },
+          secondaryInfo: {
+            __typename: "AppPresentation_JoinedLocalizableObjects",
+            text: "",
+          },
+          closureInfo: null,
+          cardPhoto: {
+            __typename: "AppPresentation_PhotoItem",
+            sizes: {
+              __typename: "AppPresentation_PhotoItemSizeDynamic",
+              maxHeight: 550,
+              maxWidth: 410,
+              urlTemplate:
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/b9/c1/6b/om-kolthoum-museum.jpg?w={width}&h={height}&s=1",
+            },
+          },
+          bubbleRating: {
+            __typename: "AppPresentation_BubbleRating",
+            rating: 4,
+            numberReviews: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "36",
+              debugValueKey: null,
+            },
+          },
+          distance: null,
+          commerceButtons: null,
+          labels: [],
+          cardLink: {
+            __typename: "AppPresentation_InternalLink",
+            route: {
+              __typename: "Routing_Route",
+              fragment: null,
+              page: "AppDetail",
+              url: "/AppDetail?contentType=attraction&contentId=3846996",
+              nonCanonicalUrl:
+                "/AppDetail?contentType=attraction&contentId=3846996",
+              typedParams: {
+                __typename: "Routing_AppDetailParameters",
+                contentId: "3846996",
+                contentType: "attraction",
+                spAttributionToken: null,
+                wasPlusShown: null,
+              },
+            },
+            webviewRoute: null,
+            text: null,
+            accessibilityString: {
+              __typename: "AppPresentation_LocalizedString",
+              string: "View details for Umm Kolthoum Museum",
+              debugValueKey: null,
+            },
+            trackingContext: "server_card",
+          },
+        },
+      ],
+      clusterId: "ATTRACTION_XSELL",
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_9",
+      spacing: "spacing-08",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_PoiImproveThisListing",
+      stableDiffingType: "ImproveThisListingSection",
+      trackingKey:
+        '{"ik":"3af12072-8977-46c8-84ae-925792db24a4_19","lid":308825,"sn":"Attraction_Review"}',
+      trackingTitle: "ImproveThisListingSection",
+      sectionTitle: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Anything missing or inaccurate?",
+        debugValueKey: null,
+      },
+      sectionDescription: {
+        __typename: "AppPresentation_LocalizedString",
+        string: "Suggest edits to improve what we show.",
+        debugValueKey: null,
+      },
+      improveThisListingRoute: {
+        __typename: "AppPresentation_InternalLink",
+        route: {
+          __typename: "Routing_Route",
+          fragment: null,
+          page: "ImproveListing",
+          url: "/ImproveListing-d308825.html",
+          nonCanonicalUrl: "/ImproveListing-d308825.html",
+          typedParams: {
+            __typename: "Routing_ImproveListingParameters",
+          },
+        },
+        webviewRoute: null,
+        text: {
+          __typename: "AppPresentation_LocalizedString",
+          string: "Improve this listing",
+          debugValueKey: null,
+        },
+        accessibilityString: null,
+        trackingContext: "server_improveThisListing",
+      },
+      clusterId: null,
+    },
+    {
+      __typename: "AppPresentation_LogicalBreak",
+      stableDiffingType: "LogicalBreakSection_10",
+      spacing: "spacing-05",
+      clusterId: null,
+      divider: null,
+      background: null,
+    },
+    {
+      __typename: "AppPresentation_AdPlaceholderNative",
+      trackingTitle: "AdPlaceholder_NATIVE_1",
+      trackingKey:
+        '{"adt":"NATIVE","ik":"3af12072-8977-46c8-84ae-925792db24a4_20","sn":"Attraction_Review"}',
+      stableDiffingType: "AdPlaceholder_NATIVE_1",
+      clusterId: null,
+      adUnitId: "/5349/ta.ta.com.s/af.egypt.cairo",
+      adSizes: ["FLUID", "_300x250"],
+      targetingParams: [
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "country",
+          values: ["294200"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "dest",
+          values: ["casino"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "detail",
+          values: ["308825"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "d",
+          values: ["CAI"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "dregion",
+          values: ["294201"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "o",
+          values: ["DAB"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "oregion",
+          values: ["34172"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "r",
+          values: ["DABCAI"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "geo",
+          values: ["294201"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "geo_ctx",
+          values: ["12028", "12029", "12077", "21827", "21831", "21833"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "hname",
+          values: ["The_Museum_of_Egyptian_Antiquities"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "loctype",
+          values: ["attractions"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "PageType",
+          values: ["Attraction_Review"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "platform",
+          values: ["mobile_app"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "rd",
+          values: ["com"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "region",
+          values: ["3688720"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "attractype",
+          values: ["Specialty_Museums"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "pos",
+          values: ["footer"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "fluidType",
+          values: ["mobile"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "correlator",
+          values: ["3921418240836357"],
+        },
+        {
+          __typename: "AppPresentation_AdTargetingParam",
+          key: "sess",
+          values: ["99D89825191A470D9D932C1A4C981FF8"],
+        },
+      ],
+    },
+  ],
+  impressions: [
+    {
+      __typename: "AppPresentation_ImpressionLog",
+      data: "noClientLog",
+    },
+  ],
+  status: {
+    __typename: "AppPresentation_QueryResponseStatus",
+    message: null,
+    success: true,
+    pollingStatus: null,
+  },
+  commerce: {
+    __typename: "AppPresentation_CommerceParameters",
+    attractionCommerce: {
+      __typename: "AppPresentation_AttractionCommerceParameters",
+      setByUser: true,
+      updated: null,
+      startDate: "2022-10-29",
+      endDate: "2022-10-30",
+      pax: [
+        {
+          __typename: "AppPresentation_AgeBandSelection",
+          count: 2,
+          ageBand: "ADULT",
+          endAge: null,
+          maxTravelersPerBooking: null,
+          minTravelersPerBooking: null,
+          startAge: null,
+        },
+      ],
+    },
+    hotelCommerce: {
+      __typename: "AppPresentation_HotelCommerceParameters",
+      setByUser: false,
+      updated: null,
+      checkIn: "2022-10-29",
+      checkOut: "2022-10-30",
+      rooms: [
+        {
+          __typename: "AppPresentation_HotelRoom",
+          adults: 2,
+          childrenAges: [],
+        },
+      ],
+    },
+    restaurantCommerce: {
+      __typename: "AppPresentation_RestaurantCommerceParameters",
+      setByUser: false,
+      updated: null,
+      partySize: 2,
+      reservationTime: "2022-10-29T20:00:00",
+    },
+    lastUpdated: null,
+  },
+  updatedClusterIds: [],
+  datePickerConfig: {
+    __typename: "AppPresentation_DatePickerConfig",
+    hotelDatePickerConfig: {
+      __typename: "AppPresentation_HotelDatePickerConfig",
+      maxStayLength: 30,
+    },
+    lastSelectableDate: "2023-11-29",
+    restaurantDatePickerConfig: {
+      __typename: "AppPresentation_RestaurantDatePickerConfig",
+      numDisplayOptions: 9,
+      reservationRange: {
+        __typename: "AppPresentation_ReservationRange",
+        maxDate: "2023-11-29",
+        maxTime: "23:30:00",
+        minDate: "2022-10-29",
+        minTime: "00:00:00",
+      },
+    },
+    surfaces: ["LIST", "MAP"],
+    timeZoneOffset: "+02:00",
+    attractionProductDatePickerConfig: null,
+  },
+};

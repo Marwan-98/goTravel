@@ -1,7 +1,9 @@
+import { User } from "./User";
+
 export interface Trip {
   id: number;
   name: string;
-  userId: number;
+  user: User[];
   days: TripDay[];
   hotel: TripHotel[];
   restaurant: TripRestaurant[];

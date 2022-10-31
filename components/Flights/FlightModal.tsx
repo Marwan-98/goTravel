@@ -104,7 +104,7 @@ const FlightModal = ({ setShowFlightModal }) => {
   }, []);
   return (
     <div className="fixed inset-0 flex items-center justify-center h-full w-full bg-black bg-opacity-25">
-      <div className="w-1/2 bg-white p-5 relative">
+      <div className="w-1/2 h-96 overflow-y-scroll bg-white p-5 relative">
         <div>
           {
             !checked ? (

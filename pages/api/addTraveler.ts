@@ -3,10 +3,17 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../utils/prismaClient";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { id } = req.headers;
-  const trip = await prisma.trip.findUnique({
+  const { id, tripId } = req.body;
+  const updateTrip = await prisma.trip.update({
     where: {
-      id: Number(id),
+      id: Number(tripId),
+    },
+    data: {
+      user: {
+        connect: {
+          id,
+        },
+      },
     },
     select: {
       hotel: true,
@@ -27,7 +34,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       },
     },
   });
-  return res.status(200).json(trip);
+
+  return res.status(200).json(updateTrip);
 };
 
 export default handler;

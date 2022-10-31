@@ -55,7 +55,6 @@ const SearchBar = () => {
         .then((response) => dispatch(getWeather(response)))
         .catch((err) => console.error(err));
 
-      console.log(city);
       fetch("https://travel-advisor.p.rapidapi.com/attractions/v2/list", {
         method: "POST",
         headers: {
@@ -95,7 +94,6 @@ const SearchBar = () => {
       //     code: city.detailsV2.locationId,
       //   };
       // });
-      console.log(123);
       return [123];
     },
   };

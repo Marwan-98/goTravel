@@ -10,12 +10,18 @@ import { useDispatch } from "react-redux";
 import { setRestaurants } from "../redux/features/restaurantSlice";
 import { useAppSelector } from "../redux/hooks";
 import { format } from "date-fns";
+import { motion } from "framer-motion";
+import Calendar from "../components/constants/Calendar/Calendar";
+import InnerLayout from "../components/InnerLayout";
+import { setCity } from "../redux/features/citySlice";
 
 const EatOut = () => {
+  const city = useAppSelector((state) => state.city.city);
   const restaurants = useAppSelector((state) => state.restaurants.restaurants);
   const geoId = useAppSelector((state) => state.city.cityCode);
 
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const startDate = useAppSelector((state) => state.user.startDate);
+  const endDate = useAppSelector((state) => state.user.endDate);
   const [adults, setAdults] = useState(1);
 
   const dispatch = useDispatch();
@@ -35,7 +41,7 @@ const EatOut = () => {
           {
             headers: {
               "X-RapidAPI-Key":
-                "56b9557de5msh43c2654c5ab3bf0p137f1bjsn275bc3e4b597",
+                "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
               "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
           }
@@ -55,95 +61,98 @@ const EatOut = () => {
     }
   };
 
+  useEffect(() => {
+    return () => {
+      dispatch(setCity(""));
+    };
+  }, []);
+
+  useEffect(() => {
+    city && getRestaurants();
+  }, [city]);
+
   return (
     <Layout>
-      <div>
-        <div className="flex items-center justify-center">
-          <div className=" flex flex-col w-full justify-between">
-            <div className="flex items-center justify-around my-1">
-              <div className="flex flex-col w-1/2 mr-5">
-                <SearchBar searching="restaurants" />
-              </div>
-              <DatePicker
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
-                showTimeInput
-                timeInputLabel="Time:"
-                dateFormat="MM/dd/yyyy h:mm aa"
-                className="h-[44px] w-full text-center border"
-              />
-            </div>
-            <div className="flex items-center justify-around my-1">
-              <div className="flex items-center w-52 justify-between px-2">
-                <button
-                  className="flex bg-white border h-6 w-6 justify-center items-center rounded-xl p-0"
-                  onClick={() =>
-                    adults === 0 ? setAdults(adults) : setAdults(adults - 1)
-                  }
-                >
-                  <AiOutlineMinus />
-                </button>
-                <div className="inline-flex items-center justify-center w-32 border border-transparent bg-indigo-100 px-4 py-2 text-base font-medium text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                  {adults} Adults
-                </div>
-                <button
-                  className="flex bg-white border h-6 w-6 justify-center items-center rounded-xl p-0"
-                  onClick={() => setAdults(adults + 1)}
-                >
-                  <AiOutlinePlus />
-                </button>
-              </div>
+      <InnerLayout>
+        {!restaurants ? (
+          <>
+            <motion.div
+              className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
+              initial={{ y: 100 }}
+              whileInView={{ y: 0 }}
+            >
               <div>
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center w-32 border border-transparent bg-indigo-100 px-4 py-2 text-base font-medium text-indigo-700 uppercase hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  onClick={getRestaurants}
-                >
-                  Search
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-wrap">
-          {restaurants &&
-            restaurants.map((restaurant) => (
-              <div
-                className="mx-5 h-72 w-72 border border-gray-100 my-5 relative flex flex-col"
-                key={restaurant.trackingKey}
-              >
-                <div
-                  className="h-2/3 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('${restaurant.cardPhoto?.sizes.urlTemplate
-                      .replace(new RegExp("{width}"), "400")
-                      .replace(new RegExp("{height}"), "400")}')`,
-                  }}
-                ></div>
-                <div className="flex flex-col justify-around items-start flex-1">
-                  <h2 className="truncate font-bold w-full">
-                    {restaurant.cardTitle.string}
-                  </h2>
-                  <h4>
-                    <span>{restaurant.primaryInfo?.text}</span>
-                  </h4>
-                  <Link
-                    href={`/restaurant/${
-                      restaurant.cardLink.route.typedParams.contentId
-                    }?reservationTime=${format(
-                      startDate!,
-                      "yyyy-MM-dd'T'HH:mm"
-                    )}&partySize=${adults}`}
-                  >
-                    <button className="bg-blue-900 text-white p-1 rounded">
-                      See Details
-                    </button>
-                  </Link>
+                <div className="flex justify-between">
+                  <div>
+                    <h2 className="text-4xl">Hungry?</h2>
+                    <span>Just Search For Restaurants In Your Area</span>
+                  </div>
+                  <div className="basis-80">
+                    <SearchBar searching="restaurants" />
+                  </div>
                 </div>
               </div>
-            ))}
-        </div>
-      </div>
+            </motion.div>
+          </>
+        ) : (
+          <>
+            <motion.div
+              key={restaurants}
+              className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
+              initial={{ y: 100 }}
+              whileInView={{ y: 0 }}
+            >
+              <div>
+                <div className="flex justify-between">
+                  <div>
+                    <h2 className="text-4xl">
+                      <span className="font-bold text-[#FF8345]">{city}</span>{" "}
+                      Restaurants
+                    </h2>{" "}
+                  </div>
+                  <div className="basis-80">
+                    <SearchBar searching="locations" />
+                  </div>
+                </div>
+                <div className="mt-10">
+                  {restaurants.map((restaurant) => (
+                    <div className="bg-white w-full h-52 my-10 rounded-2xl flex">
+                      <div
+                        className="bg-black h-full w-1/4 rounded-2xl"
+                        style={{
+                          backgroundImage: `url('${restaurant.cardPhoto?.sizes.urlTemplate
+                            .replace(new RegExp("{width}"), "400")
+                            .replace(new RegExp("{height}"), "400")}')`,
+                        }}
+                      ></div>
+                      <div className="py-2 px-10 flex flex-col justify-around grow">
+                        <h3 className="text-2xl font-bold mb-2">
+                          {restaurant.cardTitle?.string}
+                        </h3>
+                        <span>{restaurant.primaryInfo?.text}</span>
+                        <span>
+                          {restaurant.bubbleRating?.rating} (
+                          {restaurant.bubbleRating?.numberReviews?.string}{" "}
+                          Reviews)
+                        </span>
+                        <Link
+                          href={`/restaurant/${
+                            restaurant.cardLink.route.typedParams.contentId
+                          }?reservationTime=${startDate}&partySize=${1}`}
+                        >
+                          <button className="bg-[#1EC28B] p-3 text-white rounded-2xl w-24 self-end">
+                            Details
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </InnerLayout>
     </Layout>
   );
 };

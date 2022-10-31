@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Props } from "../../types/types";
 
 const RoomModal = ({ setOpenRoomModal, room }: Props) => {
-  console.log(room);
   return (
     <>
       <div className="fixed inset-0 h-full w-full bg-black bg-opacity-75 flex justify-center items-center">
