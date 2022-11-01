@@ -6,13 +6,14 @@ import {
 
 import { useFormik } from "formik";
 import { countries } from "../components/constants/countries/countries";
-import { supabase } from "../utils/supabaseClient";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const SignUp = () => {
   const router = useRouter();
+  const supabase = useSupabaseClient();
 
   const formik = useFormik({
     initialValues: {

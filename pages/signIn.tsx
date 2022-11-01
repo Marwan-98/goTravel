@@ -5,13 +5,18 @@ import {
 } from "react-icons/ai";
 
 import { useFormik } from "formik";
-import { supabase } from "../utils/supabaseClient";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux/features/userSlice";
 
 const SignIn = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+
+  const supabase = useSupabaseClient();
 
   const formik = useFormik({
     initialValues: {
@@ -25,14 +30,26 @@ const SignIn = () => {
           password: values.password,
         });
         if (error) throw error;
-        if (data)
+        if (data) {
           axios
             .get("/api/getUser", {
               headers: {
                 email: values.email,
               },
             })
-            .then((res) => router.push("/"));
+            .then((res) => {
+              axios
+                .get("/api/getUser", {
+                  headers: {
+                    email: res.data.email,
+                  },
+                })
+                .then((res) => {
+                  dispatch(setUser(res.data));
+                })
+                .then(() => router.push("/"));
+            });
+        }
       } catch (error) {
         console.log(error);
       }

@@ -5,6 +5,7 @@ import { LayoutProps } from "../types/types";
 import Calendar from "./constants/Calendar/Calendar";
 
 const InnerLayout = ({ children }: LayoutProps) => {
+  const user = useAppSelector((state) => state.user.user);
   return (
     <div className="h-full">
       <div className="h-full">
@@ -19,7 +20,9 @@ const InnerLayout = ({ children }: LayoutProps) => {
               <div className="flex justify-start items-center">
                 <div className="h-12 w-12 rounded-full bg-black px-5"></div>
                 <div className="px-5">
-                  <span className="text-lg font-bold">John Doe</span>
+                  <span className="text-lg font-bold">
+                    {user?.firstName} {user?.lastName}
+                  </span>
                   <span className="text-[#73848C] block">
                     Travel Enthusiast
                   </span>

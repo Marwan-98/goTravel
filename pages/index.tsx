@@ -17,6 +17,7 @@ import InnerLayout from "../components/InnerLayout";
 import { APIResult, Section } from "../types/APIResult";
 
 const Home: NextPage = () => {
+  const user = useAppSelector((state) => state.user.user);
   const city = useAppSelector((state) => state.city.city);
   const cityCode = useAppSelector((state) => state.city.cityCode);
   const attractions = useAppSelector((state) => state.city.attractions);
@@ -80,7 +81,7 @@ const Home: NextPage = () => {
               <div>
                 <div className="flex justify-between">
                   <div>
-                    <h2 className="text-4xl">Hello, John!</h2>
+                    <h2 className="text-4xl">Hello, {user?.firstName}!</h2>
                     <span>Welcome Back and explore the world</span>
                   </div>
                   <div className="basis-80">

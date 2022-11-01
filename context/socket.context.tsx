@@ -3,7 +3,7 @@ import io, { Socket } from "socket.io-client";
 import { SOCKET_URL } from "../config/default";
 import EVENTS from "../config/events";
 
-const socket = io(SOCKET_URL);
+const socket = io("http://localhost:4000");
 
 interface Context {
   socket: Socket;
@@ -26,6 +26,10 @@ function SocketsProvider(props: any) {
   const [messages, setMessages] = useState<
     { message: string; userId: number; tripId: number; dateSent: Date }[]
   >([]);
+
+  socket.on("connect", function () {
+    console.log("connect");
+  });
 
   socket.on(EVENTS.SERVER.ROOMS, (value) => {
     setRooms(value);

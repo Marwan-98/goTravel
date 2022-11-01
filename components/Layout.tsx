@@ -16,18 +16,19 @@ import { GoSignOut } from "react-icons/go";
 import { LayoutProps, Props } from "../types/types";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { supabase } from "../utils/supabaseClient";
 import axios from "axios";
 import { setUser } from "../redux/features/userSlice";
 import { useAppSelector } from "../redux/hooks";
 import { useDispatch } from "react-redux";
-import { auth } from "../utils/authentication";
 import { setTrips } from "../redux/features/ItinerarySlice";
 import { AiOutlineTool } from "react-icons/ai";
-import InnerLayout from "./InnerLayout";
 import { useSockets } from "../context/socket.context";
 import EVENTS from "../config/events";
-import { useUser } from "../context/AuthContext";
+import {
+  useUser,
+  useSession,
+  useSupabaseClient,
+} from "@supabase/auth-helpers-react";
 
 const navigation = [
   { name: "Explore", href: "/", icon: MdOutlineExplore },
@@ -46,6 +47,9 @@ const Layout = ({ children }: LayoutProps) => {
   const { socket, roomId, rooms } = useSockets();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const supabase = useSupabaseClient();
+  const session = useSession();
+
   const user = useAppSelector((state) => state.user.user);
   const trips = useAppSelector((state) => state.itinerary.trips);
   const dispatch = useDispatch();
@@ -53,23 +57,32 @@ const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
 
   useEffect(() => {
-    auth().then((res) => {
-      if (!res) {
+    if (session && !user) {
+      axios
+        .get("/api/getUser", {
+          headers: {
+            email: session.user.email,
+          },
+        })
+        .then((res) => {
+          axios
+            .get("/api/getUser", {
+              headers: {
+                email: res.data.email,
+              },
+            })
+            .then((res) => {
+              dispatch(setUser(res.data));
+            });
+        });
+    }
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event == "TOKEN_REFRESHED") {
         dispatch(setUser(null));
         router.push("/signIn");
-      } else if (res && !user) {
-        axios
-          .get("/api/getUser", {
-            headers: {
-              email: res!.user.email,
-            },
-          })
-          .then((res) => {
-            dispatch(setUser(res.data));
-          });
       }
     });
-  }, []);
+  }, [session]);
 
   useEffect(() => {
     user &&

@@ -5,16 +5,17 @@ import { prisma } from "../../utils/prismaClient";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { roomId, message, userId, dateSent } = req.body;
 
-  const addMessage = await prisma.message.create({
-    data: {
-      tripId: Number(roomId),
-      message,
-      userId,
-      dateSent,
-    },
-  });
+  console.log(roomId);
+  // const addMessage = await prisma.message.create({
+  //   data: {
+  //     tripId: 4,
+  //     message,
+  //     userId,
+  //     dateSent,
+  //   },
+  // });
 
-  if (addMessage) return res.status(200).send("message added");
+  return res.status(200).send("message added");
 };
 
 export default handler;
