@@ -14,7 +14,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import Calendar from "../components/constants/Calendar/Calendar";
 import InnerLayout from "../components/InnerLayout";
-import { Section } from "../types/AttractionResult";
+import { APIResult, Section } from "../types/APIResult";
 
 const Home: NextPage = () => {
   const city = useAppSelector((state) => state.city.city);
@@ -41,13 +41,14 @@ const Home: NextPage = () => {
         }
       )
       .then(function (res) {
+        console.log(res.data.data.AppPresentation_queryAppListV2[0]);
         const attractions =
           res.data.data.AppPresentation_queryAppListV2[0].sections
             .filter(
               (item: Section) =>
                 item.__typename === "AppPresentation_SingleCard"
             )
-            .map((item) => item.singleCardContent);
+            .map((item: Section) => item.singleCardContent);
         dispatch(setAttractions(attractions));
       })
       .catch(function (error) {

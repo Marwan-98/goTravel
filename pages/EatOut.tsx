@@ -13,8 +13,7 @@ import { motion } from "framer-motion";
 import Calendar from "../components/constants/Calendar/Calendar";
 import InnerLayout from "../components/InnerLayout";
 import { setCity } from "../redux/features/citySlice";
-import { Section } from "../types/RestaurantResult";
-import { Restaurant } from "../types/Restaurants";
+import { Section } from "../types/APIResult";
 
 const EatOut = () => {
   const city = useAppSelector((state) => state.city.city);
@@ -50,10 +49,10 @@ const EatOut = () => {
           const restauratnsResult =
             res.data.data.AppPresentation_queryAppListV2[0].sections
               .filter(
-                (restaurant: Restaurant) =>
+                (restaurant: Section) =>
                   restaurant.__typename === "AppPresentation_SingleCard"
               )
-              .map((restaurant) => restaurant.singleCardContent);
+              .map((restaurant: Section) => restaurant.singleCardContent);
           dispatch(setRestaurants(restauratnsResult));
         });
     } else {

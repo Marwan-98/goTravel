@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import Turnstone from "turnstone";
 import Link from "next/link";
 import { Hotel } from "../types/Hotels";
-import { HotelResult, Section } from "../types/HotelResult";
+import { HotelResult } from "../types/HotelResult";
 import { useAppSelector } from "../redux/hooks";
 import { setHotel, setHotels } from "../redux/features/hotelsSlice";
 import { useDispatch } from "react-redux";
@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { setStartDate, setEndDate } from "../redux/features/userSlice";
 import InnerLayout from "../components/InnerLayout";
 import { setCity } from "../redux/features/citySlice";
+import { Section } from "../types/APIResult";
 
 const Lodges = () => {
   const city = useAppSelector((state) => state.city.city);
@@ -58,7 +59,7 @@ const Lodges = () => {
                 (hotel: Section) =>
                   hotel.__typename === "AppPresentation_SingleCard"
               )
-              .map((hotel) => hotel.singleCardContent);
+              .map((hotel: Section) => hotel.singleCardContent);
           dispatch(setHotels(hotelResults));
         });
     }
