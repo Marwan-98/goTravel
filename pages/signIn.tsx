@@ -8,6 +8,7 @@ import { useFormik } from "formik";
 import { supabase } from "../utils/supabaseClient";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SignIn = () => {
   const router = useRouter();
@@ -52,13 +53,12 @@ const SignIn = () => {
                 Sign in to your account
               </h2>
               <p className="mt-2 text-sm text-gray-600">
-                Don't Have an Account?{" "}
-                <a
-                  href="/signUp"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
-                  Sign Up
-                </a>
+                Don&apos;t Have an Account?{" "}
+                <Link href="/signUp">
+                  <span className="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
+                    Sign Up
+                  </span>
+                </Link>
               </p>
             </div>
 

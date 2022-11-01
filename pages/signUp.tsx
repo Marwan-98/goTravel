@@ -9,6 +9,7 @@ import { countries } from "../components/constants/countries/countries";
 import { supabase } from "../utils/supabaseClient";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SignUp = () => {
   const router = useRouter();
@@ -51,12 +52,11 @@ const SignUp = () => {
               </h2>
               <p className="mt-2 text-sm text-gray-600">
                 Already Have an Account?{" "}
-                <a
-                  href="/signIn"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
-                  Sign In
-                </a>
+                <Link href="/signIn">
+                  <span className="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
+                    Sign In
+                  </span>
+                </Link>
               </p>
             </div>
 
