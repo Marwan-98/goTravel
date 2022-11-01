@@ -1,10 +1,12 @@
 import axios from "axios";
+import { FlightLocation } from "../../../types/FlightLocation";
+import { LocationResult } from "../../../types/LocationResult";
+import { User } from "../../../types/User";
 import { amadeus } from "../../../utils/amadeusClient";
-import { hotelQuery } from "../../Flights/test";
 
 export const flightsListbox = {
   data: async (query: string) => {
-    const locations = [];
+    const locations: string[][] = [];
     return (
       query.length < 10 &&
       amadeus.referenceData.locations
@@ -12,7 +14,7 @@ export const flightsListbox = {
           keyword: query,
           subType: "CITY",
         })
-        .then((res) => {
+        .then((res: FlightLocation) => {
           res.data.map((loc) =>
             locations.push([
               `${loc.address.cityName}, ${
@@ -24,32 +26,6 @@ export const flightsListbox = {
           return locations;
         })
     );
-  },
-};
-
-export const lodgesListbox = {
-  data: async (query: string) => {
-    return axios
-      .get(
-        "https://hotels-com-provider.p.rapidapi.com/v1/destinations/search",
-        {
-          params: { query: query, currency: "USD", locale: "en_US" },
-          headers: {
-            "X-RapidAPI-Key":
-              "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
-            "X-RapidAPI-Host": "hotels-com-provider.p.rapidapi.com",
-          },
-        }
-      )
-      .then((res) => {
-        const locations = res.data.suggestions
-          .filter((group) => group.group === "CITY_GROUP")[0]
-          .entities.map((entity) => [
-            entity.caption.replaceAll(new RegExp(/<(.|\n)*?>/g), ""),
-            entity.destinationId,
-          ]);
-        return locations;
-      });
   },
 };
 
@@ -67,18 +43,19 @@ export const locationsListbox = {
         },
       })
       .then((response) => {
+        console.log(response.data.data.Typeahead_autocomplete.results);
         const attractions = response.data.data.Typeahead_autocomplete.results
-          .filter((item) => {
+          .filter((item: LocationResult) => {
             if (
               item.__typename === "Typeahead_LocationItem" &&
-              item.detailsV2.placeType.match(/^(CITY|REGION|PROVINCE)$/)
+              item.detailsV2?.placeType.match(/^(CITY|REGION|PROVINCE)$/)
             ) {
               return true;
             }
           })
-          .map((item) => [
-            `${item.detailsV2.names.name}, ${item.detailsV2.names.longOnlyHierarchyTypeaheadV2}`,
-            item.detailsV2.locationId,
+          .map((item: LocationResult) => [
+            `${item.detailsV2?.names.name}, ${item.detailsV2?.names.longOnlyHierarchyTypeaheadV2}`,
+            item.detailsV2?.locationId,
           ]);
         return attractions;
       })
@@ -97,7 +74,7 @@ export const usersListbox = {
         },
       })
       .then((res) => {
-        const users = res.data.map((user) => [user.email, user.id]);
+        const users = res.data.map((user: User) => [user.email, user.id]);
         return users;
       });
   },

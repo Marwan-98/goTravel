@@ -1,24 +1,29 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import React, { useState } from "react";
-import { useAppSelector } from "../../redux/hooks";
+import { useAppSelector } from "../../../redux/hooks";
 import DatePicker from "react-datepicker";
-import { setStartDate, setEndDate } from "../../redux/features/userSlice";
+import { setStartDate, setEndDate } from "../../../redux/features/userSlice";
 import { useDispatch } from "react-redux";
 import { differenceInDays } from "date-fns";
-import CloseButton from "../constants/CloseButton";
-import { setTrips } from "../../redux/features/ItinerarySlice";
+import CloseButton from "../CloseButton";
+import { setTrips } from "../../../redux/features/ItinerarySlice";
 
-const TripModal = ({ setOpenTripModal }) => {
+const TripModal = ({
+  setOpenTripModal,
+}: {
+  setOpenTripModal: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const user = useAppSelector((state) => state.user.user);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(null);
+  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [endDate, setEndDate] = useState<Date | null>(null);
 
   const dispatch = useDispatch();
 
-  const onChange = (dates) => {
+  const onChange = (dates: (Date | null)[]) => {
     const [start, end] = dates;
-    setStartDate(start);
+
+    start && setStartDate(start);
     setEndDate(end);
   };
 

@@ -1,19 +1,31 @@
 import axios, { AxiosResponse } from "axios";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setTrips } from "../../redux/features/ItinerarySlice";
-import { useAppSelector } from "../../redux/hooks";
-import { addToTrip } from "../constants/API/addToTrip";
-import CloseButton from "../constants/CloseButton";
+import { setTrips } from "../../../redux/features/ItinerarySlice";
+import { useAppSelector } from "../../../redux/hooks";
+import { addToTrip } from "../API/addToTrip";
+import CloseButton from "../CloseButton";
 
-const AddToTripModal = ({ setAddToTripModal, id, type, name, address }) => {
+const AddToTripModal = ({
+  setAddToTripModal,
+  id,
+  type,
+  name,
+  address,
+}: {
+  setAddToTripModal: React.Dispatch<React.SetStateAction<boolean>>;
+  id: number;
+  type: string;
+  name: string;
+  address: string;
+}) => {
   const dispatch = useDispatch();
 
   const user = useAppSelector((state) => state.user.user);
   const hotel = useAppSelector((state) => state.hotels.hotel);
   const trips = useAppSelector((state) => state.itinerary.trips);
 
-  const addHotelToTrip = (tripId) => {
+  const addHotelToTrip = (tripId: number) => {
     addToTrip(tripId, id, type, name, address, user!)
       .then((res) => {
         dispatch(setTrips(res.data));

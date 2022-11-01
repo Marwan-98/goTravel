@@ -8,7 +8,6 @@ import {
 } from "react-icons/ai";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { amaduesFlights } from "../components/Flights/test";
 
 import Flight from "../components/Flights/Flight";
 import { format, isSameDay, parseISO, startOfToday } from "date-fns";
@@ -72,90 +71,91 @@ const Flights = () => {
   return (
     <Layout>
       <InnerLayout>
-        {flights.length < 1 ? (
-          <>
-            <motion.div
-              className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-            >
-              <div>
+        <>
+          {flights.length < 1 ? (
+            <>
+              <motion.div
+                className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
+                initial={{ y: 100 }}
+                whileInView={{ y: 0 }}
+              >
                 <div>
-                  <h2 className="text-4xl">Wanna Travel?</h2>
-                  <span>Just Search For The Nearest Flights</span>
-                </div>
-                <div className="flex justify-around">
-                  <SearchBar searching="originFlights" />
-                  <SearchBar searching="destinationFlights" />
-                </div>
-              </div>
-            </motion.div>
-          </>
-        ) : (
-          <>
-            <motion.div
-              key={flights}
-              className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-            >
-              <div>
-                <div className="flex justify-between">
                   <div>
-                    <h2 className="text-4xl">
-                      <span className="font-bold text-[#FF8345]">Cairo</span>{" "}
-                      flights
-                    </h2>{" "}
+                    <h2 className="text-4xl">Wanna Travel?</h2>
+                    <span>Just Search For The Nearest Flights</span>
                   </div>
-                  <div className="basis-80">
-                    <SearchBar searching="locations" />
+                  <div className="flex justify-around">
+                    <SearchBar searching="originFlights" />
+                    <SearchBar searching="destinationFlights" />
                   </div>
                 </div>
-                <div className="mt-10">
-                  {flights.map((result) => (
-                    <div
-                      className="bg-white flex justify-between my-3"
-                      key={result.id}
-                    >
-                      <div className="flex flex-col justify-center items-center grow">
-                        {result.itineraries.map((itinerary, idx) => {
-                          return (
-                            <div
-                              className="flex flex-col w-full p-2 m-1"
-                              key={idx}
-                            >
-                              <span className="uppercase font-bold">
-                                {idx === 0 ? "outbound" : "return"} flight
-                              </span>
-                              <Flight itinerary={itinerary} />
-                            </div>
-                          );
-                        })}
-                      </div>
-                      <div className="flex flex-col items-center justify-around p-5 border">
-                        <span className="text-xl font-bold">
-                          {result.price.grandTotal} {result.price.currency}
-                        </span>
-                        <button
-                          className="bg-[#1ec28b] text-white p-3 uppercase rounded-2xl"
-                          onClick={() => {
-                            dispatch(setFlight(result));
-                            setShowFlightModal(true);
-                          }}
-                        >
-                          View Details
-                        </button>
-                      </div>
+              </motion.div>
+            </>
+          ) : (
+            <>
+              <motion.div
+                className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
+                initial={{ y: 100 }}
+                whileInView={{ y: 0 }}
+              >
+                <div>
+                  <div className="flex justify-between">
+                    <div>
+                      <h2 className="text-4xl">
+                        <span className="font-bold text-[#FF8345]">Cairo</span>{" "}
+                        flights
+                      </h2>{" "}
                     </div>
-                  ))}
+                    <div className="basis-80">
+                      <SearchBar searching="locations" />
+                    </div>
+                  </div>
+                  <div className="mt-10">
+                    {flights.map((result) => (
+                      <div
+                        className="bg-white flex justify-between my-3"
+                        key={result.id}
+                      >
+                        <div className="flex flex-col justify-center items-center grow">
+                          {result.itineraries.map((itinerary, idx) => {
+                            return (
+                              <div
+                                className="flex flex-col w-full p-2 m-1"
+                                key={idx}
+                              >
+                                <span className="uppercase font-bold">
+                                  {idx === 0 ? "outbound" : "return"} flight
+                                </span>
+                                <Flight itinerary={itinerary} />
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <div className="flex flex-col items-center justify-around p-5 border">
+                          <span className="text-xl font-bold">
+                            {result.price.grandTotal} {result.price.currency}
+                          </span>
+                          <button
+                            className="bg-[#1ec28b] text-white p-3 uppercase rounded-2xl"
+                            onClick={() => {
+                              dispatch(setFlight(result));
+                              setShowFlightModal(true);
+                            }}
+                          >
+                            View Details
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-        {showFlightModal && (
-          <FlightModal setShowFlightModal={setShowFlightModal} />
-        )}
+              </motion.div>
+            </>
+          )}
+          {showFlightModal && (
+            <FlightModal setShowFlightModal={setShowFlightModal} />
+          )}
+        </>
       </InnerLayout>
     </Layout>
   );

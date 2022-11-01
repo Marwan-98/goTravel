@@ -43,39 +43,40 @@ function classNames(...classes: string[]) {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const { user } = useUser();
   const { socket, roomId, rooms } = useSockets();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const appUser = useAppSelector((state) => state.user.user);
+  const user = useAppSelector((state) => state.user.user);
   const trips = useAppSelector((state) => state.itinerary.trips);
   const dispatch = useDispatch();
 
   const router = useRouter();
 
   useEffect(() => {
-    if (!user) {
-      dispatch(setUser(null));
-      router.push("/signIn");
-    } else if (user && !appUser) {
-      axios
-        .get("/api/getUser", {
-          headers: {
-            email: user!.email,
-          },
-        })
-        .then((res) => {
-          dispatch(setUser(res.data));
-        });
-    }
+    auth().then((res) => {
+      if (!res) {
+        dispatch(setUser(null));
+        router.push("/signIn");
+      } else if (res && !user) {
+        axios
+          .get("/api/getUser", {
+            headers: {
+              email: res!.user.email,
+            },
+          })
+          .then((res) => {
+            dispatch(setUser(res.data));
+          });
+      }
+    });
   }, []);
 
   useEffect(() => {
-    appUser &&
+    user &&
       axios
         .get("/api/getTrips", {
           headers: {
-            user: appUser.id,
+            user: user.id,
           },
         })
         .then((res) => {
@@ -88,7 +89,7 @@ const Layout = ({ children }: LayoutProps) => {
             socket.emit(EVENTS.CLIENT.CREATE_ROOM, { roomName, roomId });
           });
         });
-  }, [appUser]);
+  }, [user]);
 
   const signOut = async () => {
     const { error } = await supabase.auth.signOut();
@@ -98,7 +99,7 @@ const Layout = ({ children }: LayoutProps) => {
   };
 
   return (
-    appUser && (
+    user && (
       <div className="w-screen">
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -162,12 +163,12 @@ const Layout = ({ children }: LayoutProps) => {
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {navigation.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
                           href={item.href}
                           className={classNames(
                             item.href === router.pathname
-                              ? "bg-gray-100 text-gray-900"
+                              ? "bg-[#1ec28b] text-white"
                               : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                             "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                           )}
@@ -182,7 +183,7 @@ const Layout = ({ children }: LayoutProps) => {
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       ))}
                     </nav>
                   </div>
@@ -210,10 +211,10 @@ const Layout = ({ children }: LayoutProps) => {
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
-                    <a
+                    <span
                       className={classNames(
                         item.href === router.pathname
-                          ? "bg-gray-100 text-gray-900"
+                          ? "bg-[#1ec28b] text-white"
                           : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                         "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                       )}
@@ -221,14 +222,14 @@ const Layout = ({ children }: LayoutProps) => {
                       <item.icon
                         className={classNames(
                           item.href === router.pathname
-                            ? "text-gray-500"
+                            ? "white"
                             : "text-gray-400 group-hover:text-gray-500",
                           "mr-3 flex-shrink-0 h-6 w-6"
                         )}
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </span>
                   </Link>
                 ))}
                 <button

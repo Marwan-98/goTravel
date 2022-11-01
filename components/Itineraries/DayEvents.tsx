@@ -2,7 +2,7 @@ import { TripEvent } from "../../types/Itineraries";
 import { backgroundColor } from "./backgroundColor";
 import { eventIcon } from "./eventIcon";
 
-const DayEvents = ({ events }) => {
+const DayEvents = ({ events }: { events: TripEvent[] }) => {
   return (
     <div className="flow-root">
       <ul role="list" className="-mb-8">

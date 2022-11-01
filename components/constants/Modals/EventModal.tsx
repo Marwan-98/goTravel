@@ -3,8 +3,14 @@ import { useFormik } from "formik";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setTrip } from "../../redux/features/ItinerarySlice";
+import { setTrip } from "../../../redux/features/ItinerarySlice";
 import * as Yup from "yup";
+import {
+  TripAttraction,
+  TripDay,
+  TripHotel,
+  TripRestaurant,
+} from "../../../types/Itineraries";
 
 const EventModal = ({
   setShowEventModal,
@@ -12,6 +18,12 @@ const EventModal = ({
   restaurants,
   attractions,
   selectedDay,
+}: {
+  setShowEventModal: React.Dispatch<React.SetStateAction<boolean>>;
+  hotels: TripHotel[];
+  restaurants: TripRestaurant[];
+  attractions: TripAttraction[];
+  selectedDay: number;
 }) => {
   const dispatch = useDispatch();
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import { restaurants } from "../components/EatOut/test";
 import Link from "next/link";
 import SearchBar from "../components/constants/SearchBar/SearchBar";
 import DatePicker from "react-datepicker";
@@ -14,6 +13,8 @@ import { motion } from "framer-motion";
 import Calendar from "../components/constants/Calendar/Calendar";
 import InnerLayout from "../components/InnerLayout";
 import { setCity } from "../redux/features/citySlice";
+import { Section } from "../types/RestaurantResult";
+import { Restaurant } from "../types/Restaurants";
 
 const EatOut = () => {
   const city = useAppSelector((state) => state.city.city);
@@ -47,10 +48,11 @@ const EatOut = () => {
           }
         )
         .then((res) => {
+          console.log(res.data.data.AppPresentation_queryAppListV2[0]);
           const restauratnsResult =
             res.data.data.AppPresentation_queryAppListV2[0].sections
               .filter(
-                (restaurant) =>
+                (restaurant: Restaurant) =>
                   restaurant.__typename === "AppPresentation_SingleCard"
               )
               .map((restaurant) => restaurant.singleCardContent);
@@ -97,7 +99,6 @@ const EatOut = () => {
         ) : (
           <>
             <motion.div
-              key={restaurants}
               className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
@@ -116,7 +117,10 @@ const EatOut = () => {
                 </div>
                 <div className="mt-10">
                   {restaurants.map((restaurant) => (
-                    <div className="bg-white w-full h-52 my-10 rounded-2xl flex">
+                    <div
+                      className="bg-white w-full h-52 my-10 rounded-2xl flex"
+                      key={restaurant.trackingKey}
+                    >
                       <div
                         className="bg-black h-full w-1/4 rounded-2xl"
                         style={{

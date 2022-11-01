@@ -10,7 +10,7 @@ export interface Trip {
   attraction: TripAttraction[];
 }
 
-type TripHotel = {
+export type TripHotel = {
   id: number;
   name: string;
   location: string;
@@ -19,7 +19,7 @@ type TripHotel = {
   tripId: number;
 };
 
-type TripRestaurant = {
+export type TripRestaurant = {
   id: number;
   name: string;
   location: string;
@@ -28,7 +28,7 @@ type TripRestaurant = {
   tripId: number;
 };
 
-type TripAttraction = {
+export type TripAttraction = {
   id: number;
   name: string;
   location: string;
@@ -37,7 +37,7 @@ type TripAttraction = {
   tripId: number;
 };
 
-type TripDay = {
+export type TripDay = {
   id: number;
   dayNumber: string;
   events: TripEvent[];

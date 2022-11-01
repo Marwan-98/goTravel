@@ -10,10 +10,10 @@ import { useAppSelector } from "../../redux/hooks";
 import { RiArrowDropDownLine, RiArrowDropRightLine } from "react-icons/ri";
 import DayEvents from "../../components/Itineraries/DayEvents";
 import { AiOutlinePlus } from "react-icons/ai";
-import EventModal from "../../components/Itineraries/EventModal";
+import EventModal from "../../components/constants/Modals/EventModal";
 import { BsPlusLg } from "react-icons/bs";
 import AddTraveler from "../../components/Itineraries/AddTraveler";
-import ChatModal from "../../components/Itineraries/ChatModal";
+import ChatModal from "../../components/constants/Modals/ChatModal";
 import { useSockets } from "../../context/socket.context";
 import EVENTS from "../../config/events";
 
@@ -63,7 +63,11 @@ const Itinerary = () => {
             <div className="flex items-center px-5">
               {trip?.user.map((user, idx) => (
                 <div className="mx-5" key={idx}>
-                  <div className="h-16 w-16 rounded-full bg-black"></div>
+                  <img
+                    className="h-14 w-14 mx-auto rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
                   <span>
                     {user.firstName} {user.lastName}
                   </span>
@@ -78,14 +82,16 @@ const Itinerary = () => {
                 </div>
                 <span>Add Traveler</span>
               </button>
-              <div className="grow text-end">
-                <button
-                  className="bg-red-500 font-bold text-white p-2 rounded-2xl"
-                  onClick={() => setShowChatModal(true)}
-                >
-                  Group Chat
-                </button>
-              </div>
+              {trip?.user.length! > 1 && (
+                <div className="grow text-end">
+                  <button
+                    className="bg-red-500 font-bold text-white p-2 rounded-2xl"
+                    onClick={() => setShowChatModal(true)}
+                  >
+                    Group Chat
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           <div>
@@ -167,16 +173,16 @@ const Itinerary = () => {
         {showEventModal && (
           <EventModal
             setShowEventModal={setShowEventModal}
-            hotels={trip?.hotel}
-            restaurants={trip?.restaurant}
-            attractions={trip?.attraction}
+            hotels={trip!.hotel}
+            restaurants={trip!.restaurant}
+            attractions={trip!.attraction}
             selectedDay={selectedDay}
           />
         )}
         {showAddTravelerModal && (
           <AddTraveler
             setShowAddTravelerModal={setShowAddTravelerModal}
-            tripId={id}
+            tripId={String(id)}
           />
         )}
         {showChatModal && <ChatModal setShowChatModal={setShowChatModal} />}

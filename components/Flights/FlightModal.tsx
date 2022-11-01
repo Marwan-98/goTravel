@@ -8,7 +8,11 @@ import { useAppSelector } from "../../redux/hooks";
 import { amadeus } from "../../utils/amadeusClient";
 import Flight from "./Flight";
 
-const FlightModal = ({ setShowFlightModal }) => {
+const FlightModal = ({
+  setShowFlightModal,
+}: {
+  setShowFlightModal: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const origin = useAppSelector((state) => state.flights.origin);
   const destination = useAppSelector((state) => state.flights.destination);
   const flight = useAppSelector((state) => state.flights.flight);
@@ -111,11 +115,12 @@ const FlightModal = ({ setShowFlightModal }) => {
               <span className="font-bold px-5 py-1">
                 Checking for any changes
               </span>
-            ) : checked && response.warnings ? (
-              <span className="font-bold px-5 py-1">
-                response.warnings[0].detail
-              </span>
             ) : (
+              // checked && response?.warnings ? (
+              //   <span className="font-bold px-5 py-1">
+              //     response.warnings[0].detail
+              //   </span>
+              // )
               <span className="font-bold px-5 py-1">No Changes</span>
             )
             // <span className="font-bold px-5 py-1">
@@ -134,12 +139,7 @@ const FlightModal = ({ setShowFlightModal }) => {
                   <span className="uppercase font-bold">
                     {idx === 0 ? "outbound" : "return"} flight
                   </span>
-                  <Flight
-                    key={idx}
-                    itinerary={itinerary}
-                    destination={destination}
-                    origin={origin}
-                  />
+                  <Flight key={idx} itinerary={itinerary} />
                 </div>
               );
             })}

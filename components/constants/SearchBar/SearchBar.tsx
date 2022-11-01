@@ -4,12 +4,7 @@ import {
   setDestination,
   setOrigin,
 } from "../../../redux/features/flightsSlice";
-import {
-  flightsListbox,
-  locationsListbox,
-  lodgesListbox,
-  usersListbox,
-} from "./listboxes";
+import { flightsListbox, locationsListbox, usersListbox } from "./listboxes";
 //@ts-ignore
 import Turnstone from "turnstone";
 import { useDispatch } from "react-redux";
@@ -44,19 +39,6 @@ const SearchBar = ({
           styles={styles}
           onSelect={(selected: string) =>
             selected ? dispatch(setDestination(selected[1])) : ""
-          }
-          debounceWait={2000}
-        />
-      );
-    case "lodges":
-      return (
-        <Turnstone
-          id="autocomplete"
-          listbox={lodgesListbox}
-          styles={styles}
-          typeahead={false}
-          onSelect={(selected: string) =>
-            selected ? dispatch(setCityCode(+selected[1])) : ""
           }
           debounceWait={2000}
         />

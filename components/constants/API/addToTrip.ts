@@ -1,5 +1,6 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { useAppSelector } from "../../../redux/hooks";
+import { Trip } from "../../../types/Itineraries";
 import { User } from "../../../types/User";
 
 export const addToTrip = (
@@ -9,7 +10,7 @@ export const addToTrip = (
   name: string,
   address: string,
   user: User
-) => {
+): Promise<AxiosResponse<any, any>> => {
   switch (type) {
     case "HOTEL":
       return axios.post("/api/like", {
@@ -42,6 +43,6 @@ export const addToTrip = (
         tripId,
       });
     default:
-      return new Promise((resolve) => resolve("please add a type"));
+      return new Promise((resolve, reject) => reject("please add place"));
   }
 };

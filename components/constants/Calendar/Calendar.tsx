@@ -23,6 +23,7 @@ import {
 import { useAppSelector } from "../../../redux/hooks";
 import { setEndDate, setStartDate } from "../../../redux/features/userSlice";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 const meetings = [
   {
     id: 1,
@@ -37,7 +38,7 @@ const meetings = [
   // More meetings...
 ];
 
-function classNames(...classes) {
+function classNames(...classes: (string | boolean)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -54,6 +55,7 @@ const colStartClasses = [
 export default function Calendar() {
   const dispatch = useDispatch();
   let today = startOfToday();
+  const trips = useAppSelector((state) => state.itinerary.trips);
   const startDate = useAppSelector((state) => state.user.startDate);
   const endDate = useAppSelector((state) => state.user.endDate);
   const [clickCount, setClickCount] = useState(0);
@@ -176,34 +178,56 @@ export default function Calendar() {
       <section className="mt-12">
         <h2 className="text-[#2B2945] text-xl font-bold">My Trips</h2>
         <ol className="mt-4 space-y-1 text-sm leading-6 text-[#2B2945]">
-          {meetings.map((meeting) => (
-            <li
-              key={meeting.id}
-              className="group relative flex items-center border rounded-2xl space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-100 hover:bg-gray-100"
-            >
-              <img
-                src={meeting.imageUrl}
-                alt=""
-                className="h-20 w-20 flex-none rounded-2xl"
-              />
-              <div className="flex-auto">
-                <p className="text-[#2B2945] text-base font-bold">Cairo Trip</p>
-                <p className="mt-0.5 text-[#73848C]">
+          {trips.map((trip, idx) => {
+            if (idx < 2) {
+              return (
+                <Link href={`/itinerary/${trip.id}`} key={trip.id}>
+                  <li className="group relative cursor-pointer flex items-center border rounded-2xl space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-100 hover:bg-gray-100">
+                    <img
+                      src={"./trip.jpg"}
+                      alt=""
+                      className="h-20 w-20 flex-none rounded-2xl"
+                    />
+                    <div className="flex-auto">
+                      <p className="text-[#2B2945] text-base font-bold">
+                        {trip.name}
+                      </p>
+                      {/* <p className="mt-0.5 text-[#73848C]">
                   <HiOutlineCalendarDays className="inline mr-2" />
-                  <time dateTime={meeting.startDatetime}>26 Jun</time> -{" "}
-                  <time dateTime={meeting.endDatetime}>30 Jun</time>
-                </p>
-                <div className="flex items-center">
-                  <div className="flex items-center mr-2">
-                    <div className="h-5 w-5 inline-block border border-white z-30 rounded-full bg-black"></div>
-                    <div className="h-5 w-5 -ml-1 inline-block border border-white z-20 rounded-full bg-black"></div>
-                    <div className="h-5 w-5 -ml-1 inline-block border border-white z-10 rounded-full bg-black"></div>
-                  </div>
-                  <span className="font-bold text-[#1EC28B]">+3</span>
-                </div>
-              </div>
-            </li>
-          ))}
+                  <time dateTime={trip.startDatetime}>26 Jun</time> -{" "}
+                  <time dateTime={trip.endDatetime}>30 Jun</time>
+                </p> */}
+                      <div className="flex items-center">
+                        <div className="isolate flex -space-x-1 overflow-hidden">
+                          <img
+                            className="relative z-30 inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                            src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt=""
+                          />
+                          <img
+                            className="relative z-20 inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                            src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt=""
+                          />
+                          <img
+                            className="relative z-10 inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                            alt=""
+                          />
+                          <img
+                            className="relative z-0 inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt=""
+                          />
+                        </div>
+                        <span className="font-bold text-[#1EC28B]">+3</span>
+                      </div>
+                    </div>
+                  </li>
+                </Link>
+              );
+            }
+          })}
         </ol>
       </section>
     </div>

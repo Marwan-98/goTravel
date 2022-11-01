@@ -2,9 +2,9 @@ import { format, getTime, parseISO } from "date-fns";
 import React from "react";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
 import { MdOutlineFlightTakeoff, MdOutlineFlightLand } from "react-icons/md";
-import { Segment } from "../../types/Flights";
+import { Itinerary, Segment } from "../../types/Flights";
 
-const Flight = ({ itinerary }) => {
+const Flight = ({ itinerary }: { itinerary: Itinerary }) => {
   return (
     <div className="w-full flex flex-col justify-around p-2">
       {itinerary.segments.map((seg: Segment, idx: number) => {

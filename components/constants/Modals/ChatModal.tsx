@@ -3,9 +3,9 @@ import { format, parseISO } from "date-fns";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
-import EVENTS from "../../config/events";
-import { useSockets } from "../../context/socket.context";
-import { useAppSelector } from "../../redux/hooks";
+import EVENTS from "../../../config/events";
+import { useSockets } from "../../../context/socket.context";
+import { useAppSelector } from "../../../redux/hooks";
 
 const ChatModal = ({
   setShowChatModal,

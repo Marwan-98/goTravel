@@ -15,9 +15,9 @@ const Booking = () => {
   const router = useRouter();
   const { flight, destination } = router.query;
   const [flightObject, setFlightObject] = useState<Flight | null>(null);
-  const [dateOfBirth, setDateOfBirth] = useState(new Date());
-  const [issuanceDate, setIssuanceDate] = useState(new Date());
-  const [expiryDate, setExpiryDate] = useState(new Date());
+  const [dateOfBirth, setDateOfBirth] = useState<Date | null>(new Date());
+  const [issuanceDate, setIssuanceDate] = useState<Date | null>(new Date());
+  const [expiryDate, setExpiryDate] = useState<Date | null>(new Date());
 
   const formik = useFormik({
     initialValues: {
@@ -48,55 +48,59 @@ const Booking = () => {
       nationality,
       holder,
     }) => {
-      amadeus.booking.flightOrders
-        .post(
-          JSON.stringify({
-            data: {
-              type: "flight-order",
-              flightOffers: [flightObject],
-              travelers: [
-                {
-                  id: "1",
-                  dateOfBirth: formatISO(dateOfBirth, {
-                    representation: "date",
-                  }),
-                  name: {
-                    firstName,
-                    lastName,
-                  },
-                  gender,
-                  contact: {
-                    emailAddress,
-                    phones: [
+      if (dateOfBirth && issuanceDate && expiryDate) {
+        amadeus.booking.flightOrders
+          .post(
+            JSON.stringify({
+              data: {
+                type: "flight-order",
+                flightOffers: [flightObject],
+                travelers: [
+                  {
+                    id: "1",
+                    dateOfBirth: formatISO(dateOfBirth, {
+                      representation: "date",
+                    }),
+                    name: {
+                      firstName,
+                      lastName,
+                    },
+                    gender,
+                    contact: {
+                      emailAddress,
+                      phones: [
+                        {
+                          deviceType: "MOBILE",
+                          countryCallingCode,
+                          number,
+                        },
+                      ],
+                    },
+                    documents: [
                       {
-                        deviceType: "MOBILE",
-                        countryCallingCode,
-                        number,
+                        documentType: "PASSPORT",
+                        birthPlace,
+                        issuanceDate: formatISO(issuanceDate, {
+                          representation: "date",
+                        }),
+                        number: passportNumber,
+                        expiryDate: formatISO(expiryDate, {
+                          representation: "date",
+                        }),
+                        issuanceCountry: "ES",
+                        nationality: "ES",
+                        holder,
                       },
                     ],
                   },
-                  documents: [
-                    {
-                      documentType: "PASSPORT",
-                      birthPlace,
-                      issuanceDate: formatISO(issuanceDate, {
-                        representation: "date",
-                      }),
-                      number: passportNumber,
-                      expiryDate: formatISO(expiryDate, {
-                        representation: "date",
-                      }),
-                      issuanceCountry: "ES",
-                      nationality: "ES",
-                      holder,
-                    },
-                  ],
-                },
-              ],
-            },
-          })
-        )
-        .catch((err) => alert(err.description[0].detail));
+                ],
+              },
+            })
+          )
+          .catch((err: { description: { detail: string }[] }) =>
+            alert(err.description[0].detail)
+          );
+      }
     },
   });
 
@@ -162,12 +166,7 @@ const Booking = () => {
                   <span className="uppercase font-bold">
                     {idx === 0 ? "outbound" : "return"} flight
                   </span>
-                  <FlightComponent
-                    key={idx}
-                    itinerary={itinerary}
-                    destination={destination}
-                    origin={origin}
-                  />
+                  <FlightComponent key={idx} itinerary={itinerary} />
                 </div>
               );
             })}

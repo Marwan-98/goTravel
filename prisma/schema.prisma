@@ -19,6 +19,7 @@ model travelUser {
   attraction attraction[]
   trips      trip[]
   messages   message[]
+  review     review[]
 }
 
 model hotel {
@@ -96,4 +97,15 @@ model message {
   tripId   Int
   trip     trip       @relation(fields: [tripId], references: [id])
   user     travelUser @relation(fields: [userId], references: [id])
+}
+
+model review {
+  id            Int        @id @default(autoincrement())
+  rating        Int
+  title         String
+  text          String
+  datePublished DateTime
+  locationId    String
+  userId        Int
+  user          travelUser @relation(fields: [userId], references: [id])
 }

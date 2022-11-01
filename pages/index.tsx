@@ -14,6 +14,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import Calendar from "../components/constants/Calendar/Calendar";
 import InnerLayout from "../components/InnerLayout";
+import { Section } from "../types/AttractionResult";
 
 const Home: NextPage = () => {
   const city = useAppSelector((state) => state.city.city);
@@ -43,7 +44,10 @@ const Home: NextPage = () => {
       .then(function (res) {
         const attractions =
           res.data.data.AppPresentation_queryAppListV2[0].sections
-            .filter((item) => item.__typename === "AppPresentation_SingleCard")
+            .filter(
+              (item: Section) =>
+                item.__typename === "AppPresentation_SingleCard"
+            )
             .map((item) => item.singleCardContent);
         dispatch(setAttractions(attractions));
       })
@@ -84,7 +88,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 {/* Feeling Section */}
-                <div className="flex flex-col w-full items-center xl:flex-row xl:justify-between mt-16">
+                {/* <div className="flex flex-col w-full items-center xl:flex-row xl:justify-between mt-16">
                   <motion.div
                     className="bg-black relative h-60 w-full cursor-pointer mr-0
                         overflow-hidden 
@@ -139,9 +143,9 @@ const Home: NextPage = () => {
                       <span>Explore Cairo's Top Lesiure Spots</span>
                     </div>
                   </motion.div>
-                </div>
+                </div> */}
                 {/* Traveler's Choice */}
-                <div className="w-full bg-white mt-8 rounded-2xl p-5">
+                {/* <div className="w-full bg-white mt-8 rounded-2xl p-5">
                   <h2 className="text-3xl font-bold">Travelers' Choice</h2>
                   <div className="flex flex-row xl:flex-col overflow-x-scroll xl:overflow-hidden">
                     <motion.div
@@ -238,14 +242,13 @@ const Home: NextPage = () => {
                       </div>
                     </motion.div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </>
         ) : (
           <>
             <motion.div
-              key={attractions}
               className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
@@ -264,7 +267,10 @@ const Home: NextPage = () => {
                 </div>
                 <div className="mt-10">
                   {attractions.map((attraction) => (
-                    <div className="bg-white w-full h-52 my-10 rounded-2xl flex">
+                    <div
+                      className="bg-white w-full h-52 my-10 rounded-2xl flex"
+                      key={attraction.trackingKey}
+                    >
                       <div
                         className="bg-black h-full w-1/4 rounded-2xl"
                         style={{

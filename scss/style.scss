@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stars-outer {
+  position: relative;
+  display: inline-block;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.stars-outer::before {
+  content: "★★★★★";
+  color: #fff;
+}
+
+.stars-inner::before {
+  content: "★★★★★";
+  background: rgb(255, 131, 69);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(255, 131, 69, 1) 0%,
+    rgba(30, 194, 139, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 131, 69, 1) 0%,
+    rgba(30, 194, 139, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 131, 69, 1) 0%,
+    rgba(30, 194, 139, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8345",endColorstr="#1ec28b",GradientType=1);
+
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}

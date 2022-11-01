@@ -15,7 +15,7 @@ export interface Commerce {
   attractionCommerce: AttractionCommerce;
   hotelCommerce: HotelCommerce;
   restaurantCommerce: RestaurantCommerce;
-  lastUpdated: Date;
+  lastUpdated: null;
 }
 
 export interface AttractionCommerce {
@@ -168,23 +168,18 @@ export interface Section {
   rankingDetailsV2?: RankingDetailsV2;
   managementCenterRoute?: null;
   reviewsLink?: ReviewsLink;
-  accessibleTags?: AccessibleTags;
-  tags?: AccessibleTags;
-  ownerStatus?: string;
+  accessibleTags?: null;
+  tags?: Tags;
+  ownerStatus?: null;
   rating?: number;
   contactLinks?: ContactLink[];
+  poiCommerceAttractionPrimary?: PoiCommerceAttractionPrimary;
+  poiCommerceAttractionSecondary?: null;
   iconName?: string;
-  showMore?: ShowMore;
+  showMore?: ShowMore | null;
   text?: EmailSubject;
   todaySchedule?: EmailSubject[];
   sectionTitle?: EmailSubject;
-  lastUpdated?: EmailSubject;
-  viewAllRoute?: ViewAllRoute;
-  subtitle?: null;
-  managementResponse?: null;
-  managementResponseLanguage?: null;
-  subsections?: NullableContent[];
-  translateAction?: null;
   about?: string;
   nullableContent?: NullableContent[];
   tagsSubsection?: null;
@@ -205,15 +200,11 @@ export interface Section {
   sectionType?: string;
   tabs?: Tab[];
   wideCardsCarouselTitle?: EmailSubject;
+  subtitle?: null;
   seeAllV2?: SeeAllV2;
   wideCardsCarouselContent?: WideCardsCarouselContent[];
   sectionDescription?: EmailSubject;
   improveThisListingRoute?: ImproveThisListingRoute;
-}
-
-export interface AccessibleTags {
-  __typename: EmailBodyTypename;
-  text: string;
 }
 
 export interface Address {
@@ -237,13 +228,18 @@ export interface Data {
   publishedDateTime: Date;
   thumbsUpVotes: number;
   uploadDateTime: Date;
-  attribution: AccessibleTags;
+  attribution: Tags;
   photoSizeDynamic: PhotoSizeDynamic;
   sizes: Size[];
 }
 
 export enum DataTypename {
   MediaPhotoResult = "Media_PhotoResult",
+}
+
+export interface Tags {
+  __typename: EmailBodyTypename;
+  text: string;
 }
 
 export interface PhotoSizeDynamic {
@@ -256,6 +252,7 @@ export interface PhotoSizeDynamic {
 export enum PhotoSizeDynamicTypename {
   AppPresentationPhotoItemSizeDynamic = "AppPresentation_PhotoItemSizeDynamic",
   MediaPhotoResultSizeDynamic = "Media_PhotoResultSizeDynamic",
+  PhotoSizeDynamic = "PhotoSizeDynamic",
 }
 
 export interface Size {
@@ -267,6 +264,7 @@ export interface Size {
 
 export enum SizeTypename {
   MediaMediaSize = "Media_MediaSize",
+  PhotoSize = "PhotoSize",
 }
 
 export interface Anchor {
@@ -434,12 +432,12 @@ export interface NonNullContent {
   stableDiffingType: string;
   trackingKey: string;
   trackingTitle: string;
-  bubbleRating: BubbleRating;
+  bubbleRating: BubbleRating | null;
   cardTitle: EmailSubject;
   cardLink: CardLink;
   distance: EmailSubject;
-  cardPhoto: CardPhoto;
-  primaryInfo: AccessibleTags;
+  cardPhoto: CardPhoto | null;
+  primaryInfo: Tags;
 }
 
 export enum NonNullContentTypename {
@@ -506,13 +504,64 @@ export enum CardPhotoTypename {
 export interface NullableContent {
   __typename: string;
   title?: EmailSubject;
-  icon?: null;
-  list?: EmailSubject[];
+  awards?: Award[];
+  standaloneItem?: Tags;
+}
+
+export interface Award {
+  __typename: string;
+  awardIcon: string;
+  awardCategory: string;
+  title: EmailSubject;
+  years: string;
+  awardDetails: AwardDetails;
+}
+
+export interface AwardDetails {
+  __typename: string;
+  title: EmailSubject;
+  description: EmailSubject;
+}
+
+export interface PoiCommerceAttractionPrimary {
+  __typename: string;
+  title: EmailSubject;
+  subTitle: EmailSubject;
+  price: EmailSubject;
+  linkV2: V2;
+}
+
+export interface V2 {
+  __typename: GalleryLinkTypename;
+  route: LinkV2Route;
+  webviewRoute: null;
+  text: EmailSubject;
+  accessibilityString: null;
+  trackingContext: string;
+}
+
+export interface LinkV2Route {
+  __typename: RouteTypename;
+  fragment: null;
+  page: string;
+  url: string;
+  nonCanonicalUrl: string;
+  typedParams: StickyTypedParams;
+}
+
+export interface StickyTypedParams {
+  __typename: string;
+  state?: string;
+  contentId?: string;
+  contentType: PlaceTypeEnum;
+  pagee: null | string;
+  routingFilters?: null;
+  detailId?: number;
 }
 
 export interface RankingDetailsV2 {
   __typename: string;
-  text: AccessibleTags;
+  text: Tags;
   route: RankingDetailsV2Route;
   trackingContext: string;
 }
@@ -523,10 +572,10 @@ export interface RankingDetailsV2Route {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: StickyTypedParams;
+  typedParams: IndigoTypedParams;
 }
 
-export interface StickyTypedParams {
+export interface IndigoTypedParams {
   __typename: string;
   contentType: PlaceTypeEnum;
   geoId: number;
@@ -539,7 +588,7 @@ export interface StickyTypedParams {
   pagee: null;
   sort: null;
   sortOrder: null;
-  routingFilters: RoutingFilter[];
+  routingFilters: RoutingFilter[] | null;
 }
 
 export interface RoutingFilter {
@@ -563,16 +612,15 @@ export interface ReviewsLinkRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: IndigoTypedParams;
+  typedParams: IndecentTypedParams;
 }
 
-export interface IndigoTypedParams {
+export interface IndecentTypedParams {
   __typename: string;
   contentType?: PlaceTypeEnum;
   detailId?: number;
   routingFilters?: null;
-  pagee?: null | string;
-  contentId?: string;
+  pagee?: null;
 }
 
 export interface SectionRoute {
@@ -581,10 +629,10 @@ export interface SectionRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: IndecentTypedParams;
+  typedParams: HilariousTypedParams;
 }
 
-export interface IndecentTypedParams {
+export interface HilariousTypedParams {
   __typename: string;
   contentId: string;
   contentType: PlaceTypeEnum;
@@ -605,7 +653,7 @@ export interface ShowMore {
   __typename: GalleryLinkTypename;
   route: SectionRoute;
   webviewRoute?: null;
-  text?: EmailSubject | null;
+  text?: null;
   accessibilityString?: null;
   trackingContext?: string;
 }
@@ -614,7 +662,7 @@ export interface Tab {
   __typename: string;
   initialTab: boolean | null;
   seeMore: ReviewsLink;
-  seeMoreV2: ReviewsLink;
+  seeMoreV2: V2;
   searchLink: ReviewsLink | null;
   tabTitle: EmailSubject;
   tabSearchHint: EmailSubject | null;
@@ -639,13 +687,13 @@ export interface Content {
   trackingKey?: string;
   trackingTitle?: string;
   reviewRating?: number;
-  bubbleRatingText?: AccessibleTags;
+  bubbleRatingText?: Tags;
   helpfulVote?: HelpfulVote;
   labels?: any[];
   cardLink?: null;
-  photos?: any[];
-  ownerResponse?: OwnerResponse;
-  reviewActions?: ReportActionElement[];
+  photos?: PhotoElement[];
+  ownerResponse?: null;
+  reviewActions?: ReviewAction[];
   safetyText?: null;
   disclaimer?: EmailSubject;
   htmlText?: EmailBody;
@@ -658,22 +706,22 @@ export interface Content {
   userProfile?: ErProfile;
   publishedDate?: EmailSubject;
   initiallyCollapsed?: boolean;
-  askAQuestionLink?: ViewAllRoute;
-  submitQuestionAction?: SubmitAnswerActionClass;
+  askAQuestionLink?: AskAQuestionLink;
+  submitQuestionAction?: Action;
   poiName?: string;
   postingGuidelinesLink?: PostingGuidelinesLink;
   answerActionText?: EmailSubject;
-  submitAnswerAction?: SubmitAnswerActionClass;
+  submitAnswerAction?: Action;
   allAnswerLinkV2?: null;
   allAnswerLink?: ImproveThisListingRoute;
   question?: Question;
-  topAnswer?: Question;
+  topAnswer?: Question | null;
 }
 
-export interface ViewAllRoute {
+export interface AskAQuestionLink {
   __typename: GalleryLinkTypename;
   route: PurpleRoute;
-  webviewRoute: WebviewRouteClass | null;
+  webviewRoute: WebviewRouteClass;
   text: EmailSubject;
   accessibilityString: null;
   trackingContext: string;
@@ -685,10 +733,10 @@ export interface PurpleRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: HilariousTypedParams;
+  typedParams: AmbitiousTypedParams;
 }
 
-export interface HilariousTypedParams {
+export interface AmbitiousTypedParams {
   __typename: string;
   contentId: string;
   contentType: PlaceTypeEnum;
@@ -727,7 +775,7 @@ export interface PurpleValue {
   count: number;
   value: string;
   isSelected: boolean;
-  object: AccessibleTags;
+  object: Tags;
   selectedAccessibilityString: EmailSubject;
   unselectedAccessibilityString: EmailSubject;
   tooltip: null;
@@ -783,24 +831,49 @@ export interface HelpfulVoteAction {
   objectType: string;
 }
 
-export interface OwnerResponse {
+export interface PhotoElement {
   __typename: string;
-  disclaimer: EmailSubject;
-  publishedDate: EmailSubject;
-  displayName: string;
-  positionAtLocation: EmailSubject;
-  avatar: AlbumPhoto;
-  profileLink: null;
-  reportAction: ReportActionElement;
-  text: string;
+  photoId: number;
+  link: Link;
+  photo: PhotoPhoto;
 }
 
-export interface ReportActionElement {
+export interface Link {
+  __typename: GalleryLinkTypename;
+  route: FluffyRoute;
+  webviewRoute: null;
+  text: null;
+  accessibilityString: null;
+  trackingContext: string;
+}
+
+export interface FluffyRoute {
+  __typename: RouteTypename;
+  fragment: null;
+  page: string;
+  url: string;
+  nonCanonicalUrl: string;
+  typedParams: CunningTypedParams;
+}
+
+export interface CunningTypedParams {
   __typename: string;
-  actionName?: EmailSubject;
-  actionType?: string;
-  authenticateUser?: boolean;
-  webUrl?: PostingGuidelinesLink;
+  locationIdStr: string;
+  albumId: null;
+  galleryConfig: string;
+  mediaId: number;
+  mediaType: string;
+  to: null;
+  from: null;
+  entryPoint: string;
+  reviewId: string;
+  positionId: null;
+}
+
+export interface PhotoPhoto {
+  __typename: string;
+  photoSizeDynamic: PhotoSizeDynamic;
+  photoSizes: Size[];
 }
 
 export interface PostingGuidelinesLink {
@@ -821,17 +894,17 @@ export interface Question {
   memberProfile: ErProfile;
   actions: Actions;
   writtenDate: EmailSubject;
-  thumbsUpAction: SubmitAnswerActionClass | null;
+  thumbsUpAction: Action | null;
   thumbsUpCount: number | null;
 }
 
 export interface Actions {
   __typename: string;
-  deleteAction: SubmitAnswerActionClass;
+  deleteAction: Action;
   reportAction: ReportAction;
 }
 
-export interface SubmitAnswerActionClass {
+export interface Action {
   __typename: string;
   authenticateUser: boolean;
   tpcid: number | null;
@@ -849,7 +922,7 @@ export interface ReportAction {
 
 export interface ErProfile {
   __typename: string;
-  contributionCount: EmailSubject | null;
+  contributionCount: EmailSubject;
   displayName: string;
   localizedDisplayName: EmailSubject;
   hometown: null | string;
@@ -872,10 +945,10 @@ export interface ProfileLinkRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: AmbitiousTypedParams;
+  typedParams: MagentaTypedParams;
 }
 
-export interface AmbitiousTypedParams {
+export interface MagentaTypedParams {
   __typename: string;
   contentId: null;
   contentType: null;
@@ -900,6 +973,14 @@ export interface Bar {
   percentage: number;
 }
 
+export interface ReviewAction {
+  __typename: string;
+  actionName?: EmailSubject;
+  actionType?: string;
+  authenticateUser?: boolean;
+  webUrl?: PostingGuidelinesLink;
+}
+
 export interface TargetingParam {
   __typename: TargetingParamTypename;
   key: string;
@@ -911,7 +992,7 @@ export enum TargetingParamTypename {
 }
 
 export interface WideCardsCarouselContent {
-  __typename: string;
+  __typename: WideCardsCarouselContentTypename;
   badge: Badge | null;
   trackingKey: string;
   trackingTitle: string;
@@ -919,8 +1000,8 @@ export interface WideCardsCarouselContent {
   isSaved: boolean;
   saveId: SaveID;
   cardTitle: EmailSubject;
-  primaryInfo: AccessibleTags;
-  secondaryInfo: AccessibleTags;
+  primaryInfo: Tags;
+  secondaryInfo: Tags;
   closureInfo: null;
   cardPhoto: CardPhoto;
   bubbleRating: BubbleRating;
@@ -928,6 +1009,10 @@ export interface WideCardsCarouselContent {
   commerceButtons: null;
   labels: any[];
   cardLink: CardLink;
+}
+
+export enum WideCardsCarouselContentTypename {
+  AppPresentationVerticalStandardCard = "AppPresentation_VerticalStandardCard",
 }
 
 export interface Badge {

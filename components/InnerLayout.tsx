@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { useAppSelector } from "../redux/hooks";
+import { LayoutProps } from "../types/types";
 import Calendar from "./constants/Calendar/Calendar";
 
-const InnerLayout = ({ children }) => {
+const InnerLayout = ({ children }: LayoutProps) => {
   return (
     <div className="h-full">
       <div className="h-full">

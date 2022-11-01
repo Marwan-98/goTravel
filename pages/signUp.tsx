@@ -60,33 +60,24 @@ const SignUp = () => {
 
                   <div className="mt-1 grid grid-cols-3 gap-3">
                     <div>
-                      <a
-                        href="#"
-                        className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
-                      >
+                      <button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
                         <span className="sr-only">sign up with Facebook</span>
                         <AiFillFacebook className="h-6 w-6" />
-                      </a>
+                      </button>
                     </div>
 
                     <div>
-                      <a
-                        href="#"
-                        className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
-                      >
+                      <button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
                         <span className="sr-only">sign up with Twitter</span>
                         <AiOutlineTwitter className="h-6 w-6" />
-                      </a>
+                      </button>
                     </div>
 
                     <div>
-                      <a
-                        href="#"
-                        className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
-                      >
+                      <button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
                         <span className="sr-only">sign up with Google</span>
                         <AiOutlineGoogle className="h-6 w-6" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -237,12 +228,9 @@ const SignUp = () => {
                     </div>
 
                     <div className="text-sm">
-                      <a
-                        href="#"
-                        className="font-medium text-indigo-600 hover:text-indigo-500"
-                      >
+                      <button className="font-medium text-indigo-600 hover:text-indigo-500">
                         Forgot your password?
-                      </a>
+                      </button>
                     </div>
                   </div>
 

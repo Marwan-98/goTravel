@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import InnerLayout from "../components/InnerLayout";
-import TripModal from "../components/Itineraries/TripModal";
+import TripModal from "../components/constants/Modals/TripModal";
 import Layout from "../components/Layout";
 import EVENTS from "../config/events";
 import { useSockets } from "../context/socket.context";

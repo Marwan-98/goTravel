@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import Turnstone from "turnstone";
 import Link from "next/link";
 import { Hotel } from "../types/Hotels";
-import { HotelResult } from "../types/HotelResult";
+import { HotelResult, Section } from "../types/HotelResult";
 import { useAppSelector } from "../redux/hooks";
 import { setHotel, setHotels } from "../redux/features/hotelsSlice";
 import { useDispatch } from "react-redux";
@@ -56,7 +56,8 @@ const Lodges = () => {
           const hotelResults =
             res.data.data.AppPresentation_queryAppListV2[0].sections
               .filter(
-                (hotel) => hotel.__typename === "AppPresentation_SingleCard"
+                (hotel: Section) =>
+                  hotel.__typename === "AppPresentation_SingleCard"
               )
               .map((hotel) => hotel.singleCardContent);
           dispatch(setHotels(hotelResults));
@@ -87,7 +88,7 @@ const Lodges = () => {
               <div>
                 <div className="flex justify-between">
                   <div>
-                    <h2 className="text-4xl">Hungry?</h2>
+                    <h2 className="text-3xl">Staying somewhere?</h2>
                     <span>Just Search For hotels In Your Area</span>
                   </div>
                   <div className="basis-80">
@@ -100,7 +101,6 @@ const Lodges = () => {
         ) : (
           <>
             <motion.div
-              key={hotels}
               className="bg-[#F5FAF8] h-full p-10 rounded-2xl col-span-4"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
@@ -119,7 +119,10 @@ const Lodges = () => {
                 </div>
                 <div className="mt-10">
                   {hotels.map((hotel) => (
-                    <div className="bg-white w-full h-52 my-10 rounded-2xl flex">
+                    <div
+                      className="bg-white w-full h-52 my-10 rounded-2xl flex"
+                      key={hotel.trackingKey}
+                    >
                       <div
                         className="bg-black h-full w-1/4 rounded-2xl"
                         style={{

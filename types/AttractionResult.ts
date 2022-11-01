@@ -175,17 +175,20 @@ export interface Section {
   contactLinks?: ContactLink[];
   poiCommerceAttractionPrimary?: PoiCommerceAttractionPrimary;
   poiCommerceAttractionSecondary?: null;
+  iconName?: string;
+  showMore?: ShowMore | null;
+  text?: EmailSubject;
+  todaySchedule?: EmailSubject[];
   sectionTitle?: EmailSubject;
   about?: string;
   nullableContent?: NullableContent[];
-  showMore?: ShowMore | null;
   tagsSubsection?: null;
   adUnitId?: string;
   adSizes?: string[];
   targetingParams?: TargetingParam[];
   address?: Address;
   neighborhood?: null;
-  gettingThere?: null;
+  gettingThere?: GettingThere;
   anchor?: Anchor;
   center?: Center;
   pins?: Anchor[];
@@ -317,22 +320,19 @@ export enum Name {
 export interface ContactLink {
   __typename: string;
   clickTrackingUrl: null;
-  icon: null;
+  icon: null | string;
   link: PhotoCta;
   linkType: string;
 }
 
 export interface PhotoCta {
-  __typename: PhotoCTATypename;
-  route: PhotoCTARoute;
-  webviewRoute: null;
+  __typename: string;
+  externalUrl?: string;
   text: EmailSubject;
   accessibilityString: null;
   trackingContext: string;
-}
-
-export enum PhotoCTATypename {
-  AppPresentationInternalLink = "AppPresentation_InternalLink",
+  route?: PhotoCTARoute;
+  webviewRoute?: null;
 }
 
 export interface PhotoCTARoute {
@@ -354,12 +354,16 @@ export interface PurpleTypedParams {
 }
 
 export interface GalleryLink {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: GalleryLinkRoute;
   webviewRoute: null;
   text: null;
   accessibilityString: null;
   trackingContext: string;
+}
+
+export enum GalleryLinkTypename {
+  AppPresentationInternalLink = "AppPresentation_InternalLink",
 }
 
 export interface GalleryLinkRoute {
@@ -379,12 +383,23 @@ export interface FluffyTypedParams {
   offset: null;
 }
 
+export interface GettingThere {
+  __typename: string;
+  sectionTitle: EmailSubject;
+  transportItems: TransportItem[];
+}
+
+export interface TransportItem {
+  __typename: string;
+  transitAndTravel: EmailSubject;
+}
+
 export interface HeroContent {
   __typename: string;
 }
 
 export interface ImproveThisListingRoute {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: WebviewRouteClass;
   webviewRoute: null;
   text: EmailSubject;
@@ -417,12 +432,12 @@ export interface NonNullContent {
   stableDiffingType: string;
   trackingKey: string;
   trackingTitle: string;
-  bubbleRating: BubbleRating;
+  bubbleRating: BubbleRating | null;
   cardTitle: EmailSubject;
   cardLink: CardLink;
   distance: EmailSubject;
   cardPhoto: CardPhoto | null;
-  primaryInfo: Tags | null;
+  primaryInfo: Tags;
 }
 
 export enum NonNullContentTypename {
@@ -440,7 +455,7 @@ export enum BubbleRatingTypename {
 }
 
 export interface CardLink {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: CardLinkRoute;
   webviewRoute: null;
   text: null;
@@ -490,6 +505,7 @@ export interface NullableContent {
   __typename: string;
   title?: EmailSubject;
   awards?: Award[];
+  standaloneItem?: Tags;
 }
 
 export interface Award {
@@ -516,7 +532,7 @@ export interface PoiCommerceAttractionPrimary {
 }
 
 export interface V2 {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: LinkV2Route;
   webviewRoute: null;
   text: EmailSubject;
@@ -582,7 +598,7 @@ export interface RoutingFilter {
 }
 
 export interface ReviewsLink {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: ReviewsLinkRoute;
   webviewRoute: null;
   text: EmailSubject | null;
@@ -620,12 +636,12 @@ export interface HilariousTypedParams {
   __typename: string;
   contentId: string;
   contentType: PlaceTypeEnum;
-  geoId: null;
-  routingFilters: null;
+  geoId?: null;
+  routingFilters?: null;
 }
 
 export interface SeeAllV2 {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: RankingDetailsV2Route;
   webviewRoute: null;
   text: EmailSubject;
@@ -634,8 +650,12 @@ export interface SeeAllV2 {
 }
 
 export interface ShowMore {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: SectionRoute;
+  webviewRoute?: null;
+  text?: null;
+  accessibilityString?: null;
+  trackingContext?: string;
 }
 
 export interface Tab {
@@ -690,42 +710,16 @@ export interface Content {
   submitQuestionAction?: Action;
   poiName?: string;
   postingGuidelinesLink?: PostingGuidelinesLink;
-  answerActionText?: EmailSubject | null;
-  submitAnswerAction?: Action | null;
-  allAnswerLinkV2?: AllAnswerLinkV2 | null;
+  answerActionText?: EmailSubject;
+  submitAnswerAction?: Action;
+  allAnswerLinkV2?: null;
   allAnswerLink?: ImproveThisListingRoute;
   question?: Question;
   topAnswer?: Question | null;
 }
 
-export interface AllAnswerLinkV2 {
-  __typename: PhotoCTATypename;
-  route: AllAnswerLinkV2Route;
-  webviewRoute: null;
-  text: EmailSubject;
-  accessibilityString: null;
-  trackingContext: string;
-}
-
-export interface AllAnswerLinkV2Route {
-  __typename: RouteTypename;
-  fragment: null;
-  page: string;
-  url: string;
-  nonCanonicalUrl: string;
-  typedParams: AmbitiousTypedParams;
-}
-
-export interface AmbitiousTypedParams {
-  __typename: string;
-  contentId: string;
-  contentType: PlaceTypeEnum;
-  pagee: string;
-  questionId: string;
-}
-
 export interface AskAQuestionLink {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: PurpleRoute;
   webviewRoute: WebviewRouteClass;
   text: EmailSubject;
@@ -739,10 +733,10 @@ export interface PurpleRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: CunningTypedParams;
+  typedParams: AmbitiousTypedParams;
 }
 
-export interface CunningTypedParams {
+export interface AmbitiousTypedParams {
   __typename: string;
   contentId: string;
   contentType: PlaceTypeEnum;
@@ -845,7 +839,7 @@ export interface PhotoElement {
 }
 
 export interface Link {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: FluffyRoute;
   webviewRoute: null;
   text: null;
@@ -859,10 +853,10 @@ export interface FluffyRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: MagentaTypedParams;
+  typedParams: CunningTypedParams;
 }
 
-export interface MagentaTypedParams {
+export interface CunningTypedParams {
   __typename: string;
   locationIdStr: string;
   albumId: null;
@@ -928,7 +922,7 @@ export interface ReportAction {
 
 export interface ErProfile {
   __typename: string;
-  contributionCount: EmailSubject | null;
+  contributionCount: EmailSubject;
   displayName: string;
   localizedDisplayName: EmailSubject;
   hometown: null | string;
@@ -937,7 +931,7 @@ export interface ErProfile {
 }
 
 export interface ProfileLink {
-  __typename: PhotoCTATypename;
+  __typename: GalleryLinkTypename;
   route: ProfileLinkRoute;
   webviewRoute: null;
   text: EmailSubject;
@@ -951,10 +945,10 @@ export interface ProfileLinkRoute {
   page: string;
   url: string;
   nonCanonicalUrl: string;
-  typedParams: FriskyTypedParams;
+  typedParams: MagentaTypedParams;
 }
 
-export interface FriskyTypedParams {
+export interface MagentaTypedParams {
   __typename: string;
   contentId: null;
   contentType: null;
