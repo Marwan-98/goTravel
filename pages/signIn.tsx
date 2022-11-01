@@ -39,7 +39,7 @@ const SignIn = () => {
   });
   return (
     <>
-      <div className="flex min-h-full">
+      <div className="flex min-h-screen">
         <div className="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
@@ -51,10 +51,19 @@ const SignIn = () => {
               <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
                 Sign in to your account
               </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                Don't Have an Account?{" "}
+                <a
+                  href="/signUp"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  Sign Up
+                </a>
+              </p>
             </div>
 
             <div className="mt-8">
-              <div>
+              {/* <div>
                 <div>
                   <p className="text-sm font-medium text-gray-700">
                     sign in with
@@ -97,7 +106,7 @@ const SignIn = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="mt-6">
                 <form
@@ -146,7 +155,7 @@ const SignIn = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  {/* <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <input
                         id="remember-me"
@@ -167,7 +176,7 @@ const SignIn = () => {
                         Forgot your password?
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div>
                     <button

@@ -49,10 +49,19 @@ const SignUp = () => {
               <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
                 Sign up to your account
               </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                Already Have an Account?{" "}
+                <a
+                  href="/signIn"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  Sign In
+                </a>
+              </p>
             </div>
 
             <div className="mt-8">
-              <div>
+              {/* <div>
                 <div>
                   <p className="text-sm font-medium text-gray-700">
                     sign up with
@@ -95,7 +104,7 @@ const SignUp = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="mt-6">
                 <form
@@ -210,7 +219,7 @@ const SignUp = () => {
                       />
                     </div>
                   </div>
-
+                  {/* 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <input
@@ -232,7 +241,7 @@ const SignUp = () => {
                         Forgot your password?
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div>
                     <button
