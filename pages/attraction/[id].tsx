@@ -50,8 +50,7 @@ const Attraction = () => {
           },
           {
             headers: {
-              "X-RapidAPI-Key":
-                "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
+              "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPIDKEY,
               "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
           }
@@ -96,8 +95,6 @@ const Attraction = () => {
     }
   }, [trips, router]);
 
-  console.log(attraction);
-
   const images = [
     {
       url: "https://ychef.files.bbci.co.uk/976x549/p07zy3y6.jpg",
@@ -106,8 +103,6 @@ const Attraction = () => {
       url: "https://www.traveltoegypt.net/front/images/blog/Cairo-City.jpg",
     },
   ];
-
-  console.log(attraction);
 
   return (
     <Layout>

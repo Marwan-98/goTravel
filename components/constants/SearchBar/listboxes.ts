@@ -37,13 +37,11 @@ export const locationsListbox = {
         url: "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete",
         params: { query: query, lang: "en_US", units: "km" },
         headers: {
-          "X-RapidAPI-Key":
-            "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
+          "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPIDKEY,
           "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
         },
       })
       .then((response) => {
-        console.log(response.data.data.Typeahead_autocomplete.results);
         const attractions = response.data.data.Typeahead_autocomplete.results
           .filter((item: LocationResult) => {
             if (

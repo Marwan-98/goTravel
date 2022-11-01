@@ -41,14 +41,12 @@ const EatOut = () => {
           },
           {
             headers: {
-              "X-RapidAPI-Key":
-                "fedfe1bd6dmsh287dd9e2a9dc3c1p1cc4c5jsn98cb3bea3e96",
+              "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPIDKEY,
               "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
           }
         )
         .then((res) => {
-          console.log(res.data.data.AppPresentation_queryAppListV2[0]);
           const restauratnsResult =
             res.data.data.AppPresentation_queryAppListV2[0].sections
               .filter(

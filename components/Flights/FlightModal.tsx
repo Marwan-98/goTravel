@@ -58,19 +58,13 @@ const FlightModal = ({
             .then((res) => {
               res.data.data.flightOffers[0] !== flight
                 ? dispatch(setFlight(res.data.data.flightOffers[0]))
-                : console.log("same");
+                : null;
               setResponse(res.data.data);
             })
             .then(() => setChecked(true))
             .catch((err) => console.log(err));
         });
     } else {
-      console.log(
-        differenceInSeconds(
-          Number(localStorage.getItem("expiresIn")),
-          new Date()
-        )
-      );
       axios
         .post(
           "https://test.api.amadeus.com/v1/shopping/flight-offers/pricing",
@@ -89,7 +83,7 @@ const FlightModal = ({
         .then((res) => {
           res.data.data.flightOffers[0] !== flight
             ? dispatch(setFlight(res.data.data.flightOffers[0]))
-            : console.log("same");
+            : null;
           setResponse(res.data.data);
         })
         .then(() => setChecked(true));

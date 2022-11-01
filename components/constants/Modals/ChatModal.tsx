@@ -17,8 +17,6 @@ const ChatModal = ({
   const { socket, messages, setMessages, roomId } = useSockets();
   const [message, setMessage] = useState("");
 
-  console.log(props);
-
   const router = useRouter();
   const { id } = router.query;
 

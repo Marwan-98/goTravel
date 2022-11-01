@@ -5,7 +5,6 @@ import { prisma } from "../../utils/prismaClient";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { id, type, user } = req.headers;
 
-  console.log(user);
   switch (type) {
     case "HOTEL":
       const likedHotel = await prisma.hotel.findFirstOrThrow({

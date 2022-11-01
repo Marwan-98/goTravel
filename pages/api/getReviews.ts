@@ -18,8 +18,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     },
   });
 
-  console.log(`locationId: ${locationid}`);
-
   if (reviews) return res.status(200).json(reviews);
 };
 
