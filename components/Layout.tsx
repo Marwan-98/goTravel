@@ -57,6 +57,9 @@ const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
 
   useEffect(() => {
+    if (!session) {
+      router.push("/signIn");
+    }
     if (session && !user) {
       axios
         .get("/api/getUser", {
