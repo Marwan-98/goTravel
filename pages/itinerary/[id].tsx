@@ -1,7 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Layout from "../../components/Layout";
 import { setTrip, setTrips } from "../../redux/features/ItinerarySlice";
@@ -47,6 +47,12 @@ const Itinerary = () => {
     }
   }, [router]);
 
+  useEffect(() => {
+    return () => {
+      socket.emit(EVENTS.CLIENT.LEAVE_ROOM, roomId);
+    };
+  }, []);
+
   return (
     <Layout>
       <>
@@ -71,7 +77,7 @@ const Itinerary = () => {
                 className="mx-5 flex flex-col justify-center items-center cursor-pointer"
                 onClick={() => setShowAddTravelerModal(true)}
               >
-                <div className="h-16 w-16 rounded-full border border-dashed border-4 flex items-center justify-center">
+                <div className="h-16 w-16 rounded-full border border-dashed flex items-center justify-center">
                   <BsPlusLg />
                 </div>
                 <span>Add Traveler</span>

@@ -68,7 +68,6 @@ const Layout = ({ children }: LayoutProps) => {
           },
         })
         .then((res) => {
-          console.log(res.data);
           dispatch(setUser(res.data));
         });
     }
