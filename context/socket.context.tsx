@@ -27,17 +27,16 @@ function SocketsProvider(props: any) {
     { message: string; userId: number; tripId: number; dateSent: Date }[]
   >([]);
 
-  socket.on(EVENTS.SERVER.ROOMS, (value) => {
+  socket.once(EVENTS.SERVER.ROOMS, (value) => {
     setRooms(value);
   });
 
-  socket.on(EVENTS.SERVER.JOINED_ROOM, (value) => {
-    console.log(value);
+  socket.once(EVENTS.SERVER.JOINED_ROOM, (value) => {
     setRoomId(value);
     setMessages([]);
   });
 
-  socket.on(
+  socket.once(
     EVENTS.SERVER.ROOM_MESSAGE,
     ({ message, userId, dateSent, tripId }) => {
       setMessages([...messages, { message, userId, dateSent, tripId }]);
