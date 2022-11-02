@@ -46,6 +46,7 @@ function classNames(...classes: string[]) {
 const Layout = ({ children }: LayoutProps) => {
   const { socket, roomId, rooms } = useSockets();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const supabase = useSupabaseClient();
   const session = useSession();
@@ -57,7 +58,9 @@ const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (session && !user) {
+    if (!session && !isLoading) {
+      router.push("/signIn");
+    } else if (session && !user) {
       axios
         .get("/api/getUser", {
           headers: {
@@ -65,27 +68,26 @@ const Layout = ({ children }: LayoutProps) => {
           },
         })
         .then((res) => {
-          axios
-            .get("/api/getUser", {
-              headers: {
-                email: res.data.email,
-              },
-            })
-            .then((res) => {
-              dispatch(setUser(res.data));
-            });
+          console.log(res.data);
+          dispatch(setUser(res.data));
         });
     }
+
     supabase.auth.onAuthStateChange((event, session) => {
-      if (!session) {
-        router.push("/signIn");
-      }
       if (event == "TOKEN_REFRESHED") {
         dispatch(setUser(null));
         router.push("/signIn");
       }
     });
-  }, [session]);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => {
+      setIsLoading(true);
+    };
+  }, [session, isLoading]);
 
   useEffect(() => {
     user &&
