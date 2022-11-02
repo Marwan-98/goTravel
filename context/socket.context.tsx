@@ -32,6 +32,7 @@ function SocketsProvider(props: any) {
   });
 
   socket.on(EVENTS.SERVER.JOINED_ROOM, (value) => {
+    console.log(value);
     setRoomId(value);
     setMessages([]);
   });

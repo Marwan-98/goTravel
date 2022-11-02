@@ -77,7 +77,7 @@ const Layout = ({ children }: LayoutProps) => {
         });
     }
     supabase.auth.onAuthStateChange((event, session) => {
-      if (!session) {
+      if (!session || session) {
         router.push("/signIn");
       }
       if (event == "TOKEN_REFRESHED") {

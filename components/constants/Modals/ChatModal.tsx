@@ -52,7 +52,7 @@ const ChatModal = ({
     ]);
 
     axios.post("/api/addMessage", {
-      roomId,
+      roomId: id,
       message,
       userId: user?.id,
       dateSent: date,
