@@ -32,12 +32,6 @@ const Itinerary = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
     if (router.isReady) {
       if (id !== roomId) {
         socket.emit(EVENTS.CLIENT.JOIN_ROOM, id);

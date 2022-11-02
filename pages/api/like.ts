@@ -4,7 +4,6 @@ import { prisma } from "../../utils/prismaClient";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { type, name, id, location, url, tripId, user } = req.body;
-  console.log(user);
   switch (type) {
     case "HOTEL":
       const likeHotel = await prisma.hotel.create({

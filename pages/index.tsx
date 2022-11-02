@@ -42,7 +42,6 @@ const Home: NextPage = () => {
         }
       )
       .then(function (res) {
-        console.log(res.data.data.AppPresentation_queryAppListV2[0]);
         const attractions =
           res.data.data.AppPresentation_queryAppListV2[0].sections
             .filter(

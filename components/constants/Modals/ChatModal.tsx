@@ -51,14 +51,12 @@ const ChatModal = ({
       },
     ]);
 
-    axios
-      .post("/api/addMessage", {
-        roomId,
-        message,
-        userId: user?.id,
-        dateSent: date,
-      })
-      .then((res) => console.log(res.data));
+    axios.post("/api/addMessage", {
+      roomId,
+      message,
+      userId: user?.id,
+      dateSent: date,
+    });
   };
   return (
     <div className="fixed inset-0 flex items-center justify-center h-full w-full bg-black bg-opacity-25">
