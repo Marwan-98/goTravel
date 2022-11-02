@@ -7,7 +7,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const addMessage = await prisma.message.create({
     data: {
-      tripId: roomId,
+      tripId: Number(roomId),
       message,
       userId,
       dateSent,
