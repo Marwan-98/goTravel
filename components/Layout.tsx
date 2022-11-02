@@ -57,9 +57,6 @@ const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (!session) {
-      router.push("/signIn");
-    }
     if (session && !user) {
       axios
         .get("/api/getUser", {
@@ -80,6 +77,9 @@ const Layout = ({ children }: LayoutProps) => {
         });
     }
     supabase.auth.onAuthStateChange((event, session) => {
+      if (!session) {
+        router.push("/signIn");
+      }
       if (event == "TOKEN_REFRESHED") {
         dispatch(setUser(null));
         router.push("/signIn");
