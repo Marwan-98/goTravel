@@ -13,6 +13,8 @@ import AddToTripModal from "../../components/constants/Modals/AddToTripModal";
 import Link from "next/link";
 import AddReviewModal from "../../components/constants/Modals/AddReviewModal";
 import { Review } from "../../types/Review";
+import { format, parseISO } from "date-fns";
+import handleGetImage from "../../components/constants/API/handleGetImage";
 
 const Restaurant = () => {
   const dispatch = useDispatch();
@@ -290,27 +292,21 @@ const Restaurant = () => {
                       key={idx}
                     >
                       <div className="flex items-center">
-                        {/* <div
-                                                          className="h-10 w-10 rounded-xl bg-black"
-                                                          style={{
-                                                            backgroundImage: `url('${review.userProfile?.avatar.data.photoSizeDynamic.urlTemplate
-                                                              .replace(
-                                                                new RegExp("{width}"),
-                                                                "1000"
-                                                              )
-                                                              .replace(
-                                                                new RegExp("{height}"),
-                                                                "1000"
-                                                              )}')`,
-                                                            backgroundSize: "cover",
-                                                            backgroundPosition: "center",
-                                                          }}
-                                                        ></div> */}
+                        <img
+                          src={handleGetImage(review.user.image)}
+                          className="h-10 w-10 rounded-xl"
+                          alt=""
+                        />
                         <div className="mx-5">
                           <span className="mx-1">
                             {review.user.firstName} {review.user.lastName}
                           </span>
-                          <span>{review.datePublished}</span>
+                          <span>
+                            {format(
+                              parseISO(String(review.datePublished)),
+                              "MM/dd/yyyy"
+                            )}
+                          </span>
                           <div className="block">
                             <div className="stars-outer">
                               <div
