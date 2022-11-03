@@ -9,6 +9,7 @@ import {
   MdOutlineMap,
   MdOutlineMenu,
   MdClose,
+  MdOutlineSettings,
 } from "react-icons/md";
 
 import { GoSignOut } from "react-icons/go";
@@ -37,6 +38,7 @@ const navigation = [
   { name: "Eat out", href: "/EatOut", icon: MdOutlineFoodBank },
   { name: "Itineraries", href: "/Itineraries", icon: MdOutlineMap },
   { name: "Utilities", href: "/Utilities", icon: AiOutlineTool },
+  { name: "Settings", href: "/Settings", icon: MdOutlineSettings },
 ];
 
 function classNames(...classes: string[]) {
@@ -79,9 +81,11 @@ const Layout = ({ children }: LayoutProps) => {
       }
     });
 
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    if (!user) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    }
 
     return () => {
       setIsLoading(true);

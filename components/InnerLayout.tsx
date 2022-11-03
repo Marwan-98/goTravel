@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useAppSelector } from "../redux/hooks";
 import { LayoutProps } from "../types/types";
+import handleGetImage from "./constants/API/handleGetImage";
 import Calendar from "./constants/Calendar/Calendar";
 
 const InnerLayout = ({ children }: LayoutProps) => {
   const user = useAppSelector((state) => state.user.user);
   return (
-    <div className="h-full">
+    <div className="h-full ml-10">
       <div className="h-full">
         <div className="grid h-full grid-cols-1 lg:grid-cols-6 gap-5">
           {children}
@@ -18,7 +19,10 @@ const InnerLayout = ({ children }: LayoutProps) => {
           >
             <div>
               <div className="flex justify-start items-center">
-                <div className="h-12 w-12 rounded-full bg-black px-5"></div>
+                <img
+                  src={`${handleGetImage(user?.image)}`}
+                  className="h-12 w-12 rounded-full"
+                ></img>
                 <div className="px-5">
                   <span className="text-lg font-bold">
                     {user?.firstName} {user?.lastName}
