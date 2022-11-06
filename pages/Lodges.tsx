@@ -109,8 +109,8 @@ const Lodges = () => {
                 <div className="flex justify-between">
                   <div>
                     <h2 className="text-4xl">
-                      <span className="font-bold text-[#FF8345]">Cairo</span>{" "}
-                      hotels
+                      <span className="font-bold text-[#FF8345]">{city}</span>{" "}
+                      Restaurants
                     </h2>{" "}
                   </div>
                   <div className="basis-80">

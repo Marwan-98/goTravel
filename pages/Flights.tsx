@@ -25,6 +25,7 @@ import { motion } from "framer-motion";
 import InnerLayout from "../components/InnerLayout";
 
 const Flights = () => {
+  const city = useAppSelector((state) => state.city.city);
   const startDate = useAppSelector((state) => state.user.startDate);
   const endDate = useAppSelector((state) => state.user.endDate);
   const [travelClass, setTravelClass] = useState("ECONOMY");
@@ -65,7 +66,7 @@ const Flights = () => {
   };
 
   useEffect(() => {
-    originLocationCode && destinationLocationCode && getFlights;
+    originLocationCode && destinationLocationCode && getFlights();
   }, [originLocationCode, destinationLocationCode]);
 
   return (
@@ -102,8 +103,8 @@ const Flights = () => {
                   <div className="flex justify-between">
                     <div>
                       <h2 className="text-4xl">
-                        <span className="font-bold text-[#FF8345]">Cairo</span>{" "}
-                        flights
+                        <span className="font-bold text-[#FF8345]">{city}</span>{" "}
+                        Restaurants
                       </h2>{" "}
                     </div>
                     <div className="basis-80">
